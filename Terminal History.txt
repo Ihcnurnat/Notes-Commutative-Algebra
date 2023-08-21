@@ -95,3 +95,121 @@ To https://github.com/Ihcnurnat/Notes-Commutative-Algebra.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin/main'.
 (base) runchitan@192 Introduction to Commutative Algebra Atiyah % 
+
+
+New dialogues... 
+
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /Users/runchitan/Desktop/LaTeX Workshop/Introduction to Commutative Algebra Atiyah/.git/
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .DS_Store
+        Textbooks/
+        main.pdf
+        main.synctex.gz
+        main.tex
+        quiver.sty
+        texFiles/
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git add .
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .DS_Store
+        new file:   Textbooks/13Ed.pdf
+        new file:   Textbooks/Atiyah.pdf
+        new file:   main.pdf
+        new file:   main.synctex.gz
+        new file:   main.tex
+        new file:   quiver.sty
+        new file:   texFiles/.DS_Store
+        new file:   texFiles/Chapter 1.tex
+        new file:   texFiles/Chapter 2.tex
+        new file:   texFiles/Chapter 3.tex
+        new file:   texFiles/Chapter 4.tex
+        new file:   texFiles/Notes.tex
+
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git remote add origin https://github.com/Ihcnurnat/Notes-Commutative-Algebra.git 
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git commit -m "First commit"
+[master (root-commit) 92bca47] First commit
+ 13 files changed, 31490 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 Textbooks/13Ed.pdf
+ create mode 100644 Textbooks/Atiyah.pdf
+ create mode 100644 main.pdf
+ create mode 100644 main.synctex.gz
+ create mode 100644 main.tex
+ create mode 100644 quiver.sty
+ create mode 100644 texFiles/.DS_Store
+ create mode 100644 texFiles/Chapter 1.tex
+ create mode 100644 texFiles/Chapter 2.tex
+ create mode 100644 texFiles/Chapter 3.tex
+ create mode 100644 texFiles/Chapter 4.tex
+ create mode 100644 texFiles/Notes.tex
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git push -u origin main 
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Ihcnurnat/Notes-Commutative-Algebra.git'
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git branch -m main
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git push -u origin main
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 5.01 MiB | 3.57 MiB/s, done.
+Total 17 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Ihcnurnat/Notes-Commutative-Algebra.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    main.pdf
+        deleted:    main.synctex.gz
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Terminal History.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git add .
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git commit -m "deleted some files"
+[main 438ee8c] deleted some files
+ 3 files changed, 97 insertions(+)
+ create mode 100644 Terminal History.txt
+ delete mode 100644 main.pdf
+ delete mode 100644 main.synctex.gz
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git pull --rebase 
+Current branch main is up to date.
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % git push 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.59 KiB | 1.59 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Ihcnurnat/Notes-Commutative-Algebra.git
+   92bca47..438ee8c  main -> main
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % 
+ *  History restored 
+
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah % 
