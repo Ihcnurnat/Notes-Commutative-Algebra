@@ -1,0 +1,323 @@
+%\chapter{\Huge \textbf{Chapter 1}}
+\section{Chapter 1}
+
+\subsection{Ex 1.}
+\textit{See MAT's Page 1.}\\
+For a nilpotent element $x$ and a unit $a$, we can prove that $a+x$ is again a unit.
+
+Say $x^n=0$ for some $n\in\ZZ$, and set $$y=-a^{-1}x.$$
+Notice that 
+$$(1-y)(1+y+\cdots+y^{n-1})=1-y^n=1-(-a^{-1}x)^n=1,$$ which suggests that $1-y$ is a unit.
+So we have $a+x=a(1-y)$ is product of unit, thus it's a unit as expected.
+
+\subsection{Ex 2.}\label{Chap 1 Ex 2.}
+\subsubsection{(i)} $\Leftarrow:$ standard application of \textbf{Ex.1}
+
+%$\Rightarrow:$ Induction on the degree of $f$. Conclusion is correct when there's only one term $a_0=f$.\newpage
+$\Rightarrow:$ We follow the hint and suppose $b_0+b_1x+\cdots+b_mx^m$ is the inverse of $f$. We prove by induction on $r$ that $a_n^{r+1}b_{m-r}=0$:
+
+for $r=0$, note $a_nb_m$ is the coefficient for $x^{n+m}$, which must be $0$;
+
+assume the validity for $r-1$. \href{https://math.stackexchange.com/questions/19132/characterizing-units-in-polynomial-rings}{HERE} is the way to deal with the coefficients.
+
+Consider the coefficients of $x^{n+m-1}$, which must be 
+$a_{n-1}b_m+a_nb_{m-1}=0$. If we multiply both sides with $a_n$ will have 
+$$a_{n-1}a_nb_m+a_n^2b_{m-1}=a_n^2b_{m-1}=0$$ since $a_nb_m=0$.
+In general, we can continue by the similar fashion, namely look at the coefficients of $x^{n+m-i}$ for some natural number $i$: 
+$$\sum_{\alpha+\beta=n+m-i}a_{\alpha}b_{\beta}.$$ Multiply $a^{i}$ on both sides will make all terms except the last one be $0$, which forces the last term $a^{i+1}_{n}b_{m-i}=0$ to be zero. In particular, let $i=m$ we have $a^{i+1}_{n}b_0=0$. Recall that $b_0$ is a unit, so we have $a^{m+1}_{n}=0$ as desired. So $-a_nx^n$ is a nilpotent and $f+(-a_nx^n)=a_0+\cdots+a_{n-1}x^{n-1}$ is a unit by Ex 1. So we can apply the argument again, implies that $a_{n-1}$ is nilpotent. Until we only have the constant term, namely $a_0=a_0+a_1x-a_1x$ must be a unit.
+    
+\subsubsection{(ii)} $\Rightarrow:$ Suppose $f$ is nilpotent, thus we have 
+    \begin{align*}
+        0&=f^m\\
+        &=(a_0+a_1x+\cdots+a_nx^n)^m\\
+        &=a_0^m+(ma_0^{m-1}a_1)x+\cdots+a_1^mx^m+\cdots+(a_nx^n)^m,
+    \end{align*}which forces, in particular, $a_0$ to be nilpotent. 
+    Then we know $f-a_0=a_1x+a_2x^2+\cdots+a_nx^n$ is nilpotent since all nilpotent elements form an ideal. We define it as $f_1:=f-a_0$. It has a corresponding $m_1\in \mathbb{N}$ such that 
+    \begin{align*}
+        0=f_1^{m_1}&=(a_1^{m_1})x^{m_1}+\cdots
+    \end{align*}The coefficient for the term $x^{m_1}$ must be zero, which proves $a_1$ is nilpotent. And for all finitely many coefficient we can inductive do this and conclude they're all nilpotent as desired.\\
+    
+    \noindent $\Leftarrow:$ To prove $f$ is nilpotent, we only have to find a "large" enough number suffices to turn $f$ into $0$. Since all coefficients are nilpotent, we could find $d_0, d_1,..., d_n\in\ZZ$ such that 
+    $$a_i^{d_i}=0$$ for $0\leq i\leq n$.
+    Denote $\sum_{j=0}^{n} d_i = D$.
+    We could verify that 
+    \begin{align*}
+        f^D&=(a_0+a_1x+\cdots+a_nx^n)^D\\
+        &=[a_0^D+\cdots +(a_nx^n)]^D\\
+        &=C_0+C_1x+\cdots+C_{Dn}x^{Dn}
+    \end{align*}
+    where $C_i=\sum \prod_{i\in I_n} a_i$ for some finite index set $I_n\subset \{0,1,2,...,n\}$. The coefficient $C_i$ is sum of some coefficient that collected various powers of $x$, namely terms of $x^j$ where $j\in I_i$. Each such power will contain various $a_i$, but according to Pigeon Principle we've lifted them to power $D$, at least one of them will become $0$ and then this term is zero. All such term will be zero, and their sum, $C_i$, will be zero. So we have $f^D=0$ as desired.
+
+\newpage\subsubsection{(iii)} 
+$\Leftarrow:$ this is precisely the definition.\\
+
+$\Rightarrow:$ We follow the hint. Suppose $f$ is a zero-divisor, then there exists a nonzero element $g$ in the polynomial ring such that $fg=0$. We can further suppose $g$ is the smallest degree polynomial satisfy the condition we mentioned.
+\begin{align*}
+    0=fg=(a_0+a_1x+\cdots+a_nx^n)(b_0+b_1x+\cdots+b_mx^m).
+\end{align*}In particular we have $a_nb_m=0$. Notice that we'll have 
+$$(a_ng)(f)=0.$$ But polynomial $a_ng$ is of degree less than $g$ since $a_nb_m=0$, this contradicts least degree property of $g$, which implies that $a_ng=0$.
+Let's examine the equality above again: \begin{align*}
+    0=fg&=(a_0+a_1x+\cdots+a_{n-1}x^{n-1})(b_0+b_1x+\cdots+b_mx^m)+(a_nx^n)(b_0+b_1x+\cdots+b_mx^m)\\
+    &=(a_0+a_1x+\cdots+a_{n-1}x^{n-1})(b_0+b_1x+\cdots+b_mx^m).
+\end{align*}This time we look at coefficient for term $x^{n+m-1}$, which is $a_{n-1}b_m$ precisely. Since the product is $0$, which forces in particular $a_{n-1}b_m=0$. Then we can use polynomial $a_{n-1}g$, which is of degree less than $g$, but will annihilate $f$. We can continue in this fashion and conclude that all $a_ig=0$ for all $i\in \{1,2,...,n\}$. While $g$ is non-zero so we can find some $b_i\neq 0$ such that $$a_ib_j=0$$ as expected.
+
+\subsubsection{(iv)}
+\href{https://math.stackexchange.com/questions/688331/exercise-from-atiyah-macdonald-chapter-1-2-iv}{Solutions from StackExchange.}
+
+\textit{For one direction, refer to Gauss's Lemma.}
+
+In fact, we have many versions of Gauss's Lemma.
+
+
+
+\newpage\subsection{Ex 3.}
+Induction on $r$, which holds for $r=1$. Suppose all results hold for $A[x_1,...,x_{r-1}]$.\\\\
+$f$ is a unit in $A[x_1,...,x_{r-1}][x_r]$ $\Leftrightarrow$ $a_0$ is a unit in $A[x_1,...,x_{r-1}]$ and $a_1,...,a_n\in A[x_1,...,x_{r-1}]$ are nilpotent.\\\\
+One thing to notice is that here the coefficients are polynomial with indeterminants, so we can use the induction assumption to finish( since polynomial is of finite degree and we only have to apply finitely many times of results).\\\\
+For example, $a_0$ is a polynomial and a unit in $A[x_1,...,x_{r-1}]$, thus we could distract $b_0\in A[x_1,...,x_{r-2}]$ is a unit and finitely many polynomial $b_1,...b_{?}$ that are nilpotent.
+After applying (i) for finitely many times, we could find a "pure" coefficient in $A$ that's a unit, along with many polynomial that're nilpotent. Since their coefficients are all nilpotent, we could repeat (ii) for finitely many times and argue that all coefficients other than the first one in $A$ are nilpotent.\\\\
+So the generalised version of theorem states that the constant term is a unit in $A$, and other coefficients are nilpotent.
+
+\subsection{Ex 4.}
+Maximal ideal is prime ideal, thus Jacobson Radical $\supset $ Nilradical.\\
+So the non-trivial direction of proof starts by picking up an element $f$ from Jacobson Radical $\mathfrak{R}$. 
+By Prop 1.9 we know that $1-fy$ is a unit for any $y$.\\
+Now we let $y=x$, this gives us
+\begin{align*}
+    1-fx&=1-a_0x-a_1x^2-\cdots-a_nx^{n+1}
+\end{align*}is a unit. Use (ii) of Ex. 2, we know that all $a_0,a_1,...,a_n$ are nilpotent then $f$ is nilpotent by (iii) of Ex 2.
+
+
+\subsection{Ex 5.} 
+
+\subsubsection{(i)} 
+
+$\Leftarrow:$ \ding{52}
+
+\noindent $\Rightarrow:$ Assume $g:=b_0+b_1x+b_2x^2+\cdots\in A[[x]]$ to be the inverse for $f$ in the formal power series.
+We only need to look at the lowest power of their product
+\begin{align*}
+    1=fg=(b_0+b_1x+\cdots)(a_0+a_1x+\cdots)=b_0a_0+(b_0a_1+b_1a_0)x+\cdots.
+\end{align*}The fact that this equality holds implies that we must have $b_0a_0=1$, which gives us the desired result.
+
+\subsubsection{(ii)} Suppose we have $f^n=0$ for some integer $n>0$. If we look at the constant coefficient, we'll have $a_0^n=0$, so $a_0$ nilpotent. Then inductively prove $a_i$ is nilpotent for all $i\in \mathbb N$ by following Ex 2. (ii).\\
+
+Converse is ... ???
+
+\subsubsection{(iii)} 
+
+$\Leftrightarrow:$ Suppose $f$ belongs to the Jacobson radical, so according to Prop 1.9 this is equivalently to say
+$$1-fy$$ is a unit in $A[[x]]$ for all $y\in A[[x]]$. By part (ii) we know that this is the same as $1-a_0b_0$ is a unit in $A$ for any $b_0\in A$ where $b_0$ is the constant coefficient for $y\in A[[x]]$. Recall part (ii) again we know that this is equivalently to say $a_0$ belongs to the Jacobson Radical of $A$.\\
+
+\href{https://math.stackexchange.com/questions/367073/about-the-definition-of-extended-ideals}{HERE} is a good counterexample explaining the reason of why we defined product of ideal with "finiteness".
+
+\subsubsection{(iv)}
+
+??? Here I assume the underlying ring homomorphism is $f:A\to A[[x]]$ which sends a ring element $a\mapsto a$ in the formal power series.\\
+
+\textbf{Fact}: preimage (under ring homomorphism) of a prime ideal is again a prime ideal.
+The proof is basically unwrap the definition.\\
+
+\textbf{Fact}: how about maximal ideal? This is generally incorrect.
+Consider a ring homomorphism of inclusion 
+$$f:\mathbb Z[x]\to \mathbb Q[x] ~\text{  defined  by  }~ q\mapsto q.$$ 
+We have a maximal ideal $\langle x\rangle$ since $\mathbb Q[x]/\langle x\rangle \cong \mathbb Q$ is a field. But the preimage, or contraction of $\langle x\rangle$ is $\langle x\rangle \subset \mathbb Z[x]$, which isn't maximal.\\
+Another great example is \href{https://www.dpmms.cam.ac.uk/~sjw47/Lecture1-3.pdf}{HERE} page 6.\\
+
+??? DON'T KNOW HOW TO DO...\\
+
+For a maximal ideal $\mathfrak m\subset A[[x]]$, its contraction under the inclusion map is 
+$$f^{-1}(\mathfrak m)=\mathfrak m\cap A.$$
+
+According to the definition of the maximal ideal, $\mathfrak m$ is composed of non-units in $A[[x]]$. Suppose we have 
+$$\mathfrak m\subsetneq I\subset  A[[x]]$$ for some ideal $I\subset A[[x]]$. Then $I=A[[x]]$ and in particular $I$ contains a unit in $A[[x]]$. Apply contraction to them we have 
+$$f^{-1}(\mathfrak m)\subsetneq f^{-1}(I)\subset A.$$ According to part (i), the ideal $I$ contains unit $g\in A[[x]]$, then $f^{-1}(I)$ contains the constant coefficient $g_0\in A$, which is a unit. This implies that $f^{-1}(I)=A$, therefore $f^{-1}(\mathfrak m)$ is a maximal ideal. 
+
+
+
+\subsubsection{(v)} 
+
+For a given prime ideal $\mathfrak p\subset A$, note that 
+$$(\mathfrak p+xA[[x]])^c=\mathfrak p$$ under the inclusion map. It suffices to prove that $\mathfrak p+xA[[x]]$ is a prime ideal in $A[[x]]$. Firstly of all it's an ideal since it's clearly a subgroup and absorb multiplication from elements of $A[[x]]$. Suppose we have $f,g\in A[[x]]$ where $f=f_0+f_1x+\cdots$ and $g=g_0+g_1x+\cdots$ such that 
+$$fg\in \mathfrak p+xA[[x]].$$
+In particular we have $f_0g_0\in \mathfrak p$, and then $f_0,g_0\in \mathfrak p$ since it's a prime ideal in $A$. This actually implies that 
+$$f=f_0+f_1x+\cdots=f_0+x(f_1+f_2x+\cdots)\in \mathfrak p+xA[[x]]$$ and similarly for $g$. So we've proved that both $f,g$ belongs to $\mathfrak p+xA[[x]]$, and this confirms that it's a prime ideal.
+
+
+
+\subsection{Ex 6.}
+
+\href{https://math.stackexchange.com/questions/2816529/check-my-proof-that-the-nilradical-and-the-jacobson-radical-are-equal-am-1-6}{HERE} is one solution. \href{https://math.stackexchange.com/questions/925332/atiyah-macdonald-problem-6-of-chapter-1  }{HERE} is another solution.
+
+Natually we have nilradical is a subset of Jacobson radical.
+
+The non-trivial direction is to prove every maximal ideal is contained in the nilradical. Suppose for the sake of contradiction that there exists a maximal ideal $I$ that's not contained in the nilradical, then by assumption we can find a non-zero idempotent.
+By Prop 1.9 we know that in particular we 
+have for $y=1$,
+$$1-xy=1-x$$ is a unit. But then we have $(1-x)x=x-x^2=0$, which implies that $1-x$ is a zero-divisor. This is a contradiction since a unit cannot be a zero-divisor. \
+
+\subsection{Ex 7.}\label{Chap 1 Ex 7.}
+
+Fix a prime ideal $I$.
+We know $A/I$ is an integral domain. To prove $I$ is a maximal ideal, we only need to check $A/I$ is a field. More precisely, we need to check every nonzero element in $A/I$ has an inverse.\\
+
+For a nonzero element $a\in A$, there exists $n\geq 2$ such that $a^n=a$.
+
+Note that we have 
+$$([a]^{n-1}-1)[a]=0 ~\Rightarrow~ [a]^{n-1}=1$$ where $[a]$ is the natural projection from $a$ onto integral domain $A/I$. Notice that $[a]^{n-2}[a]=1$, which proves that any non-zero element is a unit as desired. This implies that $A/I$ is a field, hence every prime ideal is a maximal ideal.
+
+\newpage\subsection{Ex 8.}
+
+Nilradical is the minimal element with respect to inclusion. ??\ding{54} This element has to retain to be prime.\\
+
+\textbf{Fact}: Intersection of prime ideal isn't necessarily prime. For example, in $\mathbb Z$, we have two prime ideals $(2),(3)$. Their intersection is precisely $(6)$, which isn't prime.\\
+
+\textbf{Fact}: How about maximal ideal?\\ 1) As long as we have two maximal ideal with intersection as either one's proper subset, then their intersection mustn't be maximal;\\ 2) since $\mathbb Z$ is P.I.D, non-zero prime ideal is maximal ideal. We can take the same example as before.\\
+
+Although we know that intersection of prime ideals are not necessarily prime ideal, here we only need to consider a special case, which is for applying Zorn's Lemma. We give the order of all ideals $I_1\leq I_2$ if and only if $I_2\subset I_1$. This special case is to prove that for all prime ideals that are in one \textit{chain}, their intersection is again a prime ideal. Refers \href{https://math.stackexchange.com/questions/944274/intersection-of-prime-ideals-in-a-chain-is-prime}{HERE}.
+
+??? But for this post, I don't see the reason why it requires existence of prime ideals. Zorn's Lemma only needs "for every chain it has a upper bound..."
+
+Namely if we have a chain of prime ideals $\{I_i\}$ where $i\in A$ for some index set $A$ such that 
+$$\cdots\subset I_i\subset \cdots.$$ We need to prove that $\bigcap _{i\in A} I_i$ is a prime ideal. 
+We use contrapositive argument here. Suppose we have $a,b\notin \cap _{i\in A}I_i$, then we can find $i_1,i_2\in A$ such that 
+$$a\notin I_{i_1}~~\text{ and }~~ b\notin I_{i_2}.$$
+Without loss of generality, we can assume that $I_{i_1}\subset I_{i_2}$. So we have $a,b\notin I_{i_1}$, while it's a prime ideal, then we have 
+$$ab\notin I_{i_1} ~~ \Rightarrow ~~ ab\notin \cap _{i\in A}I_i.$$
+This proves that $\cap _{i\in A} I_i$ is a prime ideal as expected.
+
+\newpage\subsection{Ex 9.}
+
+$\Leftarrow:$ Suppose we have some prime ideals $\{P_i\}_{i\in A}$ for some index set $A$, such that 
+$$\mathfrak a=\bigcap _{i\in A} P_i.$$
+In order to prove that $\operatorname{rad}(\mathfrak a)=\mathfrak a$, it suffices to prove $\operatorname{rad}(\mathfrak a)\subset \mathfrak a$.
+For any $x\in \operatorname{rad}(\mathfrak a)$, this implies that $x^n\in\mathfrak a$ for some integer $n>0$. For any $i\in A$, we have 
+$$x^n\in P_i.$$
+While this is a prime ideal, either $x^{n-1}$ or $x$ belongs to $P_i$. We can continue in this fashion and conclude that $x$ belongs to $P_i$. While the index $i$ is arbitrary, we know that $$x\in \bigcap _{i\in A}P_i=\mathfrak a$$ as desired.\\
+
+\noindent$\Rightarrow:$ DON'T KNOW HOW TO DO... 
+
+!!! This direction is trivial if we recall Prop 1.14. Since radical is intersection of prime ideals which containing $\mathfrak a$, the intersection of this set of prime ideals will be $\mathfrak a$ given that it's radical.
+
+
+\href{https://math.stackexchange.com/questions/49309/intersection-of-prime-ideals}{HERE} I present another solution in case you forget Prop 1.14.
+
+Since $\mathfrak a\neq (1)$, then we can find a maximal ideal $P$ that containing $\mathfrak a$. This ideal $P$ is in particularly prime, and we define 
+$$B:=\{Q\subset R ~~\text{ is a prime ideal }~\mid~ Q\supset \mathfrak a\}$$
+as all ideals that containing $\mathfrak a$. It's non-empty since we must have $P\in B$. 
+
+Now we use non-trivial direction of the inclusion. For any $x\in \operatorname{rad}(\mathfrak a)$, namely we can fine an integer $n$ such that $x^n\in \mathfrak a$, it belongs to $\mathfrak a$. So we have $x^n\in P$, which is prime, then we have $x\in P$ by a similar argument as above. This implies that 
+$$\mathfrak a=\operatorname{rad}(\mathfrak a)\subset \bigcap_{i\in B}Q_i.$$
+It suffices to prove the other direction, in which we intend to use a contrapositive argument. Suppose we have $r\notin \operatorname{rad}(\mathfrak a)$, this implies that we have 
+$$r^k\notin \mathfrak a$$ for any $k\in \mathbb N$. So $S:=\{1,r,r^2,...\}$ is a multiplicative set (this is defined \href{https://www.jmilne.org/math/xnotes/CA.pdf}{HERE} page 5). 
+According to \href{https://www.jmilne.org/math/xnotes/CA.pdf}{Prop 2.2 Page 5}, we know that $R\setminus S$ contains a prime ideal that containing $\mathfrak a$. This implies that we have $x\notin \cap_{i\in B}Q_i$ as desired.
+
+\newpage\subsection{Ex 10.}
+
+ii) $\Rightarrow$ iii): We prove that $\mathfrak R$ is a maximal ideal. This is because if we have
+$$\mathfrak R\subsetneq I\subset A$$ for some ideal $I$, then this implies that we have $i\in I\setminus \mathfrak R$. While the nilradical composed of all elements that're nilpotent, then we know that $i$ must be a unit. This implies that $I=A$, which confirms that $\mathfrak R$ is prime.\\
+
+\noindent iii) $\Rightarrow$ i): Since it's a field, nilradical $\mathfrak R$ is a maximal ideal and is prime.
+While by definition 
+$$\mathfrak R=\bigcap_{i\in J} P_i$$ for all prime ideals $P_i\subset A$ and for some index set $J$. By Prop 1.11 (ii), we know that $\mathfrak R=P_{i_0}$ for some $i_0\in J$. This implies that all prime ideals in $J$ is the same, otherwise the equality doesn't hold. So this confirms that $A$ has exactly one prime ideal./.;/'l''''';l.l,/.\\
+
+\noindent i) $\Rightarrow$ ii): We have a ring $A$ that only has one prime ideal. While each maximal ideal is prime, then at most we have one maximal ideal. Suppose $A=0$, the case is trivial. For $A\neq 0$, Theorem 1.3 let us conclude that we have at least one maximal ideal. So in this case we have exactly one maximal ideal, which equals to $\mathfrak R$. Each element of $A$ is either a unit or a non-unit. The first case is done, then we consider the case for a non-unit, which is contained in a maximal ideal, namely $\mathfrak R$. And it must be nilpotent since it's also in nilradical. So we know that every element of $A$ is either a unit or nilpotent.
+
+\subsection{Ex 11.}
+
+i) Consider this, for any $x\in A$, \begin{align*}
+    x+1=(x+1)^2=x^2+2x+1=x+2x+1=3x+1
+    ~~\Rightarrow~~ 2x=0.
+\end{align*}
+
+\noindent ii) According to \ref{Chap 1 Ex 7.} and $n=2>1$, we can conclude that every prime ideal is maximal.
+
+According to \ref{Chap 1 Ex 7.}, we know that any $x+\mathfrak p$ for some non-zero element $x\in A$ is the multiplicative identity since
+$$(x+\mathfrak p)(x+\mathfrak p)=x^2+\mathfrak p=x+\mathfrak p ~~\Rightarrow~~ x+\mathfrak p =1+\mathfrak p.$$
+Note that we cannot have $x^n+\mathfrak p$ for some $n\geq 2$ since we're in a Boolean ring. And each $x+\mathfrak p$ is equal to $1+\mathfrak p$.
+Together with $0+\mathfrak p$, we have exactly two elements in the field $A/\mathfrak p$.\\
+
+\noindent iii) We consider the ideal $\langle x,y\rangle \subset A$ generated by two distinct elements $x,y\in A$. It suffices to prove that this ideal is principle.
+
+DON'T KNOW HOW TO... \href{https://math.stackexchange.com/questions/110329/finitely-generated-ideals-in-a-boolean-ring-are-principal-why}{HERE}
+
+The right candidate for principle ideal isn't $xy$, but $x+y+xy$.\\
+
+We need to prove that $\langle x,y\rangle =\langle x+y+xy\rangle$. Clearly we have $\langle x,y\rangle \supset \langle x+y+xy\rangle$. Conversely, we have 
+\begin{align*}
+    x(x+y+xy)=x+xy+xy=x+2(xy)=&x,\\ y(x+y+xy)=xy+y+xy=2(xy)+y=&y.
+\end{align*}
+And this completes the other direction of inclusion.
+
+\subsection{Ex 12.}
+
+\vspace{0.2in}Also see Spring 2023 506 HW 4 Problem 3.\vspace{0.2in}
+
+Since it's a local ring, we have exactly one maximal ideal $\mathfrak m$. Suppose we have a non-zero idempotent element $x\in A$, then we pass it to the quotient
+\begin{align*}
+    (x+\mathfrak m)(x+\mathfrak m)=x^2+\mathfrak m&=x+\mathfrak m
+    ~~\Rightarrow~~ x+\mathfrak m=1+\mathfrak m
+\end{align*} given that $A/\mathfrak m$ is a field. We know that $1-x\in \mathfrak m$. Also we know that $x\in\mathfrak m$ since it's a non-unit given that $x(x-1)=0$ (it's a zero-divisor). But this gives us 
+$$1=x-(x-1)\in \mathfrak m,$$ which contradicts the fact that $\mathfrak m$ is a maximal ideal.\\
+
+Solution \href{https://math.stackexchange.com/questions/3180861/proof-check-idempotents-of-a-local-commutative-ring}{HERE} and \href{https://math.stackexchange.com/questions/725171/idempotents-in-a-local-ring}{HERE}.
+
+\subsection{Ex 13.}
+
+\indent Firstly we prove that the ideal $\mathfrak a$ couldn't be the whole ring. Suppose on the contrary that $\mathfrak a=(1)$, then we can find a $g\in A:=K[x_f]$ such that 
+$$g\prod_{i\in J}f_i=1$$ for some index set $J$. This implies that $f$ is a unit in polynomial ring $A$. By definition of irreducible polynomial, we know that $f$ couldn't be a constant since $K$ is a field. According to \ref{Chap 1 Ex 2.}, coefficients other than the constant must be nilpotent, this contradicts the fact that $f$ is a monic polynomial. So we must have $\mathfrak a\neq (1)$.\\
+
+By Corollary 1.4, there exists a maximal ideal $\mathfrak m$ that contains $\mathfrak a$. We construct a field $K_1:=A/\mathfrak m$, which contains a root for any $f\in \Sigma$ since it's defined as $0$ in this field. Repeat this process, and since each polynomial has finite degree, union of infinitely many $K_i$ will contain all of the roots. 
+
+The rest is precisely what the problem suggested.
+
+\subsection{Ex 14.}
+
+Proof is basically Proposition 2.2 of \href{https://www.jmilne.org/math/xnotes/CA.pdf}{HERE}.\\
+
+We can assume $\Sigma$ is non-empty since otherwise the proposition is trivially correct.  (Do we have to write this?\\
+
+We wish to apply Zorn's Lemma. Let $i\in J$ be an index set, we consider a chain of ideals
+\begin{align*}
+    \cdots\subset L_i\subset \cdots
+\end{align*}where $L_i\in \Sigma$. We can define their union as $L=\cup_{i\in J} L_i$. 
+It's a group under addition: for any $x,y\in L$, we can find $x\in L_{i_1}$ and $y\in L_{i_2}$. We can assume $L_{i_1}\subset L_{i_2}$, then $x-y\in L_{i_2}\subset L$ since $L_{i_2}$ is an ideal. It absorb elements from the ring, fix an element $a\in A$, 
+$$ax\in L_{i_1}\subset L$$ for arbitrary $x\in L_{i_1}$. So we know that in this chain of inclusion, their union is indeed an ideal. Clearly in every chain, we can form an ideal like this, and it will serve as the upper bound of the chain. Then we can apply Zorn's Lemma and conclude that there exists a maximal element in $\Sigma$.\\
+
+\ding{54}For any maximal element $\mathfrak p\in \Sigma$, we hope to prove it's a prime ideal.
+Suppose we have $ab\in \mathfrak p$, if $a\notin \mathfrak p$, then we have a proper inclusion of ideals 
+$$\mathfrak p\subsetneq \mathfrak p+\langle a\rangle.$$ While $\mathfrak p$ is assumed to be a maximal element, then $\mathfrak p+\langle a\rangle\notin \Sigma$. This implies that we will have an element $p+ax\in \mathfrak p+\langle a\rangle$ for some $p\in \mathfrak p$ and $x\in A$ such that it's not a zero-divisor. \ding{54}\\
+
+?How to prove it's prime... \href{https://math.stackexchange.com/questions/44481/showing-the-set-of-zero-divisors-is-a-union-of-prime-ideals}{HERE}, contrapositive is easy \ding{52}\\
+
+Now we try to prove the maximal element $\mathfrak p$ with respect to inclusion is a prime ideal by resorting a contrapositive argument.
+Suppose we have $a\notin \mathfrak p$ and $b\notin\mathfrak p$, then we can form two proper inclusion as
+$$\mathfrak p\subsetneq \mathfrak p+\langle a\rangle,~~ \mathfrak p\subsetneq \mathfrak p+\langle b\rangle.$$
+Since we already have $\mathfrak p\in\Sigma$ as a maximal element, then both ideals $\mathfrak p+\langle a\rangle$ and $\mathfrak p+\langle b\rangle$ doesn't belong to $\Sigma$. This implies that we can find non-zero-divisors in both ideals. Then we consider their product
+$$(\mathfrak p+\langle a\rangle)(\mathfrak p+\langle b\rangle)\subset \mathfrak p+\langle ab\rangle,$$ which will contain at least one non-zero-divisor. So we have $\mathfrak p\subsetneq\mathfrak p+\langle ab\rangle$ is a proper inclusion, this implies that $xy\notin \mathfrak p$ as desired. So we've verified that $\mathfrak p$ is a prime ideal.\\
+
+On page 8 of the book, we know that zero-divisors are union of annihilators 
+$$D=\bigcup_{x\neq 0} \operatorname{Ann}(x).$$ So zero-divisors are union of ideals (annihilator is a special case for quotient ideal). Each ideal $\operatorname{Ann}(x)\in \Sigma$ since it's composed of all zero-divisors. By the previous part we've build the existence of maximal element with respect to inclusion, so we can cover all zero-divisors $D$ with those maximal elements $\mathfrak p$ that are also prime ideals. So we've proved that the set of zero-divisors in $A$ is a union of prime ideals.
+
+\subsection{Ex 15.}
+
+i) We denote the ideal as $\mathfrak a=\langle E\rangle \subset A$.
+Clearly we have $V(E)\supset V(\mathfrak a)$ since for any prime ideal that contains $\mathfrak a$ must contain $E$ in particular. Conversely, give an arbitrary prime ideal $\mathfrak p\in V(E)$, this means $\mathfrak p\supset E$ by definition. We interpret the ideal generated by $E$ as intersection of all ideals that containing $E$. Hence we know that 
+$$\mathfrak p\supset \mathfrak a.$$ This implies that ideal $\mathfrak p$ is a prime ideal that containing $\mathfrak a$ so $\mathfrak p\in V(\mathfrak a)$. Therefore we've build the first equality.\\
+
+\noindent For the second equality, again we note that $V(\mathfrak a)\supset V(\rad(\mathfrak a))$. For any given prime ideal $\mathfrak q\supset \mathfrak a$ that contains $\mathfrak a$, while $\rad(\mathfrak a)$ is the intersection of the prime ideals which contain $\mathfrak a$ by Proposition 1.14, so we have $\mathfrak q\supset \rad(\mathfrak a)$ and $\mathfrak q\in V(\rad(\mathfrak a))$. In summary we have 
+$$V(E)=V(\mathfrak a)=V(\rad(\mathfrak a)).$$
+
+\noindent ii) For $\{0\}$, any prime ideals of $A$ would contain it so $V(0)=X$. Recall in the textbook we defined prime ideal $\neq \langle 1\rangle$. So we cannot consider the $A$ as a prime ideal of $A$ itself. Hence we have $V(1)=\emptyset$.\\
+
+\noindent iii) This is basically unwrap the definition. For a prime ideal $\mathfrak p$ that contains $\cup_{i\in I} E_i$, it must contain each $E_i$. This implies that $\mathfrak p\in V(E_i)$ for each index $i\in I$, therefore it belongs to $\cap _{i\in I} V(E_i)$. Conversely, pick any prime ideal $\mathfrak p$ such that lives in every $V(E_i)$ where $i\in I$. This just means $\mathfrak p$ contains every $E_i$ where $i\in I$, hence we have $\mathfrak p\in V(\cup_{i\in I} E_i)$. This completes another direction of inclusion and proved the equality.\\
+
+\noindent iv) Now we try to prove the first equality. Clearly we have $V(\mathfrak a \cap \mathfrak b)\subset V(\mathfrak a\mathfrak b)$ since $\mathfrak a\mathfrak b\subset \mathfrak a\cap \mathfrak b$. Conversely, for any prime ideal $\mathfrak p\in V(\mathfrak a\mathfrak b)$, it contains product of ideal $\mathfrak a\mathfrak b$. Since $\mathfrak p$ is prime, by Lemma 2.1 on page 4 of \href{https://www.jmilne.org/math/xnotes/CA.pdf}{HERE}, without loss of generality, we have $\mathfrak p\supset \mathfrak a$. This implies that $\mathfrak p\in V(\mathfrak a\cap\mathfrak b)$.\\
+
+\noindent Now we finish the second equality. Clearly we have $\mathfrak a\mathfrak b\subset \mathfrak a\cap \mathfrak b\subset \mathfrak a\subset \mathfrak p$, this implies that $V(\mathfrak{ab})\supset V(\mathfrak a)\cup V(\mathfrak b)$. Now consider any prime ideal $\mathfrak p\supset \mathfrak {ab}$, by the same approach above, we can assume that this prime ideal contains $\mathfrak a$. Hence we have $\mathfrak p\in V(\mathfrak a)\cup V(\mathfrak b)$.
+In summary we have $$V(\mathfrak a\cap \mathfrak b)=V(\mathfrak{ab})=V(\mathfrak a)\cup V(\mathfrak b).$$
+
+\subsection{Ex 16.}
+
+\subsection{Ex 17.}
+

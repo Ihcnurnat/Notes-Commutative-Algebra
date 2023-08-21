@@ -1,0 +1,489 @@
+%\chapter{\Huge \textbf {Chapter 2}}
+\section{Chapter 2}
+
+\subsection{Ex 2.2 Page 20}
+
+i) For any element $a\in \Ann (M+N)$, namely for any element such that $$a(M+N)=0.$$
+This implies that in particularly, $aM=0$ and $aN=0$ given $M,N\subset M+N$ by definition of sum of modules. Hence we have $a\in \Ann(M)\cap \Ann(N)$.\\
+
+Conversely, if we have $a\in \Ann(M)$ and $a\in \Ann(N)$. This implies that for any finite sum 
+$$a(m_1+\cdots+m_i+n_1+\cdots+n_j)=0,$$ so we have $a(M+N)=0$ for any $a\in A$. This completes the other direction and therefore we have the equality $$\Ann(M+N)=\Ann(M)\cap \Ann(N).$$
+
+\noindent ii) For any element $x\in (N:P)$, by definition $xP\subset N$. Now we try to interpret annihilator of $(N+P)/N$, they're all ring elements $x\in A$ such that 
+$$x(N+P)/N=0 ~\Rightarrow~ x(N+P)\subset N.$$
+If we have $xP\subset N$, then naturally we have $x(N+P)\subset N$, which completes one direction of inclusion. Conversely, if we're given $x\in \Ann((N+P)/N)$, equivalently we know that $x(N+P)\subset N$, while $xN\subset N$ given that $N$ is module. We must have $xP\subset N$, hence $x\in (N:P)$. So in summary we have $$(N:P)=\Ann((N+P)/N).$$
+
+\subsection{Prop 2.3 Remark}
+
+It works well without assumption of finitely generated? See this post discuss why every module is a quotient of free module \href{https://math.stackexchange.com/questions/2599886/every-r-module-is-a-quotient-of-a-free-module}{HERE}.
+
+\subsection{Remark ii) Page 25}
+
+\ding{46} \textit{This is an exercise 2 in the section of tensor product on Dummit and Foote Page 375. It's meant to illustrate the fact that tensor product notation $x\otimes y$ is ambiguous unless we specify which tensor product it lives in.}\\
+
+On the book we've already seen that $2\otimes 1=0$ in $\mathbb Z$-module $\mathbb Z\otimes \mathbb Z/2\mathbb Z$.
+
+Now we wish to prove it's non-zero in $2\mathbb Z\otimes \mathbb Z/2\mathbb Z$.
+
+\newpage\subsection{Proposition 2.4}
+
+\textit{Generalized Version of the Cayley–Hamilton Theorem}
+
+\vspace{0.1 in}\href{https://mathoverflow.net/questions/42241/errata-for-atiyah-macdonald}{HERE} is a useful paraphrase and some errata.
+
+See an excellent explanation \href{https://math.stackexchange.com/questions/1197842/proof-of-proposition-2-4-in-atiyah-macdonald}{HERE}.
+
+\ding{252} A counterexample of Nakayama's Lemma \href{https://math.stackexchange.com/questions/649950/counterexamples-to-nakayamas-lemma-if-m-is-not-finitely-generated}{HERE}. Also see \href{https://math.stackexchange.com/questions/292738/show-that-mathbbq-is-not-finitely-generated-using-the-fundamental-the}{HERE}, explaining why $(\mathbb Q,+)$ is not finitely generated; and \href{https://math.stackexchange.com/questions/1076387/bbbq-is-not-a-finitely-generated-bbbz-module}{HERE}, explaining $\mathbb Q$ is not a finitely generated $\mathbb Z$-module.\vspace{0.2in}
+
+\vspace{0.1 in}\textit{Proposition 2.4 Proof}
+
+Let $x_1,...,x_n$ be a set of generators of $M$. For each element in the ideal $a\in \mathfrak a$, we have to consider it as an endormorphism, i.e., we consider $a:=\psi(a)\in \operatorname{Hom}_{A}(M,M)$. Then for each $x_i$ where $1\leq i \leq n$, we have (here all $a_{ij}:=\psi(a_{ij})$)
+\begin{align*}
+\phi(x_i)=a_{i1}x_1+a_{i2}x_2+\cdots+a_{in}x_n&=\sum_{j=1}^n a_{ij}x_j\\
+    \Rightarrow~ (-a_{i1})x_1+\cdots+(\phi -a_{ii})x_i+\cdots +(-a_{in})x_n&=0\\
+    \Rightarrow~ \sum_{j=1}^n (\delta_{ij}\phi-a_{ij})x_j&=0.
+\end{align*} for all $a_{ij}\in \mathfrak a$. And we can write them in the form of a matrix as 
+\begin{align*}
+    \begin{pmatrix}
+        \phi-a_{11} & -a_{12} & \cdots & -a_{1n}\\
+        -a_{21} & \phi-a_{22} & \cdots & -a_{2n}\\
+        \cdots \\
+        -a_{n1} & -a_{n2} &\cdots & \phi-a_{nn}
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        x_1 \\ x_2 \\ \cdots \\ x_n
+    \end{pmatrix}&=0.
+\end{align*} Moreover, we denote the first matrix as $A$ and the later column vector as $v$. Now we can apply \href{https://en.wikipedia.org/wiki/Adjugate_matrix}{adjugate} matrix on that and have 
+\begin{align*}
+    \operatorname{adj}(A)A=\operatorname{det}A I &=0\\
+    \Rightarrow \operatorname{adj}Av=\det A I v&=0. 
+\end{align*}Note that this implies the matrix $\det A I$ annihilates all generators, then it must be zero endormorphism. So we have $\det AI=0\in \operatorname{Hom}_A(M,M)$. This implies $\det A=0$ as a scalar, so we can expand the determinant to get the desired result
+
+$$\phi^n+\psi(b_1)\phi^{n-1}+\cdots +\psi(b_n)=0$$ where $b_i\in \mathfrak a$ since it's the product of some $a_i$. 
+
+\newpage\subsection{Corollary 2.13}
+
+\href{https://math.stackexchange.com/questions/122380/corollary-2-13-of-atiyah-macdonald}{HERE} is a post discussing this.
+
+\subsection{Corollary 2.7}
+
+Recall that element in product of an ideal and the module is finite sum of ... 
+
+See the post \href{https://math.stackexchange.com/questions/2629962/proof-of-atiyah-macdonalds-introduction-to-commutative-algebra-corollary-2-7}{HERE}.
+
+\subsection{Proposition 2.8}
+
+See this post \href{https://math.stackexchange.com/questions/2629962/proof-of-atiyah-macdonalds-introduction-to-commutative-algebra-corollary-2-7}{HERE} and \href{https://math.stackexchange.com/questions/753069/how-is-an-onto-map-implies-nmm-m-in-commutative-algebra}{HERE}.
+
+\subsection{Exercise 2.20}
+
+Fix an exact sequence of $B-$module 
+
+\begin{tikzcd}
+    0 \arrow[r] &N_1 \arrow[r, "g_1"] &N_2 \arrow[r, "g_2"] &N_3\arrow[r] &0.
+\end{tikzcd}
+
+Let's consider this after tensor with $M_B$. Note that we have 
+
+\begin{tikzcd}[cramped, sep=small] %[column sep=small]
+    0 \arrow[r] &N_1\otimes M_B \arrow[r, "g_1\otimes 1"] &N_2\otimes M_B \arrow[r,"g_2\otimes 1"] &N_3\otimes M_B\arrow[r] &0 \\
+    \Rightarrow 0 \arrow[r] &N_1\otimes_B B\otimes_A M\arrow[r, "g_1\otimes 1"] &N_2\otimes_B B\otimes_A M \arrow[r,"g_2\otimes 1"] &N_3\otimes_B B\otimes_A  M_B\arrow[r] &0 \\
+    \Rightarrow 0 \arrow[r] &N_1\otimes_A M\arrow[r, "g_1\otimes 1"] &N_2 \otimes_A M \arrow[r,"g_2\otimes 1"] &N_3\otimes_A  M_B\arrow[r] &0, \\
+\end{tikzcd}\\
+which is exact since $N_1, N_2, N_3$ inherits $A-$module structure and $M$ is flat as an $A-$module. And this proves that $M_B$ is flat as $A-$module.
+
+\subsection{Ex 1.}
+
+According to Qing Liu's book \href{https://ebookcentral.proquest.com/lib/washington/detail.action?pq-origsite=primo&docID=430442}{Remark 1.3}, that the tensor product of modules is generated by all elements of the form $a\otimes b$ and any element in the tensor product can be written as $\sum_{\operatorname{finite}}a_i\otimes b_j$ a finite sum of tensor products. It suffices to prove for any $a\in\ZZ /m\ZZ$ and $b\in \ZZ/n\ZZ$, their tensor product is zero. Since $m,n$ are coprime, then we have $mx+ny=1$ for some integers $x,y\in ZZ$. 
+In $\ZZ$ we have $1$, then this gives us 
+\begin{align*}
+    a\otimes b&=(mx+ny)a \otimes b\\
+    &=mxa\otimes b +(ny)a\otimes b\\
+    &=mxa\otimes b+ a\otimes nyb\\
+    &=0\otimes b+a\otimes 0\\
+    &=0.
+\end{align*}Since for every element in the tensor product we have proved it's zero, then the module is zero. 
+
+\subsection{Ex 2.}\label{Chap 2 Ex 2.}
+
+For the exact sequence we can tensor it with $M$ as 
+\begin{align}
+0 ~\to~ \mathfrak a &~\to~ A ~\to~ A/\mathfrak a ~\to~ 0,\\
+\Rightarrow \mathfrak a\otimes M &~\to~ A\otimes M ~\to~ (A/\mathfrak a)\otimes M ~\to~ 0,
+\end{align}which is exact by Proposition 2.18. The first map in (2) is $\iota\otimes 1$ where $\iota:\mathfrak a\to A$ is inclusion. We have to figure out the image of the first map in (2), 
+\begin{align*}
+    \iota\otimes 1(\mathfrak a\otimes M)&=\mathfrak a\otimes M.
+\end{align*}
+
+\ding{45} Now we claim that $\mathfrak a\otimes_A M \cong \mathfrak a M$. We'll prove this by using universal property. ???
+
+We wish to prove this by universal property. Let $N$ be any $A-$module with an $A-$module homomorphism $f:\mathfrak a\times M\to N$.
+
+% https://q.uiver.app/?q=WzAsMyxbMCwwLCJcXG1hdGhmcmFrIGFcXHRpbWVzIE0iXSxbMSwxLCJOIl0sWzAsMSwiXFxtYXRoZnJhayBhTSJdLFswLDEsImYiXSxbMCwyLCJUIiwyXSxbMiwxLCJcXGJhciBmIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\[\begin{tikzcd}
+	{\mathfrak a\times M} \\
+	{\mathfrak aM} & N
+	\arrow["f", from=1-1, to=2-2]
+	\arrow["T"', from=1-1, to=2-1]
+	\arrow["{\bar f}"', dashed, from=2-1, to=2-2]
+\end{tikzcd}\]
+
+We need to verify that for any $f$, there exist $A$-linear map $\bar f$ that factors through $\mathfrak a M$. And by universal property of tensor product we'll know that $$\mathfrak a M\cong \mathfrak a\otimes _A M.$$
+And this gives us 
+$$A\otimes_A M/\mathfrak a\otimes_A M\cong M/\mathfrak a M\cong (A/\mathfrak a)\otimes_A M.$$
+
+\href{https://math.stackexchange.com/questions/1474907/if-module-m-n-mm-then-why-is-mm-n-m-n}{HERE} is a post explaining an isomorphism.
+
+\subsection{Ex 3.}
+
+\href{https://www.math.colostate.edu/~clayton/courses/603/603_4.pdf}{HERE} is one solution.
+
+\href{https://math.stackexchange.com/questions/1633040/let-a-be-a-local-ring-m-and-n-finitely-generated-a-modules-show-that-i}{HERE} is a post, discussing an important isomorphism.\vspace{0.1in}
+
+
+We follow the hint. Let $\mathfrak m\subset A$ be the maximal ideal of local ring $A$, then we can define $k:=A/\mathfrak m$ as its residue field.
+According to \ref{Chap 2 Ex 2.}, we can define a module as 
+$$M_k:=k\otimes_A M\cong M/\mathfrak m M.$$
+Notice that $M$ is finitely generated and $\mathfrak m$ lies inside Jacobson Radical $\mathfrak R$, so assumption of Nakayama's Lemma are verified. If we have $M/\mathfrak m M=0$, then we can conclude that 
+$$M=0.$$
+
+Now we back to the problem itself, observe that 
+\begin{align*}
+    M\otimes_A N&=0\\
+    \Rightarrow~ (k\otimes_k k)\otimes _A M\otimes _A N &=0\\
+    \Rightarrow~ [k\otimes_k (k\otimes_A M)] \otimes_A N &=0 ~~\text{by Qing Liu Prop 1.10 on Page 3}\\
+    \Rightarrow~ (k\otimes_A M)\otimes_k k\otimes _A N&=0\\
+    \Rightarrow~ 
+    \Rightarrow~ (k\otimes_A M)\otimes_k (k\otimes_A N)&=0\\
+    \Rightarrow~ M_k\otimes_k N_k&=0.
+\end{align*}
+Notice that since $M_k$ is annihilated by $\mathfrak m$, then it's inherits $A/\mathfrak m-$module structure, whihc implies it's a vector field. While $M,N$ finitely generated, so we have $M_k=M/\mathfrak m M$ is a finite dimensional vector space. Since all vector spaces are free, so we can write them as 
+\begin{align*}
+    M_k\otimes_k N_k= (A)^{\operatorname{rank}M\cdot\operatorname{rank} N}.
+\end{align*}The fact that this free module equals to $0$ will force each component to be $0$, i.e. either $M_k=0$ or $N_k=0$, then by the previous argument we know we must have either $M=0$ or $N=0$ as expected.
+
+
+\subsection{Ex 4.}\label{Chap 2 Ex 4.}
+
+Fix an injective $A-$module $f:N_1\to N_2$. Since $M=\oplus_{i\in I}M_i$ is flat, so we have 
+\begin{align*}
+    f\otimes 1: N_1\otimes M\to N_2\otimes M\\
+    \Rightarrow~ f\otimes 1: \oplus_{i\in I} (N_1\otimes M_i) \to \oplus_{i\in I} (N_2\otimes M_i)
+\end{align*} is injective. We define its component function as
+\begin{align*}
+    (f\otimes 1)_i:=N_1\otimes M_i\to N_2\otimes M_i
+\end{align*} for arbitrary $i\in I$. Equivalently we can express the function as $$f\otimes 1=\oplus_{i\in I}(f\otimes 1)_i.$$
+
+It suffices to prove the following claim: we claim that $f\otimes 1$ is injective if and only if every $(f\otimes 1)_i$ is injective for all $i\in I$.\\ 
+$\Leftarrow:$ For distinct $\textbf{x},\textbf{y}\in \oplus_{i\in I}(N_1\otimes M_i)$, then we can find at least one $i_0\in I$ such that $\textbf{x}_{i_0}\neq \textbf{y}_{i_0}$, then we must have $(f\otimes 1)_{i_0}(\textbf{x}_{i_0})\neq (f\otimes 1)_{i_0}(\textbf{y}_{i_0})$ give each component function is injective. And this will force $(f\otimes 1)(\textbf{x})\neq (f\otimes 1)(\textbf{y})$ as expected.\\
+$\Rightarrow:$ Given an index $j\in I$. For distinct $\textbf{x}_j,\textbf{y}_j$, we can embed it into $\textbf{x}=\mathds{1}_{\{j\}}\textbf{x}_k$ (we adopt the notatio nof indicator function \href{https://en.wikipedia.org/wiki/Indicator_function}{HERE}, this just means an element of $N_1\otimes M$ that are nonzero only in $j$-th coordinate) and similarly for $\textbf{y}_j$. Given that $f\otimes 1$ is injective, so we have
+\begin{align*}
+    (f\otimes 1)(\textbf{x})&\neq (f\otimes 1)(\textbf{y})\\
+    \Rightarrow~ (f\otimes 1)_j(\textbf{x}_j)&\neq (f\otimes 1)_j(\textbf{y}_j),
+\end{align*}which proves that $(f\otimes 1)_j$ is injective.
+
+
+\subsection{Ex 5.}
+
+\href{https://math.stackexchange.com/questions/1868080/polynomial-ring-as-direct-sum-of-modules}{HERE} is a post discussing the structure of polynomial ring, and write it into direct sum of modules.\vspace{0.1in}
+
+For a polynomial ring, we can write it as direct sum of distinct powers of indeterminate 
+\begin{align*}
+    A[x]\cong A\oplus A\{x\}\oplus A\{x^2\}\oplus\cdots\cong\oplus_{i\in \mathbb N} A\{x^i\}\cong \oplus_{i\in\mathbb N} A.
+\end{align*}
+According to \ref{Chap 2 Ex 4.}, it remains to check each module $A$ is flat for $i\in\mathbb N$. 
+Give an injective $A-$module homomorphism $f:N_1\to N_2$, we have 
+$$f:N_1\otimes_A A\to N_1\otimes_A A ~\Rightarrow f:N_1\to N_2$$ is injective, which proves that $A[x]$ is flat as desired.
+
+
+\subsection{Ex 6.}
+
+\ding{45} Potential typo: here I assume $M$ is an $A-$module.
+
+Notice that polynomial ring $A[x]\cong \oplus_{i\in\mathbb N} A_i$ where $A_i\cong A$. So we have \begin{align*}
+    (\oplus_{i\in\mathbb N} A_i)\otimes_A M&\cong \oplus_{i\in \mathbb N} M\cong M[x].
+\end{align*}
+
+\newpage\subsection{Ex 7.}
+
+\textit{Let $\mathfrak p$ be a prime ideal in $A$. Show that $\mathfrak p[x]$ is a prime ideal in $A[x]$. If $\mathfrak m$ is a maximal ideal in $A$, is $\mathfrak m[x]$ a maximal ideal in $A[x]$?\\\\ Refers to Dummit and Foote , Section 9.1 of Polynomial Ring, on Page 296. "However, the ideal generated by $\mathfrak m$ and $x$ is maximal..."}\vspace{0.1 in}
+
+\ding{252} Proposition 4 of Chapter 7.2 on Page 235 of Dummit and Foote;
+
+\ding{253} Proposition 2 of Chapter 9.1 on Page 296 of Dummit and Foote.
+
+Since we have, by Prop 2 above \begin{align*}
+    A[x]/\mathfrak p [x]\cong A/\mathfrak p [x].
+\end{align*} Note that $A/\mathfrak p$ is an integral domain given $\mathfrak p$ is a prime ideal in $A$. According to Prop 4 above, we know that $A/\mathfrak p[x]$ is an integral domain. This proves that $\mathfrak p [x]$ is a prime ideal in $A[x]$.
+
+When $I\subset A$ is a maximal ideal. See contents after Prop 2 above. 
+
+$$\mathbb Z[x]/\langle 2\mathbb Z[x]\rangle \cong \mathbb Z/2\mathbb Z[x].$$ It's not a field, so it's never a maximal ideal. 
+
+\ding{253} See \href{https://math.stackexchange.com/questions/3241642/ideals-of-rx-ix-where-i-is-a-maximal-ideal-of-r}{HERE}, \href{https://math.stackexchange.com/questions/1312528/if-i-is-a-maximal-ideal-in-r-i-x-is-a-maximal-ideal-in-rx}{HERE}, and \href{https://math.stackexchange.com/questions/2830194/example-of-an-ideal-i-that-is-maximal-in-r-but-not-maximal-in-rx}{HERE}.
+
+Note that $\langle 2,x\rangle$ is maximal ideal in $\mathbb Z[x]$ since we have 
+\begin{align*}
+    \mathbb Z[x]/\langle 2,x\rangle \cong \mathbb Z/2\mathbb Z.
+\end{align*}
+We can define a map explicitly as 
+\begin{align*}
+    \varphi: \mathbb Z[x]&\rightarrow \mathbb Z/2\mathbb Z\\
+    a_0+a_1x+\cdots+a_nx^n &\mapsto [a_0]+[a_1]\cdot 0 +\cdots+ [a_n]\cdot 0^n.
+\end{align*}And we can verify that the kernel is exactly $\langle 2,x\rangle$. 
+
+Or we can interpret this isomorphism by applying Third Isomorphism. See \href{https://math.stackexchange.com/questions/355902/mathbb-zx-2-x-cong-mathbbz-2}{HERE}, and \href{https://math.stackexchange.com/questions/765235/how-to-show-mathbbzx-left2-x-right-is-isomorphic-to-mathbbz-2}{HERE}.
+
+
+\subsection{Ex 8.}\vspace{0.1 in}
+
+i) Use Prop 2.19 characterisation (iii) twice, together with the associativity of tensor product.
+
+We start with an injetive $A$-module homomorphism $f:L'\to L$. Since $M$ is flat as $A$-module, so we have 
+$$f\otimes_A 1_M: L'\otimes_A M\to L\otimes_A M$$ is injective. Again, we can apply the assumption that $N$ is flat as an $A$-module, which gives us 
+\begin{align*}
+    f\otimes_A 1_M\otimes_A 1_N: L'\otimes_A M\otimes_A N\to L\otimes_A M\otimes_A N\\
+    \Rightarrow~ f\otimes_A(1_{M\otimes_A N}): L'\otimes_A (M\otimes_A N)\to L\otimes_A (M\otimes_A N),
+\end{align*}which confirms that $M\otimes_A N$ is flat.\vspace{0.1in}
+
+ii) Needs change the order when we applying flatness. 
+
+Let's start with an injective $B$-module homomorphism $g:L'\to L$. Since $N$ is flat $B$-module, then we know that 
+$$g\otimes_B 1_N: L'\otimes_B N\to L\otimes_B N$$ is injective. And since $B$ is $A$-algebra, then we can regard this homomorphism as $A$-module homomorphism, together with the fact that $B$ is flat $A$-algebra, we have injective maps
+\begin{align*}
+    F:=g\otimes_B 1_N \otimes_A 1_B&:L'\otimes_B N\otimes_A B\to L\otimes_B N\otimes_A B ~~\text{ this induces injective map}\\
+    \Rightarrow~ F'&:L'\otimes_B B\otimes_A N\to L\otimes_B B\otimes_A N ~~\text{ this induces injective map}\\
+    \Rightarrow~ F''&:L'\otimes_A N\to L\otimes_A N,
+\end{align*}
+which gives us $N$ is a flat $A$-module.
+Notice that the reason we have apply associativity of Exercise 2.15 from book is because both $N,B$ are $(A,B)$-bimodule.
+
+
+\subsection{Ex 9.}
+
+Notice that we have $M/M'\cong M''$. And we have a fact from Dummit and Foote, Chapter 10.3 Exercise 7, Page 356.
+
+\subsection{Ex 10.} 
+
+\ding{70} \textit{Surjectivity could be interpreted as cokernel is trivial.}
+
+\ding{49} \textit{I had some misunderstanding about the proposition initially. Need counterexample for help.}
+
+\ding{168} Elegant solution, just see the post \href{https://math.stackexchange.com/questions/855222/prove-that-if-the-induced-homomorphism-m-mathfrak-am-to-n-mathfrak-an-is-su}{HERE}, which relies on the fact that tensoring preserve cokernel by right exactness, a more detailed version is \href{https://yyao.gsucreate.org/math831/831-4.pdf}{HERE}; also see the post \href{https://math.stackexchange.com/questions/1132106/module-homomorphism-question}{HERE} for the solution. \vspace{0.2in}
+
+\textit{Solution 1} According to Corollary 2.7, since $N$ is finitely generated and $\mathfrak a\subset \mathfrak R$ in Jacobson radical, we have 
+$$u(M)+\mathfrak aN=N ~\Rightarrow~ u(M)=N.$$
+Clearly we have $u(M)+\mathfrak aN\subset N$, it suffices to check the other direction of inclusion. For arbitrary $x\in N$, we can find $n_0\in N$ such that 
+$$x\in n_0+\mathfrak a N.$$
+Notice that since $M\to M/\mathfrak a M\to N/\mathfrak a N$ is surjective and we denote the compostion map as $h$, then we know that there exists $m_0$ such that $h(m_0)=n_0+\mathfrak a N$. This gives us 
+\begin{align*}
+    x\in n_0+\mathfrak a N= u(m_0)+\mathfrak a N\subset u(M)+\mathfrak a N.
+\end{align*}
+
+\textit{I couldn't proceed with this proof, because I don't know if the diagram is commute or not???}\vspace{0.1in}
+
+\textit{Solution 2} In general for cokernel, we have an exact sequence as 
+\begin{align*}
+    M ~\rightarrow~ N ~\rightarrow~ \operatorname{coker}(u):=N/u(M) ~\rightarrow~ 0
+\end{align*}
+According to Proposition 2.18, we know that we can tensor this sequence with $(A/\mathfrak a)$ as 
+\begin{align*}
+    M\otimes_A (A/\mathfrak a) &~\rightarrow~ N\otimes_A (A/\mathfrak a)  ~\rightarrow~ \operatorname{coker}(u) \otimes_A (A/\mathfrak a) ~\rightarrow~ 0\\ 
+    \Rightarrow~ M\otimes_A (A/\mathfrak a) &~\rightarrow~ N\otimes_A (A/\mathfrak a)  ~\rightarrow~ \operatorname{coker}(u) \otimes_A (A/\mathfrak a) ~\rightarrow~ 0\\
+    \Rightarrow~ M/\mathfrak aM &~\rightarrow~ N/\mathfrak aN ~\rightarrow~ \operatorname{coker}(u)/\mathfrak a\operatorname{coker}(u) ~\rightarrow~ 0.
+\end{align*}
+Notice that since the induced map $u':M/\mathfrak a M\to N/\mathfrak aN$ is surjective, so $\operatorname{coker}(u)=\mathfrak a\operatorname{coker}(u)$, it's finitely generated since it's a quotient of finitely generated module $N$. While $\mathfrak a$ lives inside Jacobson radical, by Nakayama's Lemma, we can can conclude $\operatorname{coker}(u)=0$, which is equivalently to say that $u:M\to N$ is surjective.
+
+\vspace{0.1in}
+See a solution \href{https://math.colorado.edu/~kearnes/Teaching/Courses/F20/HW/calg2p9.pdf}{HERE}, and \href{https://www.ma.imperial.ac.uk/~jcarlson/comm_alg_ICL/p_wk3_sol.pdf}{HERE}.
+
+\vspace{0.2in}\textbf{Counterexample} Converse is true in general. Why does the ideal $\mathfrak a$ have to lie in Jacobson radical?
+
+Take a non-local ring $\mathbb Z$ and it acts on itself. Consider this diagram 
+
+% https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXG1hdGhiYiBaIl0sWzEsMCwiXFxtYXRoYmIgWiJdLFswLDEsIlxcbWF0aGJiIFovM1xcbWF0aGJiIFoiXSxbMSwxLCJcXG1hdGhiYiBaLzNcXG1hdGhiYiBaIl0sWzAsMSwiXFx0aW1lcyAyIl0sWzIsMywiXFxjb25nIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzEsMywiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV1d
+\[\begin{tikzcd}
+	{\mathbb Z} & {\mathbb Z} \\
+	{\mathbb Z/3\mathbb Z} & {\mathbb Z/3\mathbb Z}
+	\arrow["{\times 2}", from=1-1, to=1-2]
+	\arrow["\cong"', dashed, from=2-1, to=2-2]
+	\arrow[two heads, from=1-1, to=2-1]
+	\arrow[two heads, from=1-2, to=2-2]
+\end{tikzcd}\]
+
+\vspace{0.3in} There's another problem of similar taste. \\ \textit{Let $I$ be a nilpotent ideal in a commutative ring $R$. Let $M,N$ be $R$-modules with $\varphi:M\to N$ an $R$-module homomorphism. Show that if the induced map $\overline{\varphi}:M/IM\to N/IN$ is surjective, then $\varphi$ is surjective.} 
+
+\vspace{0.2in} See this post \href{https://math.stackexchange.com/questions/1634503/overline-phi-m-im-to-n-in-is-surjective-then-phi-is-surjective}{HERE}. 
+
+But here we don't have the fin.gen. assumption, which forbids us to use Nakayama.
+
+\subsection{Ex 11.}
+
+\subsubsection{i)}
+
+According to the hint, we have induced isomorphisms as \begin{align*}
+    1\otimes_A: (A/\mathfrak m)\otimes_A A^m\to (A/\mathfrak m)\otimes_A A^n\\
+    \Rightarrow~ (1\otimes_A)': (A/\mathfrak m\otimes_A A)^m\to (A/\mathfrak m\otimes_A A)^n\\
+    \Rightarrow~ (1\otimes_A)'': (A/\mathfrak m)^m\to (A/\mathfrak m)^n.
+\end{align*}
+Notice that we have the last isomorphism between vector space, while in vector space of finite dimension, they're isomorphic if and only if dimension is the same. And this case we can deduce that $m=n$ as expected.
+
+\subsubsection{ii)}
+
+\subsection{Ex 12.}
+
+We follow the hint, wishing to prove that $\operatorname{Ker}(\phi)$ is a direct summand of $M$. While $M$ is finitely generated, then so will be its direct summand.
+
+Let $e_1,...,e_n$ be basis of $A^n$, while $\phi$ is surjective, we define 
+$$u_i:=\phi^{-1}(e_i)\in M $$ for all integers $1\leq i\leq n$. And we define the module all such elements generated inside $M$ as
+$$U=\langle u_1,...,u_n\rangle.$$
+
+Clearly we have $U+\operatorname{Ker}(\phi)\subset M$. 
+
+And we must have $U\cap \operatorname{Ker}(\phi)=0$ since otherwise we'll have a nontrivial element $m=m_1u_1+\cdots+m_nu_n\in M$. Here nontriviality of $m$ enforces that $m_1,...,m_n$ are not all $0$. Hence we know
+$$0=\phi(m)=\phi(m_1u_1+\cdots+m_nu_n)=m_1e_1+\cdots+m_ne_n.$$ But $m_1e_1+\cdots+m_ne_n\neq 0$ since $m_1,...,m_n$ are not all trivial and $\{e_1,...,e_n\}$ is a basis for $A^n$.
+
+To prove that $M=U\oplus \operatorname{Ker}(\phi)$, it suffices to check $M\subset U+ \operatorname{Ker}(\phi)$. For any element $m\in M$, its image is $a:=(a_1,...,a_n):=\phi(m)\in A^n$. If we have $\phi(m)=0$, then we can write it as 
+$m=0+m\in U+\operatorname{Ker}(\phi)$ since $m\in\operatorname{Ker}(\phi)$.
+
+If it's not $0$, i.e. we know $\phi(m)=a_1e_1+\cdots+a_ne_n\neq 0$ for some nontrivial coefficients $a_1,...,a_n\in A$. Furthermore, we'll get $m\in U$ by definition of $U$, which means we can write $m=m+0\in U+\operatorname{Ker}(\phi)$.
+
+In summary, we've proved that $M\subset U+\operatorname{Ker}(\phi)$ as desired.
+
+\vspace{0.1in}
+
+\ding{252} See a post \href{https://math.stackexchange.com/questions/2944038/show-that-ker-phi-is-finitely-generated}{HERE} and \href{https://math.stackexchange.com/questions/297632/the-kernel-of-a-surjective-homomorphism-is-finitely-generated}{HERER}, which elegantly uses projectiveness of free module $A^n$ in exact sequence. 
+
+See a proof \href{https://users.math.msu.edu/users/ruiterj2/Math/Documents/Fall%202018/Commutative%20Algebra/Commutative%20Algebra%20Homework%202.pdf}{HERE}.
+
+\textit{"Homomorphism preserve finitely generated"}, see this post \href{https://math.stackexchange.com/questions/4284836/a-finitely-generated-free-module-and-a-surjective-module-homomorphism-then-prove}{HERE}.
+
+\subsection{Ex 13.}
+
+Clearly we can verify that 
+$$p\circ g=\operatorname{id}_N,$$which implies that $g$ is inejctvie. So we can consider the exact sequence 
+% https://q.uiver.app/?q=WzAsNSxbMCwwLCIwIl0sWzEsMCwiTiJdLFsyLDAsIk5fQiJdLFszLDAsIkltKGcpIl0sWzQsMCwiMCJdLFswLDFdLFsxLDIsImciXSxbMiwzXSxbMyw0XSxbMiwxLCJwIiwyLHsiY3VydmUiOjIsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\[\begin{tikzcd}
+	0 & N & {N_B} & {g(N)} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["g", from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow["p"', curve={height=12pt}, dashed, from=1-3, to=1-2]
+\end{tikzcd}\]
+We know that this sequence split, so we know $N_B=N\oplus g(N)\cong$.
+
+\vspace{0.1in}
+See this solution \href{https://yyao.gsucreate.org/math831/831-4.pdf}{HERE}. 
+
+See the post \href{https://math.stackexchange.com/questions/2025812/exercise-2-13-in-atiyah-macdonald}{HERE}, and \href{https://math.stackexchange.com/questions/4005960/exercise-2-13-atiyah-macdonald-introduction-to-commutative-algebra}{HERE}.
+
+\subsection{Ex 14.} 
+\vspace{0.1in}\textit{Direct limits}\vspace{0.1in}
+
+\subsection{Ex 15.}\label{Ex 15.}\vspace{0.1 in} 
+
+Since $C$ is direct sum of all modules and $\mu_i$ is the restriction of surjective map $\mu:C\to C/D$. For any element $x\in M:=C/D$, we can express its preimage 
+$$\mu^{-1}(x)=\bigoplus_{I_0}x_i\in C=\bigoplus_{i\in I} M_i$$ where $x_i\in M_i$ and $I_0$ is a \textit{finite} index set.
+
+For the first two distinct components $x_1,x_2$, by definition of the direct system we can find $k\in I$ such that $1\leq k$ and $2\leq k$. Furthermore, we have 
+$$x_1-\mu_{1k}(x_1)\in D,~ x_2-\mu_{2k}(x_2)\in D.$$
+But this implies we can replace $x_1,x_2$ in $\mu^{-1}(x)$ by $0$ and write $\mu_{1k}(x_1)+\mu_{2k}(x_2)$ at $k$-th coordinate, i.e. we define 
+an element 
+$$y:= 0\oplus 0 \oplus \left( \oplus_{I_0\setminus\{1,2\}}x_i\right)+ \underbrace{(0,...,0, \mu_{1k}(x_1)+\mu_{2k}(x_2) ,0...,0)}_\text{$k$-th coordinate}.$$
+
+\textit{See \href{https://tex.stackexchange.com/questions/46268/horizontal-curly-braces}{HERE} for the horizontal curly braces.} 
+
+We claim that $\mu(y)=\mu(x)$ by construction.
+
+The difference is that $y$ is direct sum whose nonzero components are fewer than $|I_0|$. And we can inductively do this process, given $I_0$ is finite, and reach to one point that there's only one nonzero compoent as expected.
+
+See \href{https://math.stackexchange.com/questions/649670/atiyah-macdonald-exercise-2-15-direct-limit}{HERE} for a discussion post on MathStackExchange.
+
+\vspace{0.3in} If we have $\mu_i(x_i)=0$, more precisely we have
+$$\mu_i(x_i)\in D=\langle x_i-\mu_{ij}(x_i)\rangle_{i,j\in I}.$$
+
+Also see "A Term..." Corollary 7.5 on Page 53.
+
+\subsection{Ex 16.}
+
+Given the construction and verify the universal property. 
+See Theorem 7.4 of A Term of Commutative Algebra...
+
+\subsection{Ex 17.}
+
+In "A Term of Commutative Algebra", Ex 7.2 on Page 52 proved that 
+$$\varinjlim M_i=\bigcup M_i.$$
+The third equality holds, since the inclusion...
+
+See a post \href{https://math.stackexchange.com/questions/178372/atiyah-macdonald-exercise-2-17-direct-limit}{HERE}.
+
+\subsection{Ex 18.}\label{Ex 18.}
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJNX2kiXSxbMSwwLCJNX2oiXSxbMCwxLCJOX2kiXSxbMSwxLCJOX2oiXSxbMiwwLCJNIl0sWzIsMSwiTiJdLFswLDEsIlxcbXVfe2lqfSJdLFsyLDMsInZfe2lqfSIsMl0sWzAsMiwiXFxwaGlfaSIsMl0sWzEsMywiXFx2YXJwaGlfaiIsMl0sWzEsNCwiXFxtdV97an0iXSxbMyw1LCJ2X2oiLDJdLFs0LDUsIlxcZXhpc3RzICEgXFxwaGkiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\[\begin{tikzcd}
+	{M_i} & {M_j} & M \\
+	{N_i} & {N_j} & N
+	\arrow["{\mu_{ij}}", from=1-1, to=1-2]
+	\arrow["{v_{ij}}"', from=2-1, to=2-2]
+	\arrow["{\phi_i}"', from=1-1, to=2-1]
+	\arrow["{\phi_j}"', from=1-2, to=2-2]
+	\arrow["{\mu_{j}}", from=1-2, to=1-3]
+	\arrow["{v_j}"', from=2-2, to=2-3]
+	\arrow["{\exists ! \phi}", dashed, from=1-3, to=2-3]
+\end{tikzcd}\]
+
+Notice that we're given another cone under $\{M_i\}$ with nadir $N$ by composing $v_i\circ\phi_i:M_i\to N$. By universal property of $M$ there exists a unique map $\phi:M\to N$ as expected.
+
+\subsection{Ex 19.}
+% https://q.uiver.app/#q=WzAsMTUsWzEsMCwiTV9pIl0sWzIsMCwiTl9pIl0sWzMsMCwiUF9pIl0sWzAsMCwiMCJdLFs0LDAsIjAiXSxbMCwxLCIwIl0sWzQsMSwiMCJdLFswLDIsIjAiXSxbNCwyLCIwIl0sWzEsMSwiTV9qIl0sWzIsMSwiTl9qIl0sWzMsMSwiUF9qIl0sWzEsMiwiXFx2YXJpbmpsaW0gTSJdLFsyLDIsIlxcdmFyaW5qbGltIE4iXSxbMywyLCJcXHZhcmluamxpbSBQIl0sWzMsMF0sWzAsMSwiXFxwaGlfaSJdLFsxLDIsIlxccHNpX2kiXSxbMiw0XSxbNSw5XSxbOSwxMCwiXFxwaGlfaiJdLFsxMCwxMSwiXFxwc2lfaiJdLFsxMSw2XSxbNywxMl0sWzEyLDEzLCJcXHBoaSJdLFsxMywxNCwiXFxwc2kiXSxbMCw5LCJcXGFscGhhX3tpan0iLDJdLFsxLDEwLCJcXGJldGFfe2lqfSIsMl0sWzIsMTEsIlxcZ2FtbWFfe2lqfSIsMl0sWzksMTIsIlxcYWxwaGFfaiIsMl0sWzEwLDEzLCJcXGJldGFfaiIsMl0sWzExLDE0LCJcXGdhbW1hX2oiLDJdLFsxNCw4XV0=
+\[\begin{tikzcd}
+	0 & {M_i} & {N_i} & {P_i} & 0 \\
+	0 & {M_j} & {N_j} & {P_j} & 0 \\
+	0 & {\varinjlim M} & {\varinjlim N} & {\varinjlim P} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["{\phi_i}", from=1-2, to=1-3]
+	\arrow["{\psi_i}", from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{\phi_j}", from=2-2, to=2-3]
+	\arrow["{\psi_j}", from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+	\arrow[from=3-1, to=3-2]
+	\arrow["\phi", from=3-2, to=3-3]
+	\arrow["\psi", from=3-3, to=3-4]
+	\arrow["{\alpha_{ij}}"', from=1-2, to=2-2]
+	\arrow["{\beta_{ij}}"', from=1-3, to=2-3]
+	\arrow["{\gamma_{ij}}"', from=1-4, to=2-4]
+	\arrow["{\alpha_j}"', from=2-2, to=3-2]
+	\arrow["{\beta_j}"', from=2-3, to=3-3]
+	\arrow["{\gamma_j}"', from=2-4, to=3-4]
+	\arrow[from=3-4, to=3-5]
+\end{tikzcd}\]
+
+Note that we'll decide the index $i,j$ along the proof.
+
+According to the assumption, the first two rows are exact, we wish to show the last row is exact. Here $\phi,\psi$ are given by applying \ref{Ex 18.}. Furthermore, \ref{Ex 18.} tells us the diagram is commute. 
+
+We claim that $\operatorname{Im}\phi\subset \operatorname{Ker}\psi$. Pick an element $x\in \varinjlim M$, by \ref{Ex 15.} there exists an index $i$ such that $\alpha(x_i)=x$ where $x_i\in M_i$. While the diagram commute, we can chase the $x_i$ under the map in either ways 
+\begin{align*}
+    \psi\circ\phi\circ\alpha_i(x_i)=&~\gamma_i\circ \psi_i\circ \phi_i(x_i)=\gamma_i(0)=0\\
+    \Rightarrow~ \psi\circ\phi(x)=&~0,
+\end{align*}which proves the claim.
+
+Conversely, we need to show $\operatorname{Im}\phi\supset \operatorname{Ker}\psi$. Start by picking an element $y\in \operatorname{Ker}\psi$, then apply \ref{Ex 15.}. Hence there exists $j$ such that $\beta_j(y_j)=y$ for some $y_j\in N_j$. Given the diagram is commute, $y_i\in \operatorname{Ker}\psi_j=\operatorname{Im}\phi_j$. This implies there exists some $y'\in M_j$ such that $\phi_j(y')=y_j$. While the diagram involving $M_j,N_j,\varinjlim M,\varinjlim N$ commute, we know $\phi(\alpha_j(y'))=y$, which proves the claim.
+
+\subsection{Ex 20.}
+
+Follow the hint, using universal property...
+
+\subsection{Ex 21.}
+
+The colimit $\varinjlim A$ is a $\mathbb Z-$module. To be defined as a ring, we need to define multiplication, unit. 
+
+Firstly, we define the multiplication of $a,b\in\varinjlim A$. Pick two index such that $\alpha_i(a_i)=a,~\alpha_j(b_j)=b$ by invoking \ref{Ex 15.}. According to the definition of filtered set, we can pick another index $k$ such that $i,j\leq k$. While the diagram is commute, we also have $\alpha_k\circ\alpha_{ik}(a_i)=a,~ \alpha_k\circ\alpha_{jk}(b_j)=b$.
+And we define 
+$$a\cdot b ~:=~ \alpha_{ik}(a_i)\cdot_{A_k}\alpha_{jk}(b_j)$$ where the multiplication is taken from $A_k$.
+It is well-defined because the diagram is commute, the value is independent of choice of index. 
+Also we can define $1:=\alpha_k(1_k)$, which is also well-defined for the diagram is commute.
+See a post \href{https://mathstrek.blog/2020/05/10/commutative-algebra-52/}{HERE}.
