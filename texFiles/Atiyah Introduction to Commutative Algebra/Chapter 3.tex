@@ -154,6 +154,10 @@ Say $R=\mathbb Q\times\mathbb Q$. According to Milne's Notes on Algebraic Number
 \subsection{Ex 6.}
 
 Apply Zorn's Lemma. Since $A\neq 0$, hence it has identity. Then $\{1\}$ would be a multiplicatively closed subset. Hence $\sum$ is nonempty. Each \textit{chain} is bounded above by $A\setminus\{\text{zerodivisors}\}$. \ding{54}!!!
-This is a wrong way to apply Zorn. Because I was confused how to find the correct upper bound!!\\
+This is a wrong way to apply Zorn. Because I was confused how to find the correct upper bound?...\\
 
-The set $\sum$ is nonempty and ordered by inclusion as illustrated above. Fix a chain, the upper bound is the union of all multiplicatively close subsets \[M=\bigcup S_i\] where $S_i$ are all multiplicatively closed subsets in the chain. Clearly, union of multiplicatively closed subsets $M$ is again multiplicatively closed and crutially we know $0\notin M$. Therefore each chain is bounded above, then we can apply Zorn's Lemma to conclude the existence of a maximal element $M_0\in \sum$.
+The set $\sum$ is nonempty and ordered by inclusion as illustrated above. Fix a chain, the upper bound is the union of all multiplicatively close subsets \[S=\bigcup S_i\] where $S_i$ are all multiplicatively closed subsets in the chain. Clearly, union of multiplicatively closed subsets $S$ is again multiplicatively closed and crutially we know $0\notin S$. Therefore each chain is bounded above, then we can apply Zorn's Lemma to conclude the existence of a maximal element $S\in \sum$. \textit{This proof is exactly the same as proper ideal lies in some maximal ideal...}
+
+$\Rightarrow$: Use contrapositive for "minimal"(Is this legal??? In fact we can contradicts either three properties including minimal, prime, or ideal...). Suppose on the contrary that we have a prime ideal $\mathfrak p\subsetneq A-S$, then $A-\mathfrak p\in \sum$ is a multiplicatively closed subset such that $0\notin A-\mathfrak p$. Clearly we have $A-\mathfrak p\supsetneq S$, and this contradicts the assumption that $S$ is the maximal element in $\sum$.
+
+$\Leftarrow$: Assume $A-S$ is a minimal prime ideal. Hence $S$ is a multiplicatively closed set such that $0\notin S$. Furthermore, multiplicatively closed set $S$ is maximal given

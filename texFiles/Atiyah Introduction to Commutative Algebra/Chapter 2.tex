@@ -488,8 +488,87 @@ It is well-defined because the diagram is commute, the value is independent of c
 Also we can define $1:=\alpha_k(1_k)$, which is also well-defined for the diagram is commute.
 See a post \href{https://mathstrek.blog/2020/05/10/commutative-algebra-52/}{HERE}.
 
-\subsection{Ex 27. Absolutely Flatness}
+\subsection{Ex 27. Absolutely Flatness}\label{Chap 2 Ex 27.}
 
-i) $\Rightarrow$ ii): I have no idea what the hint was... 
-See a post \href{https://math.stackexchange.com/questions/137882/does-absolutely-flat-commutative-ring-imply-all-ideals-are-idempotent}{HERE}, and a solution \href{https://math.stackexchange.com/questions/786091/exercise-2-27-atiyah-macdonald-absolute-flatness}{HERE}.
 
+\subsubsection{} i) $\Rightarrow$ ii): I have no idea what the hint was...\\
+See a post \href{https://math.stackexchange.com/questions/137882/does-absolutely-flat-commutative-ring-imply-all-ideals-are-idempotent}{HERE}, and a solution \href{https://math.stackexchange.com/questions/786091/exercise-2-27-atiyah-macdonald-absolute-flatness}{HERE}.\\
+
+Let's start with the exact sequence % https://q.uiver.app/#q=WzAsNixbMCwwLCIwIl0sWzEsMCwiXFxsYW5nbGUgeFxccmFuZ2xlIl0sWzIsMCwiUiJdLFszLDAsIlIvXFxsYW5nbGUgeFxccmFuZ2xlIl0sWzQsMCwiMCJdLFsxLDFdLFswLDFdLFsxLDJdLFsyLDNdLFszLDRdXQ==
+\[\begin{tikzcd}
+	0 & {\langle x\rangle} & A & {A/\langle x\rangle} & 0 \\
+	& {}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+Since $A$ is absolutely flat, we know the functor $-\otimes_{A}A/\langle x\rangle$ is an exact functor. Apply this exact functor gives us 
+% https://q.uiver.app/#q=WzAsNixbMCwwLCIwIl0sWzEsMCwiXFxsYW5nbGUgeFxccmFuZ2xlXFxvdGltZXNfe0F9QS8gXFxsYW5nbGUgeFxccmFuZ2xlIl0sWzIsMCwiQVxcb3RpbWVzX3tBfSBBL1xcbGFuZ2xlIHhcXHJhbmdsZSJdLFszLDAsIkEvXFxsYW5nbGUgeFxccmFuZ2xlXFxvdGltZXNfe0F9IEEvXFxsYW5nbGUgeFxccmFuZ2xlIl0sWzQsMCwiMCJdLFsxLDFdLFswLDFdLFsxLDJdLFsyLDNdLFszLDRdXQ==
+\[\begin{tikzcd}
+	0 & {\langle x\rangle\otimes_{A}A/ \langle x\rangle} & {A\otimes_{A} A/\langle x\rangle} & {A/\langle x\rangle\otimes_{A} A/\langle x\rangle} & 0 \\
+	& {}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+Now we can apply quotient isomorphism we proved in \ref{Chap 2 Ex 2.}, which gives us 
+\begin{align*}
+    \langle x\rangle\otimes_{A}A/ \langle x\rangle &\simeq \langle x\rangle /\langle x\rangle^2=\langle x\rangle /\langle x^2\rangle.\\
+    A/\langle x\rangle\otimes_{A} A/\langle x\rangle &\simeq A/\langle x\rangle /\langle x\rangle A/\langle x\rangle\simeq A/\langle x\rangle.
+\end{align*}
+More precisely, we get a short exact sequence as follows 
+% https://q.uiver.app/#q=WzAsNixbMCwwLCIwIl0sWzEsMCwiXFxsYW5nbGUgeFxccmFuZ2xlL1xcbGFuZ2xlIHhcXHJhbmdsZV4yIl0sWzIsMCwiQS9cXGxhbmdsZSB4XFxyYW5nbGUiXSxbMywwLCJBL1xcbGFuZ2xlIHhcXHJhbmdsZSJdLFs0LDAsIjAiXSxbMSwxXSxbMCwxXSxbMSwyXSxbMiwzXSxbMyw0XV0=
+\[\begin{tikzcd}
+	0 & {\langle x\rangle/\langle x\rangle^2} & {A/\langle x\rangle} & {A/\langle x\rangle} & 0 \\
+	& {}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+Then we can apply first isomorphism theorem to enforce $\langle x\rangle/\langle x\rangle^2=0$. 
+
+??? \textit{What are the map induced from $A/\langle x\rangle\to A/\langle x\rangle$, it should be identity but I don't know...}\\ 
+
+\subsubsection{} ii) $\Rightarrow$ iii): 
+
+\subsubsection{} iii) $\Rightarrow$ i): 
+See a post \href{https://math.stackexchange.com/questions/2922564/absolutely-flat-ring}{HERE} without using Tor functor...
+
+\subsection{Ex 28.}
+\subsubsection{Boolean Ring}
+Clearly a Boolean ring is \textit{absolutely flat} by applying characterisation of absolutely flatness in \ref{Chap 2 Ex 27.}. 
+\subsubsection{Ring from Chapter 1 Exercise 7}
+The requirement of Exercise 7 in Chapter 1 \ref{Chap 1 Ex 7.} is $x=x^n$ for any $x\in A$ with an integer $n\geq 2$. 
+
+??? Didn't complete the proof. See \href{https://dangtuanhiep.files.wordpress.com/2008/09/papaioannoua_solutions_to_atiyah.pdf}{HERE}, and \href{https://byeongsuyu.github.io/_pdf/Atiyah_Macdonald_Supplement.pdf}{HERE}.
+
+Note that in general we have $\langle x\rangle\supset\langle x^2\rangle$. Conversely, we observe $ax=ax^n=ax^{n-2}x^2\in \langle x^2\rangle$, which proves $\langle x\rangle =\langle x^2\rangle$.
+
+\subsubsection{Homomorphic image}
+Let $f:A\to B$ be a ring homomorphism where $A$ is \textit{absolutely flat}, then $f(A)$ is \textit{absolutely flat}. 
+
+We use characterisation from \ref{Chap 2 Ex 27.}. For any principal ideal $\mathfrak I\subset f(A)$, we can express it as $\mathfrak I=\langle f(a)\rangle\subset f(A)$ where $a\in A$.
+Note that the surjective map $A\to f(A)$ will map an ideal in $A$ to an ideal in $f(A)$, therefore we have \begin{align*}
+    \langle f(a)\rangle=f(\langle a\rangle)=f(\langle a^2\rangle)=\langle f(a)f(a)\rangle,
+\end{align*}which proves that $f(A)$ is idempotent.
+
+One crutial step is the first and the last equality (without surjectivity assumption we'll only get $\langle f(a)\rangle \supset f(\langle a\rangle)$ and similarly for the other one). See a post \href{https://math.stackexchange.com/questions/3230980/image-of-an-ideal-under-a-surjective-ring-homomorphism-is-an-ideal}{HERE}, be careful see \href{https://math.stackexchange.com/questions/2200335/is-the-homomorphic-image-of-an-ideal-an-ideal#:~:text=It%20is%20not%20true%20that,nonzero%20ideals%20in%20a%20field.}{HERE}!
+
+\subsubsection{Absolutely flat local ring, non-unit...}
+
+Assume local ring $(A,\mathfrak m,k)$ is absolutely flat. 
+Didn't work out... See "A Term of Commutative Algebra" Ex 10.26.
+Take a non-unit $x\in A$. Since $\langle x\rangle =\langle x^2\rangle$ we have $x=ax^2$ for some $a\in A$.
+This implies $x(ax-1)=0$, while $x$ is a non-unit so $ax-1\neq 0$. So we know a non-unit must be a zero-divisor.
+
+Now let's consider the ideal $\langle x\rangle$, it's not the whole ring given $x$ is assumed to be a non-unit. So it must lies inside the maximal ideal of the local ring, i.e. 
+$$\langle x\rangle\subset\mathfrak m$$
+Recall the characterisation of Jacobson radical, we know that $ax-1$ is a unit in $A$. Therefore we have \[ x=(ax-1)^{-1}(ax-1)x=0~\Rightarrow~ \mathfrak m=0.\] And this proves that $A$ is a field. 
+
+??? In fact, we can say more about the converse. Any field is a local ring and absolutely flat.
+
+\subsubsection{}
+Apart from this problem, we found a post \href{https://math.stackexchange.com/questions/431256/nilradical-of-absolutely-flat-ring}{HERE}, which is about "nilradical of an absolutely flat ring is trivial".
