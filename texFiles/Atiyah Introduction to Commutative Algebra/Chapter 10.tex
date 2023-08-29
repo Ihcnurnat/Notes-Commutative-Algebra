@@ -1,0 +1,32 @@
+\section{Chapter 10}
+
+\subsection{Remarks on Page 101}
+
+The reason why $G$ is Hausdorff. 
+One equivalent condition for $G$ being Hausdorff is the diagonal element in $G\times G$ is closed. 
+Because for point $(x,y)$ that's off-diagonal, i.e. $x\neq y$, we can always find $U\times V$ (by applying Hausdorff in $G$) that's open in $G\times G$ with trivial intersection to the diagonal. See a post \href{https://math.stackexchange.com/questions/136922/x-is-hausdorff-if-and-only-if-the-diagonal-of-x-times-x-is-closed}{HERE}.
+
+\subsection{Lemma 10.1}
+
+\subsubsection{Details of (i)}
+could be found \href{https://math.stackexchange.com/questions/13368/intersection-of-neighborhoods-of-0-subgroup}{HERE} and \href{https://math.stackexchange.com/questions/174955/intersection-of-all-neighborhoods-of-zero-is-a-subgroup}{HERE}.
+
+\subsubsection{Details of (ii)}
+Details could be found at the same link \href{https://math.stackexchange.com/questions/174955/intersection-of-all-neighborhoods-of-zero-is-a-subgroup}{HERE}, the first answer.
+
+\subsubsection{Details for (iii)}
+For each element $g+H\in G/H$, it's the preimage of the continuous map
+% https://q.uiver.app/#q=WzAsMixbMCwwLCJnK0giXSxbMSwwLCJIIl0sWzAsMSwiLWciXV0=
+\[\begin{tikzcd}
+	{g+H} & H
+	\arrow["{-g}", from=1-1, to=1-2]
+\end{tikzcd}\] While $H$ is closed, hence $g+H$ is closed as expected. In fact, this translation map is a homeomorphism, see Atiyah's comment before Lemma 10.1.
+
+\subsubsection{Details for (iii), without incurring (ii)}
+???potentially \textit{incorrect}!\\ Conversely, assume $H=0$. Pick distinct points $x_1,x_2\in G$, then we have $x_1-x_2\neq 0$ in $G$. 
+While $H=\cap_{i\in I} U_i$ where each $U_i$ are all $0$-neighborhood. Hence we can find a $0$-neighborhood $U_1$ such that $$x_1-x_2\notin U ~\Rightarrow~ x_1\notin x_2+U_1.$$ 
+Similarly, we can find another $U_2$ such that $$x_2-x_1\notin U ~\Rightarrow~ x_2\notin x_1+U_2.$$
+Therefore $x_1+U_2\setminus U_1$ and $x_2+U_1\setminus U_2$ are two disjoint neighborhoods that contains $x_1,x_2$ respectively, which proves $G$ is Hausdorff.
+
+\subsubsection{Details for (iv)}
+$\Rightarrow$: Assume $G$ is Hausdorff but $H\neq 0$... Pick an element $y\in H$... See a post \href{URLhttps://math.stackexchange.com/questions/421109/questions-about-the-intersection-of-all-neighborhoods-of-0-in-a-topological-ab}{HERE}. 

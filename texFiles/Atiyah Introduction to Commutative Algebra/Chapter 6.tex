@@ -9,3 +9,18 @@ Not sure if the above example works well as a \textit{counterexample}???
 
 See a post \href{https://math.stackexchange.com/questions/173614/question-about-direct-sum-of-noetherian-modules-is-noetherian}{HERE}. 
 Once we allow infinte index set, at least countably infinite, we'll get $M_1\subsetneq M_1\oplus M_2\subsetneq...$
+
+\subsection{Proposition 6.7}
+
+We cannot interpret this inclusion set-theorically? Any element $n_{0}+N_i$ must also be a.... I cannot resolve the coset $+N_i$ problem... 
+
+The inclusion $N_{i-1}/N_i\subset M_{i-1}/M_i$ is given by noticing $N_i$ is \textit{exactly} kernel of the map (by definition the kernel is exactly $M_i\cap N=N_{i})$
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJOX3tpLTF9Il0sWzEsMCwiTV97aS0xfSJdLFsyLDAsIk1fe2ktMX0vTV9pIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMSwyLCJcXHBpIl1d
+\[\begin{tikzcd}
+	{N_{i-1}} & {M_{i-1}} & {M_{i-1}/M_i}
+	\arrow[hook, from=1-1, to=1-2]
+	\arrow["\pi", from=1-2, to=1-3]
+\end{tikzcd}\]
+And this induces an injective from $N_{i-1}/N_i\to M_{i-1}/M_i$, for which we can interpret it as set inclusion.
+
+\subsection{Ex 1.}
