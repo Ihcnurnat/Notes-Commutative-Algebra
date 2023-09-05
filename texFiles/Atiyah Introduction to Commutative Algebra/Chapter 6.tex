@@ -24,3 +24,31 @@ The inclusion $N_{i-1}/N_i\subset M_{i-1}/M_i$ is given by noticing $N_i$ is \te
 And this induces an injective from $N_{i-1}/N_i\to M_{i-1}/M_i$, for which we can interpret it as set inclusion.
 
 \subsection{Ex 1.}
+
+\subsubsection{(i)}
+
+Since $M$ is Noetherian, then it's finitely generated in particular. 
+Then we can apply one form of Nakayama's Lemma.
+One approach is to use induction on number of generators of $M$ ??? 
+
+I didn't get the approach suggested by the hint \href{https://math.stackexchange.com/questions/145310/proving-that-surjective-endomorphisms-of-noetherian-modules-are-isomorphisms-and}{HERE}.
+One crutial observation is the ascending chain of modules
+$$\operatorname{Ker}(u)\subset\operatorname{Ker}(u^2)\subset\operatorname{Ker}(u^3)\subset\cdots$$
+
+\subsubsection{(ii)}
+
+Couldn't understand hint from both the textbook and the post \href{https://math.stackexchange.com/questions/145310/proving-that-surjective-endomorphisms-of-noetherian-modules-are-isomorphisms-and}{HERE}. 
+
+A post \href{https://math.stackexchange.com/questions/273181/if-m-is-an-artinian-module-and-f-m-to-m-is-an-injective-homomorphism-then}{HERE}.
+
+According to Artinian assumption there exists $n\in \mathbb Z$ such that 
+$$\operatorname{Im}(u)\supset\operatorname{Im}(u^2)\supset\cdots\supset \operatorname{Im}(u^n)=\operatorname{Im}(u^{n+1})=\cdots$$
+
+And we only need to prove the claim $M=\operatorname{Im}(u^n)+\operatorname{Ker}(u^n)$... 
+
+Another cute argument is to consider any $m\in M$. There exists $m'\in M$ such that 
+$$u^n(m)=u^{n+1}(m').$$
+By injectivity of $u$ we must have $u^{n-1}(m)=u^n(m')$. Inductively, we know $m=u(m')$. Hence $\operatorname{Im}(u)=M$.
+
+\subsubsection{}
+For (ii), assumption of Artinian is necessary. Since for non-Artinian $\mathbb Z$-module $\mathbb Z$, we have $\times 2:\mathbb Z\to \mathbb Z$ injective but not surjective.

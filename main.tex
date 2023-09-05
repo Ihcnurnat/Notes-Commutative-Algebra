@@ -8,8 +8,19 @@
 \usepackage{eurosym}
 \usepackage{quiver}
 \usepackage{tikz,tikz-cd}
-%\usepackage[dvipsnames]{xcolor}
+\usepackage{xcolor}
 \usepackage{dsfont}
+\usepackage[tikz]{ocgx2} 
+%see here:  https://tex.stackexchange.com/questions/520455/how-to-hide-some-text-until-the-reader-clicks-on-it
+
+
+
+% Bibliography, see here: 
+% https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
+%\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+%\addbibresource{bibliography.bib}
+
+
 
 \newcommand{\QQ}{\mathbb Q}
 \newcommand{\RR}{\mathbb R}
@@ -19,11 +30,21 @@
 \newcommand{\rad}{\operatorname{rad}}
 \newcommand{\Ann}{\operatorname{Ann}}
 
+
+
 \title{Notes : Introduction to Commutative Algebra Atiyah}
 %\author{runchitan }
 %\date{September 2022}
 
+
+
 \begin{document}
+
+
+
+
+
+
 
 %\maketitle
 \tableofcontents
@@ -40,4 +61,8 @@
 \newpage\subimport{texFiles/Atiyah Introduction to Commutative Algebra/}{Chapter 10}
 \newpage\part{A Term of Commutative Algebra}
 \newpage\subimport{texFiles/A Term of Commutative Algebra/}{Chapter 3}
+
+\newpage\bibliographystyle{plain}
+\bibliography{bibliography.bib}
+%\printbibliography[heading=bibintoc, title={Bibliography}]
 \end{document}

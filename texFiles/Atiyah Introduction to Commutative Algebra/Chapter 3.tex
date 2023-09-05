@@ -178,4 +178,39 @@ Note that on "A Term..." there's another approach, requiring saturation...
 
 \subsubsection{(i)}
 
+$\Leftarrow$: Assume $A-S$ is a union of prime ideals. Then $S$ is a intersection of multiplicatively closed subset, which is again a multiplicativly closed subset. We only need to prove that 
+$$xy\in S ~\Rightarrow~ x\in S ~\text{ and }~ y\in S.$$
+This is true since $xy\notin \mathfrak p_i$ for each prime ideals implies $x\notin\mathfrak p_i$ and $y\notin\mathfrak p_i$. While $\mathfrak p_i$ is arbitrary, we can conclude that $x\in S$ and $y\in S$.
+
+Verified at \cite{altman} Exercise 3.24. \ding{52}
+
 $\Rightarrow$: Assume $S$ is saturated. 
+
+We note that $A-S$ contains no unit, so we can cover it by $\{\mathfrak p_i\}_{i\in I}$ for some index $I$ in which every $\mathfrak p_i$ is a maximal ideal. 
+Now we need to prove $\mathfrak p_i\cap (A-S)$ is an ideal and prime. 
+
+The above approach is potentially wrong... I couldn't work out. Because I couldn't prove \textit{is} an additive Abelian group. 
+See a post \href{https://math.stackexchange.com/questions/4329999/saturated-set-and-union-of-prime-ideals}{HERE}. 
+
+\subsubsection{}
+\textit{Potentially wrong...}
+It turned out I choose the wrong covering. See a post \href{https://math.stackexchange.com/questions/3988316/proof-verification-atiyah-macdonald-exercise-3-7i}{HERE}. It has some slight problems...
+
+Start with fact that any $x\in A-S$ is a non-unit, under the ring homomorphism $f:A\to S^{-1}A$ the element $f(x)$ will still be a non-unit (???). Hence we can find a maximal ideal $\mathfrak q\subset S^{-1}A$ contains $f(x)$. In particularly, it's prime. By correspondence theorem we know its preimage $f^{-1}(\mathfrak q)$ will have trivial intersection with $S$. Hence 
+$$x\in f^{-1}(\mathfrak q)\subset A-S$$ and this proves that $A-S$ is a union of prime ideals.\\
+
+I have some doubts towards the above argument. Ring homo will map unit to unit. But ring homo won't necessarily map non-unit to non-unit, for example take inclusion map $\mathbb Z\to \mathbb Q$. 
+But is the argument right in this specific case?
+
+% toggle layer visibility
+%\switchocg{myLayer1}{Click to show/hide PDF Layer} 
+%\begin{ocg}{MyLayer1}{myLayer1}{off}
+\subsubsection{a verified approach}
+
+According to a post \href{https://math.stackexchange.com/questions/57684/complement-of-saturated-set}{HERE}. One important claim is that we can find a maximal ideal containing $\langle x\rangle$ and disjoint from $S$. This is possible, see Eisenbud's "Commutative Algebra...", Page 70, construction of a prime ideal.
+
+Or see "A Term..." Proposition 3.9, Exercise 3.24. See \href{https://math.stackexchange.com/questions/4329999/saturated-set-and-union-of-prime-ideals}{HERE}.
+
+\subsubsection{Examples}
+
+Assumption of $S$ being saturated is necessary. Note that $\{1\}\subset \mathbb Z$ is a multiplicatively closed subset that's not \textit{saturated}, whereas $\{-1,1\}$ is saturated. And clearly $\mathbb Z\setminus \{1\}$ isn't a union of prime ideals for we have $1,-1$ inside that could never be covered by prime ideals. Indeed, we note $\mathbb Z\setminus \{-1,1\}$ is a union of primes. (?) 
