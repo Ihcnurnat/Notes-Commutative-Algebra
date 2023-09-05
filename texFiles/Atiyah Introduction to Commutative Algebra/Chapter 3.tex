@@ -165,7 +165,7 @@ $\Leftarrow$: Assume $A-S$ is a minimal prime ideal. Hence $S$ is a multiplicati
 \subsubsection{}
 One concern was about contrapositive, is that legal? Another problem I encountered was taking complement of multiplicatively closed subset. It will not necessarily give us an ideal. For example, consider $\mathbb Q[x]$ with a multiplicativly closed subset $S_0=\{1,x,x^2,...\}$, the complement isn't even closed under addition for we have $x+1/2,x-1/2$. Or another even simpler example, take $S_1=\{1\}$ in $\mathbb Z$.
 
-However, "complement of maximal multiplicatively closed subset \textit{is} a prime ideal." See this post \href{https://math.stackexchange.com/questions/3704318/complement-of-multiplicative-set-is-a-prime-ideal}{HERE}. 
+However, "complement of maximal multiplicatively closed subset \textit{is} a prime ideal." See this post \href{https://math.stackexchange.com/questions/3704318/complement-of-multiplicative-set-is-a-prime-ideal}{HERE}. \todo{\ding{52}}
 
 \subsubsection{}
 A post \href{https://math.stackexchange.com/questions/25739/complement-of-maximal-multiplicative-set-is-a-prime-ideal}{HERE}. A post \href{https://math.stackexchange.com/questions/3962023/atiyah-macdonald-exercise-3-6}{HERE}, see this post "conversely". 
@@ -182,7 +182,7 @@ $\Leftarrow$: Assume $A-S$ is a union of prime ideals. Then $S$ is a intersectio
 $$xy\in S ~\Rightarrow~ x\in S ~\text{ and }~ y\in S.$$
 This is true since $xy\notin \mathfrak p_i$ for each prime ideals implies $x\notin\mathfrak p_i$ and $y\notin\mathfrak p_i$. While $\mathfrak p_i$ is arbitrary, we can conclude that $x\in S$ and $y\in S$.
 
-Verified at \cite{altman} Exercise 3.24. \ding{52}
+Verified at \cite{altman} Exercise 3.24. \todo{\ding{52}}
 
 $\Rightarrow$: Assume $S$ is saturated. 
 
@@ -209,8 +209,50 @@ But is the argument right in this specific case?
 
 According to a post \href{https://math.stackexchange.com/questions/57684/complement-of-saturated-set}{HERE}. One important claim is that we can find a maximal ideal containing $\langle x\rangle$ and disjoint from $S$. This is possible, see Eisenbud's "Commutative Algebra...", Page 70, construction of a prime ideal.
 
-Or see "A Term..." Proposition 3.9, Exercise 3.24. See \href{https://math.stackexchange.com/questions/4329999/saturated-set-and-union-of-prime-ideals}{HERE}.
+Or see "A Term..." Proposition 3.9, Exercise 3.24. See \href{https://math.stackexchange.com/questions/4329999/saturated-set-and-union-of-prime-ideals}{HERE}. \todo{\ding{52}}
 
 \subsubsection{Examples}
 
 Assumption of $S$ being saturated is necessary. Note that $\{1\}\subset \mathbb Z$ is a multiplicatively closed subset that's not \textit{saturated}, whereas $\{-1,1\}$ is saturated. And clearly $\mathbb Z\setminus \{1\}$ isn't a union of prime ideals for we have $1,-1$ inside that could never be covered by prime ideals. Indeed, we note $\mathbb Z\setminus \{-1,1\}$ is a union of primes. (?) 
+
+\subsubsection{(ii)}
+
+Let $\sum$ denotes the set of all \textit{saturated} multiplicatively closed subset in $A$ that containing $S$. Note that in each \textit{chain} $\{S_i\}_{i\in I}$ where $I$ is some index set, the intersection 
+$$A:=\bigcap_{i\in I} S_i$$ is again saturated multiplicatively closed subset: clearly it contains $1$; multiplicatively closed for each $S_i$ is so; and saturated for the similar reason. Also it must contain $S$, so $A\in\sum$.
+
+Hence each chain in $\sum$ is bounded below, Zorn's Lemma gives us the existence of minimal element. 
+Suppose we have two distinct minimal element $A_1,A_2$, i.e. we have $A_1-A_2\neq\emptyset,A_2-A_1\neq\emptyset$. Pick $x\in A_1-A_2$ and $y\in A_2-A_1$. Then $xy\in A_1\cap A_2$, while $A_1$ is saturated then $x\in A_2$, contradiction! Therefore there's only one minimal element, i.e. the smallest one, in $\sum$ and we can denote it as $\overline{S}$.
+
+Let the set $\{\mathfrak Q_i\}_{i\in J}$ denotes the set of all prime ideals in $A$ that do not meet $S$ for some index set $J$. According to (i),
+$$A-\bigcup_{i\in J}\mathfrak Q_i$$ is a saturated multiplicatively closed subset. 
+Clearly we have 
+$$S\subset A-\bigcup_{i\in J}\mathfrak Q_i,$$ while $\overline{S}$ is smallest saturated one we know
+$$\overline{S} \subset A-\bigcup_{i\in J}\mathfrak Q_i.$$
+Also we must have the inclusion in converse direction. Otherwise, say $A-\bigcup_{i\in J}\mathfrak Q_i\subsetneq \overline{S}$, we'll get a strictly larger set of prime ideals that don't meet $S$ indexed by $J_0$. This is because $\overline{S}$ is saturated we can apply (i) above. And this is a contradiction for definition of $J$. Hence we can conclude 
+$$\overline{S}= A-\bigcup_{i\in J}\mathfrak Q_i.$$
+
+See a verified post \href{http://www.math.caltech.edu/~2016-17/1term/ma120a/solutions/Sol1.pdf}{HERE}. \todo{\ding{52}}
+
+\subsubsection{Compute a specifc example, wrong}
+
+For the case where $\mathfrak a=A$, we have $1+\mathfrak a=A$ and $\overline{S}=A$.
+
+Now we can assume $1\notin \mathfrak a$.
+Note that $\langle 1+\mathfrak a,~ \mathfrak a\rangle=\langle 1\rangle=A$. So the set of all prime ideals in $A$ that do not meet $S$ lies strictly inside $\mathfrak a$. \todo{\ding{53} Wrong}
+
+For any prime ideal $\mathfrak p\subsetneq \mathfrak a$, we claim that $\mathfrak p\cap (1+\mathfrak a)=\emptyset$. Suppose we have 
+$$1+a=p$$ for $a\in\mathfrak a$ and $p\in\mathfrak p\subset\mathfrak a$, then $1\in \mathfrak a$, contradiction. 
+Therefore we know that any prime ideals lies strictly inside $\mathfrak a$ are exactly the set of prime ideals that do not meet $S$. Hence we can conclude 
+$$\overline{S}=\bigcup_{\mathfrak p\in\operatorname{Spec}A,~\mathfrak p\subsetneq \mathfrak a}\mathfrak p.$$
+
+Above argument is wrong! I made a mistake in the original proof \ding{53}
+
+??? Recall the localisation, we have 
+$$\overline{S}=A-\left(\bigcup_{\mathfrak q\in\operatorname{Spec}(S^{-1}A)}f^{-1}(\mathfrak q)\right)$$ where $f:A\to S^{-1}A$.
+
+\subsubsection{Compute a specifc example, verified}
+
+See \href{https://math.stackexchange.com/questions/1635191/saturation-of-a-multiplicatively-closed-subset}{HERE}. And \cite{altman} Exercise 3.25. \todo{\ding{52}}
+
+The correct approach is to consider all primes that containing $\mathfrak a$.
+$$\overline{S}=A-\left(\bigcup_{\mathfrak p\in\operatorname{Spec}(A),~ \mathfrak a\subset\mathfrak p}\right)\mathfrak p.$$

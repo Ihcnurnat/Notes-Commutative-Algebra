@@ -14,11 +14,29 @@
 %see here:  https://tex.stackexchange.com/questions/520455/how-to-hide-some-text-until-the-reader-clicks-on-it
 
 
+% See here: https://tex.stackexchange.com/questions/8458/making-the-bibliography-appear-in-the-table-of-contents
+% this is for displaying bibliography in tableOfContents
+\usepackage[nottoc,numbib]{tocbibind}
+
 
 % Bibliography, see here: 
 % https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
 %\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
 %\addbibresource{bibliography.bib}
+
+
+
+% todo comments, see here:
+% http://tug.ctan.org/macros/latex/contrib/todonotes/todonotes.pdf
+% https://ctan.org/pkg/todonotes
+\usepackage{ifthen,xkeyval,xcolor,graphicx,calc,tikz}
+% refers to here: http://tug.ctan.org/macros/latex/contrib/todonotes/todonotes.pdf
+\usepackage{todonotes}
+%\usepackage[table]{xcolor}
+\usepackage{menukeys}
+\setuptodonotes{fancyline, color=orange!60}
+\graphicspath{ {./images/} }
+
 
 
 
