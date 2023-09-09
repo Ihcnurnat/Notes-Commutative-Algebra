@@ -1,0 +1,19 @@
+\section{Chapter 13}
+
+\subsection{Ex 13.41}\label{Altman Ex 13.41} \textit{Let $R$ be a ring, $X := \operatorname{Spec}(R)$, and $U$ an open subset. Show $U$ is quasi-compact if and only if $X-U = V(\mathfrak a)$ where $\mathfrak a$ is finitely generated.}
+    
+One equivalent statement for the latter part is "$U$ is a finite union of basic open sets". See Atiyah's Exercise 17,\ref{Atiyah Chapter 1 Ex 17.}, of Chapter 1. \todo{\ding{52}}
+\begin{proof}
+Assume $U$ is quasi-compact. Let $\{D(f_i)\}_{i\in I}$ be an open cover for $U$ where $I$ is an index set. Given $U$ is quasi-compact, there exists a \textit{finite} index set $J\subset I$ such that $\{D(f_i)\}_{i\in J}$ is a subcover. Since $U$ is open, then there exists a closed subset 
+$$V(f)=X-U$$ for some $f\in R$ and we have 
+\begin{align*}
+    U =& \bigcup_{i\in I} D(f_i) = \bigcup_{i\in J} D(f_i)
+    ~\Rightarrow~ V(f) = \bigcap_{i\in J}V(f_i) = V\left(\bigcup_{i\in J} \langle f_i\rangle\right).
+\end{align*}
+Now we define $\mathfrak a=\bigcup_{i\in J} \langle f_i\rangle$, which is finitely-generated as desired.
+
+Conversely, assume we have $U=X-\mathbf V(\mathfrak a)$ for a finitely-generated ideal $\mathfrak a=\langle f_1,...,f_m\rangle\subset R$ where $m\in\mathbb Z_+$. And this implies 
+\begin{align*}
+    U =& X-\mathbf V(\mathfrak a) = \bigcup_{1\leq i\leq m}D(f_i).
+\end{align*}While each $D(f_i)$ is quasi-compact by (vi) of \ref{Atiyah Chapter 1 Ex 17.}, we know $U$ is quasi-compact. 
+\end{proof}
