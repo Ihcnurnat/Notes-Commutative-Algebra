@@ -1,7 +1,8 @@
-%\chapter{\Huge \textbf{Chapter 1}}
 \section{Chapter 1}
 
-\subsection{Ex 1.}
+
+
+\subsection{Ex 1.}\label{Atiyah Chapter 1 Ex 1.}
 \textit{See MAT's Page 1.}\\
 For a nilpotent element $x$ and a unit $a$, we can prove that $a+x$ is again a unit.
 
@@ -10,7 +11,9 @@ Notice that
 $$(1-y)(1+y+\cdots+y^{n-1})=1-y^n=1-(-a^{-1}x)^n=1,$$ which suggests that $1-y$ is a unit.
 So we have $a+x=a(1-y)$ is product of unit, thus it's a unit as expected.
 
-\subsection{Ex 2.}\label{Chap 1 Ex 2.}
+
+
+\subsection{Ex 2.}\label{Atiyah Chapter 1 Ex 2.}
 \subsubsection{(i)} $\Leftarrow:$ standard application of \textbf{Ex.1}
 
 %$\Rightarrow:$ Induction on the degree of $f$. Conclusion is correct when there's only one term $a_0=f$.\newpage
@@ -70,13 +73,15 @@ In fact, we have many versions of Gauss's Lemma.
 
 
 
-\newpage\subsection{Ex 3.}
+\subsection{Ex 3.}\label{Atiyah Chapter 1 Ex 3.}
 Induction on $r$, which holds for $r=1$. Suppose all results hold for $A[x_1,...,x_{r-1}]$.\\\\
 $f$ is a unit in $A[x_1,...,x_{r-1}][x_r]$ $\Leftrightarrow$ $a_0$ is a unit in $A[x_1,...,x_{r-1}]$ and $a_1,...,a_n\in A[x_1,...,x_{r-1}]$ are nilpotent.\\\\
 One thing to notice is that here the coefficients are polynomial with indeterminants, so we can use the induction assumption to finish( since polynomial is of finite degree and we only have to apply finitely many times of results).\\\\
 For example, $a_0$ is a polynomial and a unit in $A[x_1,...,x_{r-1}]$, thus we could distract $b_0\in A[x_1,...,x_{r-2}]$ is a unit and finitely many polynomial $b_1,...b_{?}$ that are nilpotent.
 After applying (i) for finitely many times, we could find a "pure" coefficient in $A$ that's a unit, along with many polynomial that're nilpotent. Since their coefficients are all nilpotent, we could repeat (ii) for finitely many times and argue that all coefficients other than the first one in $A$ are nilpotent.\\\\
 So the generalised version of theorem states that the constant term is a unit in $A$, and other coefficients are nilpotent.
+
+
 
 \subsection{Ex 4.}
 Maximal ideal is prime ideal, thus Jacobson Radical $\supset $ Nilradical.\\
@@ -86,6 +91,7 @@ Now we let $y=x$, this gives us
 \begin{align*}
     1-fx&=1-a_0x-a_1x^2-\cdots-a_nx^{n+1}
 \end{align*}is a unit. Use (ii) of Ex. 2, we know that all $a_0,a_1,...,a_n$ are nilpotent then $f$ is nilpotent by (iii) of Ex 2.
+
 
 
 \subsection{Ex 5.} 
@@ -156,6 +162,8 @@ By Prop 1.9 we know that in particular we
 have for $y=1$,
 $$1-xy=1-x$$ is a unit. But then we have $(1-x)x=x-x^2=0$, which implies that $1-x$ is a zero-divisor. This is a contradiction since a unit cannot be a zero-divisor. \
 
+
+
 \subsection{Ex 7.}\label{Chap 1 Ex 7.}
 
 Fix a prime ideal $I$.
@@ -166,15 +174,19 @@ For a nonzero element $a\in A$, there exists $n\geq 2$ such that $a^n=a$.
 Note that we have 
 $$([a]^{n-1}-1)[a]=0 ~\Rightarrow~ [a]^{n-1}=1$$ where $[a]$ is the natural projection from $a$ onto integral domain $A/I$. Notice that $[a]^{n-2}[a]=1$, which proves that any non-zero element is a unit as desired. This implies that $A/I$ is a field, hence every prime ideal is a maximal ideal.
 
-\newpage\subsection{Ex 8.}
 
-Nilradical is the minimal element with respect to inclusion. ??\ding{54} This element has to retain to be prime.\\
 
-\textbf{Fact}: Intersection of prime ideal isn't necessarily prime. For example, in $\mathbb Z$, we have two prime ideals $(2),(3)$. Their intersection is precisely $(6)$, which isn't prime.\\
+\subsection{Ex 8.}\label{Atiyah Chapter 1 Ex 8.}
 
-\textbf{Fact}: How about maximal ideal?\\ 1) As long as we have two maximal ideal with intersection as either one's proper subset, then their intersection mustn't be maximal;\\ 2) since $\mathbb Z$ is P.I.D, non-zero prime ideal is maximal ideal. We can take the same example as before.\\
+\subsubsection{}
+Nilradical is the minimal element with respect to inclusion. ??\ding{54} This element has to retain to be prime.
 
-Although we know that intersection of prime ideals are not necessarily prime ideal, here we only need to consider a special case, which is for applying Zorn's Lemma. We give the order of all ideals $I_1\leq I_2$ if and only if $I_2\subset I_1$. This special case is to prove that for all prime ideals that are in one \textit{chain}, their intersection is again a prime ideal. Refers \href{https://math.stackexchange.com/questions/944274/intersection-of-prime-ideals-in-a-chain-is-prime}{HERE}.
+\textbf{Fact}: Intersection of prime ideal isn't necessarily prime. For example, in $\mathbb Z$, we have two prime ideals $(2),(3)$. Their intersection is precisely $(6)$, which isn't prime.
+
+\textbf{Fact}: How about maximal ideal?\\ 1) As long as we have two maximal ideal with intersection as either one's proper subset, then their intersection mustn't be maximal;\\ 2) since $\mathbb Z$ is P.I.D, non-zero prime ideal is maximal ideal. We can take the same example as before.
+
+\subsubsection{}
+Although we know that intersection of prime ideals are not necessarily prime ideal, here we only need to consider a special case, which is for applying Zorn's Lemma. We give the order of all ideals $I_1\leq I_2$ if and only if $I_2\subset I_1$. This special case is to prove that for all prime ideals that are in one \textit{chain}, their intersection is again a prime ideal. Refers \href{https://math.stackexchange.com/questions/944274/intersection-of-prime-ideals-in-a-chain-is-prime}{HERE}\todo{\ding{52}}.
 
 ??? But for this post, I don't see the reason why it requires existence of prime ideals. Zorn's Lemma only needs "for every chain it has a upper bound..."
 
@@ -186,7 +198,11 @@ Without loss of generality, we can assume that $I_{i_1}\subset I_{i_2}$. So we h
 $$ab\notin I_{i_1} ~~ \Rightarrow ~~ ab\notin \cap _{i\in A}I_i.$$
 This proves that $\cap _{i\in A} I_i$ is a prime ideal as expected.
 
-\newpage\subsection{Ex 9.}
+\subsubsection{}
+
+See \cite{altman} 3.17; minimal prime over an ideal...
+
+\subsection{Ex 9.}
 
 $\Leftarrow:$ Suppose we have some prime ideals $\{P_i\}_{i\in A}$ for some index set $A$, such that 
 $$\mathfrak a=\bigcap _{i\in A} P_i.$$
@@ -212,7 +228,9 @@ It suffices to prove the other direction, in which we intend to use a contraposi
 $$r^k\notin \mathfrak a$$ for any $k\in \mathbb N$. So $S:=\{1,r,r^2,...\}$ is a multiplicative set (this is defined \href{https://www.jmilne.org/math/xnotes/CA.pdf}{HERE} page 5). 
 According to \href{https://www.jmilne.org/math/xnotes/CA.pdf}{Prop 2.2 Page 5}, we know that $R\setminus S$ contains a prime ideal that containing $\mathfrak a$. This implies that we have $x\notin \cap_{i\in B}Q_i$ as desired.
 
-\newpage\subsection{Ex 10.}
+
+
+\subsection{Ex 10.}
 
 ii) $\Rightarrow$ iii): We prove that $\mathfrak R$ is a maximal ideal. This is because if we have
 $$\mathfrak R\subsetneq I\subset A$$ for some ideal $I$, then this implies that we have $i\in I\setminus \mathfrak R$. While the nilradical composed of all elements that're nilpotent, then we know that $i$ must be a unit. This implies that $I=A$, which confirms that $\mathfrak R$ is prime.\\
@@ -222,6 +240,8 @@ While by definition
 $$\mathfrak R=\bigcap_{i\in J} P_i$$ for all prime ideals $P_i\subset A$ and for some index set $J$. By Prop 1.11 (ii), we know that $\mathfrak R=P_{i_0}$ for some $i_0\in J$. This implies that all prime ideals in $J$ is the same, otherwise the equality doesn't hold. So this confirms that $A$ has exactly one prime ideal./.;/'l''''';l.l,/.\\
 
 \noindent i) $\Rightarrow$ ii): We have a ring $A$ that only has one prime ideal. While each maximal ideal is prime, then at most we have one maximal ideal. Suppose $A=0$, the case is trivial. For $A\neq 0$, Theorem 1.3 let us conclude that we have at least one maximal ideal. So in this case we have exactly one maximal ideal, which equals to $\mathfrak R$. Each element of $A$ is either a unit or a non-unit. The first case is done, then we consider the case for a non-unit, which is contained in a maximal ideal, namely $\mathfrak R$. And it must be nilpotent since it's also in nilradical. So we know that every element of $A$ is either a unit or nilpotent.
+
+
 
 \subsection{Ex 11.}
 
@@ -249,6 +269,8 @@ We need to prove that $\langle x,y\rangle =\langle x+y+xy\rangle$. Clearly we ha
 \end{align*}
 And this completes the other direction of inclusion.
 
+
+
 \subsection{Ex 12.}
 
 \vspace{0.2in}Also see Spring 2023 506 HW 4 Problem 3.\vspace{0.2in}
@@ -262,6 +284,8 @@ $$1=x-(x-1)\in \mathfrak m,$$ which contradicts the fact that $\mathfrak m$ is a
 
 Solution \href{https://math.stackexchange.com/questions/3180861/proof-check-idempotents-of-a-local-commutative-ring}{HERE} and \href{https://math.stackexchange.com/questions/725171/idempotents-in-a-local-ring}{HERE}.
 
+
+
 \subsection{Ex 13.}
 
 \indent Firstly we prove that the ideal $\mathfrak a$ couldn't be the whole ring. Suppose on the contrary that $\mathfrak a=(1)$, then we can find a $g\in A:=K[x_f]$ such that 
@@ -270,6 +294,8 @@ $$g\prod_{i\in J}f_i=1$$ for some index set $J$. This implies that $f$ is a unit
 By Corollary 1.4, there exists a maximal ideal $\mathfrak m$ that contains $\mathfrak a$. We construct a field $K_1:=A/\mathfrak m$, which contains a root for any $f\in \Sigma$ since it's defined as $0$ in this field. Repeat this process, and since each polynomial has finite degree, union of infinitely many $K_i$ will contain all of the roots. 
 
 The rest is precisely what the problem suggested.
+
+
 
 \subsection{Ex 14.}
 
@@ -299,6 +325,8 @@ $$(\mathfrak p+\langle a\rangle)(\mathfrak p+\langle b\rangle)\subset \mathfrak 
 On page 8 of the book, we know that zero-divisors are union of annihilators 
 $$D=\bigcup_{x\neq 0} \operatorname{Ann}(x).$$ So zero-divisors are union of ideals (annihilator is a special case for quotient ideal). Each ideal $\operatorname{Ann}(x)\in \Sigma$ since it's composed of all zero-divisors. By the previous part we've build the existence of maximal element with respect to inclusion, so we can cover all zero-divisors $D$ with those maximal elements $\mathfrak p$ that are also prime ideals. So we've proved that the set of zero-divisors in $A$ is a union of prime ideals.
 
+
+
 \subsection{Ex 15.}
 
 \subsubsection{(i)}
@@ -320,6 +348,8 @@ $$V(E)=V(\mathfrak a)=V(\rad(\mathfrak a)).$$
 In summary we have $$V(\mathfrak a\cap \mathfrak b)=V(\mathfrak{ab})=V(\mathfrak a)\cup V(\mathfrak b).$$
 
 See \cite{altman} Exercise 2.23 on Page 15. \todo{\ding{52}}
+
+
 
 \subsection{Ex 16.}
 
@@ -371,6 +401,8 @@ Verified on Page 28, Example 1.8 from \cite{QingLiu2002algebraic}. \todo{\ding{5
 For irreducibility of $\mathbb R[x,y]$, see a post \href{https://math.stackexchange.com/questions/125146/irreducibility-of-a-polynomial-in-the-ring-mathbbrx-y}{HERE}.
 
 See \href{https://math.stackexchange.com/questions/1281142/what-are-the-closed-points-of-mathbba-mathbbr2-operatornamespec}{HERE} for description for $\operatorname{Spec}(\mathbb R[x,y])$. 
+
+
 
 \subsection{Ex 17.}\label{Atiyah Chapter 1 Ex 17.}
 Here we use $D(f):=X_{f}$.
@@ -473,3 +505,110 @@ Assume $U=\bigcup_{i=1}^m D(f_i)$, then define $\mathfrak a=\langle f_1,...,f_m\
 Conversely, say $\mathfrak a=\langle f_1,...,f_m\rangle$. Then according the above equality we know \[\{\mathbf D(f_i)\}_{1\leq i\leq m}\] will cover $U$.
 \end{proof}
 See a lecture note \href{https://math.stanford.edu/~conrad/Perfseminar/Notes/L3.pdf}{HERE}.
+
+
+
+\subsection{Ex 18.}\label{Atiyah Chapter 1 Ex 18.}
+
+\subsubsection{(i)}
+
+Follows immediately according to (ii).
+
+\subsubsection{(ii)}
+
+By definition we have \begin{align*}
+    \overline{\{x\}} =& \bigcap_{\mathfrak p\subset \mathfrak p_x} \mathbf V(\mathfrak p) \supset \mathbf V(\mathfrak p_x).
+\end{align*}Conversely, for any prime ideal $\mathfrak q\in V(\mathfrak p)$ where $\mathfrak p\subset \mathfrak p_x$ is arbitrary. When $\mathfrak p=\mathfrak p_x$, we have $\mathfrak p\subset \mathfrak q$. And this implies $\mathfrak q\in \mathbf V(\mathfrak p_x)$, then 
+\[\bigcap_{\mathfrak p\subset \mathfrak p_x} \mathbf V(\mathfrak p) = \mathbf V(\mathfrak p_x) ~\Rightarrow~ \overline{\{x\}} = \mathbf V(\mathfrak p_x)\]
+
+See Exercise 13.16 \cite{altman} on Page 98. \todo{???}
+
+\subsubsection{(iii)} 
+
+We use contrapositive argument. We wish to prove that if $y$ lies in any neighborhood of $x$ and vice versa, then $x=y$. \todo{Wrong contrapositive ???} 
+
+\textit{A potentially wrong approach...}
+Negation of the later part gives us for any open set $O$, we have either $a,b\in O$ or $a,b\notin O$. Take $O:=\mathbf D(a)$ in the second case will forces $b\in\mathbf V(a)$. Similarly we know the other inclusion, which gives us $a=b$. \todo{Is this correct?}
+
+See \href{https://math.stackexchange.com/questions/108503/operatornamespec-a-as-a-topological-space-satisfying-the-t-0-axiom}{HERE} \todo{\ding{52}} for a solution, which used a middle claim...
+See \href{https://en.wikipedia.org/wiki/Kolmogorov_space}{Kolmogorov space} from Wiki.
+
+
+
+\subsection{Ex 19.}\label{Atiyah Chapter 1 Ex 19.}
+
+\subsubsection{Equivalent Definition for Irreducible}
+
+Take $X$ a topological space. T.F.A.E. 
+\begin{itemize}
+    \item (a) Space $X$ cannot be expressed as a union of two closed proper subset.
+    \item (b) Every pair of non-empty open sets in $X$ intersect.
+    \item (c) Every non-empty open set is dense in $X$.
+\end{itemize}
+
+(a) $\Leftrightarrow$ (b): Contrapositive. Suppose there exist $U_1,U_2$ that do not intersect in $X$, then $X$ is reducible given $$X=(X\setminus U_1)\cup(X\setminus U_2)$$ where both $X\setminus U_1,X\setminus U_2$ are non-empty and closed. 
+Conversely, suppose $X$ is reducible. Then $X=V_1\cup V_2$ where $V_1,V_2$ are non-empty closed subsets of $X$. Then both $X\setminus V_1,X\setminus V_2$ will be non-empty proper open subsets of $X$. But they won't have intersection given 
+$$(X\setminus V_1)\cap(X\setminus V_2)=X\setminus [V_1\cup V_2]=\emptyset.$$
+
+(a) $\Leftrightarrow$ (c): Contrapositive. Assume a non-empty open set $U$ isn't dense in $X$, i.e. $\overline{U}\subsetneq X$. Therefore we have $$X=\overline{U}\cup (X\setminus U),$$ which contradicts the assumption that $X$ is irreducible. Conversely, suppose $X$ is reducible. Then $X=V_1\cup V_2$ where $V_1,V_2$ are non-empty proper closed subsets of $X$. But immediately we have $(X\setminus V_1)$ is a non-empty open set in $X$, and it's not dense in $X$ since 
+$$\overline{X\setminus V_1}\subset V_2\subsetneq X.$$
+
+\subsubsection{}
+
+\begin{proof}
+    Assume $\mathfrak q:=\operatorname{Nil}(A)$ is a prime ideal, we wish to show that $\operatorname{Spec}(A)$ is irreducible. By one characterisation of nilradical, we have 
+    $$\mathfrak q=\bigcap_{\mathfrak p\in\operatorname{Spec}A}\mathfrak p ~\Rightarrow~ \operatorname{Spec}A\subset \mathbf V(\mathfrak q)~\Rightarrow~ \operatorname{Spec}A= \mathbf V(\mathfrak q).$$
+    Furthermore, recall in previous exercise \ref{Atiyah Chapter 1 Ex 18.} we can express the variety as a closure of a point.
+    $$\operatorname{Spec}A=\mathbf V(\mathfrak q)=\overline{\{\mathfrak q\}}.$$
+    While a single point $\mathfrak q$ is irreducible \todo{See \href{https://math.stackexchange.com/questions/173992/the-closure-of-overline-x-being-irreducible-and-relating-the-generic-poi}{HERE} in case you're uncomfortable about the previous claim...}, then we can apply a result from \ref{Atiyah Chapter 1 Ex 20.} to conclude that $\operatorname{Spec}A$ is irrducibe in itself, hence irreducible.
+
+    Now we have the deal with the other direction. We proceed by contrapositve. Assume $\mathfrak b:=\operatorname{Nil}(A)$ is not a prime ideal, though it's an ideal anyway. Hence there exist some $xy\in \mathfrak b$ but $x\notin \mathfrak b$ and $y\notin \mathfrak b$. 
+    %One thing to note is that $xy$ cannot be unit since they live in intersection of all prime ideals. 
+    Now we can use results from previous exercise 17 \ref{Atiyah Chapter 1 Ex 17.}. While $xy$ is nilpotent, then $\mathbf V(xy)=\operatorname{Spec} A$; while $x,y$ aren't nilpotent, then $\mathbf V(x),\mathbf V(y)\subsetneq \operatorname{Spec}A$. Notice we have two proper closed subsets
+    $$\mathbf V(x)\cup\mathbf V(y)=\mathbf V(xy)=\operatorname{Spec} A,$$which proves $\operatorname{Spec}A$ is reducible as expected.
+\end{proof}
+
+See a post \href{https://math.stackexchange.com/questions/541943/spectrum-of-a-ring-is-irreducible-if-and-only-if-nilradical-is-prime-atiyah-mac}{HERE}.
+See a blog \href{https://mathstrek.blog/2020/04/01/commutative-algebra-14/}{HERE}.
+
+See a Lemma on Page 2 of a note \href{https://ocw.mit.edu/courses/18-726-algebraic-geometry-spring-2009/3723a99e97b581828fd782b9ffd83921_MIT18_726s09_lec11_more_schemes.pdf}{HERE}\todo{\ding{52}}.
+
+
+
+\subsection{Ex 20.}\label{Atiyah Chapter 1 Ex 20.}
+
+\subsubsection{(i)}
+Both $Y$ and $\overline{Y}$ are topological space with subspace topology given by $X$.
+For any pair of non-empty open subset $U_1,U_2\in\overline{Y}$, there exist $W_1,W_2$ open in $X$ such that $$U_1=W_1\cap\overline{Y},~ U_2=W_2\cap\overline{Y}.$$
+While $Y$ is irreducible, then $(W_1\cap Y)\cap (W_2\cap Y)$ will intersect in $Y$. By definition of subspace topology in $Y$, we know both $(W_1\cap Y),(W_2\cap Y)$ are open. Furthermore, we note
+$$\emptyset~\subsetneq~[(W_1\cap Y)\cap(W_2\cap Y)]\cap Y ~\subset~ (U_1\cap U_2)\cap \overline{Y}.$$ Thus it follows that any pair of two open sets in $\overline{Y}$ will intersection in $\overline{Y}$, which means $\overline{Y}$ is irreducible.
+
+See Stacks Project \href{https://stacks.math.columbia.edu/tag/004U}{HERE}.\todo{\ding{52}}
+
+\subsubsection{(ii)}
+
+I have no idea what is needed to prove? Isn't this equivalent to some sort of Axiom of Choice or Zorn?\todo{\ding{53}}
+
+See \cite{altman} Lemma 16.50 on Page 125, \textit{"irreducible component"}. Also see a post \href{https://math.stackexchange.com/questions/1809159/show-every-irreducible-subset-of-a-topological-space-x-is-contained-in-a-maxim}{HERE}\todo{\ding{52}}.
+
+Use Zorn's Lemma... 
+Order all irreducible spaces by inclusion. In any \textit{chain} of irreducible spaces, we claim the union of irreducible spaces are again irreducible. Then any chain is bounded above and apply Zorn's Lemma gives the existence of a maximal irreducible space. Therefore any irreducible space is contained in a maximal one, for which we call \textit{irreducible component} in (iii) later on.
+
+\subsubsection{(iii)}
+
+Say $A\subset X$ is an irreducible component, which means maximal with respect to inclusion. It follows immediately $A$ is closed given $$A\subset \overline{A} ~\Rightarrow~ A=\overline{A}.$$
+
+For any point $x\in X$, note that $\{x\}$ is irreducible. Hence it lies in some irreducible component. This means all irreducible components will cover $X$.
+
+For a Hausdorff space $X$, irreducible compoent is just a singleton $\{x\}$ for any $x\in X$.
+
+See \cite{altman} Lemma 16.50 on Page 125; See an official solution \href{https://metaphor.ethz.ch/x/2019/hs/401-3660-69L/ex/SolSheet1.pdf}{HERE}.\todo{\ding{52}}
+
+\subsubsection{(iv)}
+
+According to \ref{Atiyah Chapter 1 Ex 18.}, we know $\mathbf V(\mathfrak p)=\overline{\{\mathfrak p\}}$ is closed for being a closure of a single point by (ii). It's maximal given $\mathfrak p$ is minimal.
+
+See a post \href{https://math.stackexchange.com/questions/764677/irreducible-components-of-speca}{HERE}\todo{\ding{52}}.
+
+\subsection{Ex 21.}\label{Atiyah Chapter 1 Ex 21.}
+
