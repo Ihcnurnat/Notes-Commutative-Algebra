@@ -289,7 +289,7 @@ Solution \href{https://math.stackexchange.com/questions/3180861/proof-check-idem
 \subsection{Ex 13.}
 
 \indent Firstly we prove that the ideal $\mathfrak a$ couldn't be the whole ring. Suppose on the contrary that $\mathfrak a=(1)$, then we can find a $g\in A:=K[x_f]$ such that 
-$$g\prod_{i\in J}f_i=1$$ for some index set $J$. This implies that $f$ is a unit in polynomial ring $A$. By definition of irreducible polynomial, we know that $f$ couldn't be a constant since $K$ is a field. According to \ref{Chap 1 Ex 2.}, coefficients other than the constant must be nilpotent, this contradicts the fact that $f$ is a monic polynomial. So we must have $\mathfrak a\neq (1)$.\\
+$$g\prod_{i\in J}f_i=1$$ for some index set $J$. This implies that $f$ is a unit in polynomial ring $A$. By definition of irreducible polynomial, we know that $f$ couldn't be a constant since $K$ is a field. According to \ref{Atiyah Chapter 1 Ex 2.}, coefficients other than the constant must be nilpotent, this contradicts the fact that $f$ is a monic polynomial. So we must have $\mathfrak a\neq (1)$.\\
 
 By Corollary 1.4, there exists a maximal ideal $\mathfrak m$ that contains $\mathfrak a$. We construct a field $K_1:=A/\mathfrak m$, which contains a root for any $f\in \Sigma$ since it's defined as $0$ in this field. Repeat this process, and since each polynomial has finite degree, union of infinitely many $K_i$ will contain all of the roots. 
 
@@ -612,3 +612,26 @@ See a post \href{https://math.stackexchange.com/questions/764677/irreducible-com
 
 \subsection{Ex 21.}\label{Atiyah Chapter 1 Ex 21.}
 
+\subsubsection{(i)}
+
+For any $f\in A$ we unwrap the definition as follows \begin{align*}
+    \phi^{\ast -1}(\mathbf D(f)) =& \{\alpha\in Y ~\mid~ \phi^{\ast}(\alpha)\in \mathbf D(f)\}\\
+    =& \{\alpha \in Y ~\mid~ \phi^{-1}(\alpha)\notin \mathbf V(f)\} \\
+    =& Y-\{\alpha\in Y~\mid~ \phi^{-1}(\alpha)\in \mathbf V(f)\}\\
+    =& Y-\{\alpha\in Y~\mid~ f\subseteq\phi^{-1}(\alpha)\}\\
+    =& Y-\{\alpha\in Y~\mid~ \phi(f)\subseteq \alpha\}\\
+    =& Y-\{\alpha\in Y~\mid~ \alpha\in \mathbf V(\phi(f))\}\\
+    =& \{\alpha\in Y ~\mid~ \alpha\notin \mathbf V(\phi(f))\}\\
+    =& Y-\mathbf V(\phi(f))\\
+    =& \mathbf D(\phi(f)).
+\end{align*}
+Hence the induced map $\phi^{\ast}$ is continuous.
+
+\subsubsection{(ii)}
+Given $\mathfrak a\subset A$ is an ideal. We can compute the pre-image as \begin{align*}
+    ?
+\end{align*}
+
+\subsubsection{}
+
+See a solution \href{http://math_research.uct.ac.za/marques/US/AMforSophiesAGSeminar.pdf}{HERE}.

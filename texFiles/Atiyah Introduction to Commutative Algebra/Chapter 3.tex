@@ -174,7 +174,7 @@ A post \href{https://math.stackexchange.com/questions/25739/complement-of-maxima
 
 Note that on "A Term..." there's another approach, requiring saturation... 
 
-\subsection{Ex 7.}
+\subsection{Ex 7.}\label{Atiyah Chapter 3 Ex 7}
 
 \subsubsection{(i)}
 
@@ -256,3 +256,56 @@ See \href{https://math.stackexchange.com/questions/1635191/saturation-of-a-multi
 
 The correct approach is to consider all primes that containing $\mathfrak a$.
 $$\overline{S}=A-\left(\bigcup_{\mathfrak p\in\operatorname{Spec}(A),~ \mathfrak a\subset\mathfrak p}\right)\mathfrak p.$$
+
+\subsection{Ex 8.}
+
+\subsubsection{}
+
+For (i) $\Rightarrow$ (ii). Fix $t\in T$. Then $t/1$ is a unit in $S^{-1}A$ with the inverse being $\phi^{-1}(1/t)\in S^{-1}A$ given $\phi$ is bijective. 
+Notice that under ring homomorphism 
+\[\phi(t/1\cdot\phi^{-1}(1/t))=\phi(t/1)\cdot 1/t=t/1\cdot 1/t=1 ~\Rightarrow~ t/1\cdot\phi^{-1}(1/t)=1\in S^{-1}A.\]
+
+\subsubsection{}
+
+For (ii) $\Rightarrow$ (iii). Fix an element $t\in T$. By (ii) we know there's an element $a/s\in S^{-1}A$ for some $a\in A$ and $s\in S$ such that $1=t/1\cdot a/s=ta/s$. By definition there's some $s'\in S$ such that \[s'(ta-s)=0\in A ~\Rightarrow~ (s'a)t=s's\in S.\] Notice that $s'a\in A$, so we can define $x=s'a$ hencde $xa\in S$ as expected. 
+
+\subsubsection{}\label{Atiyah Chapter 3 Ex 8. 3-4}
+
+For (iii) $\Rightarrow$ (iv). For any $t\in T$, there exists some $x\in A$ such that 
+\[xt\in S\subset \overline{S} ~\Leftrightarrow~ x,t\in\overline{S}.\]
+
+\subsubsection{}
+
+For (iv) $\Rightarrow$ (v). Take contrapositive. For any prime ideal $\mathfrak p$ that doesn't meet $S$, then \[\mathfrak p\subset A\setminus \overline{S}\subset A\setminus T.\] And this is saying that $\mathfrak p$ won't meet $T$.
+
+\subsubsection{}
+
+For (v) $\Rightarrow$ (i). 
+?? No idea. I tried two approaches. One is use local property, which leads to localise twice. Another is to verify bijectivity element-wise.
+
+\subsubsection{}
+
+For (v) $\Rightarrow$ (iv). Okay. Use contrapostive and characterisation of saturation in \Cref{Atiyah Chapter 3 Ex 7}. Say $T$ isn't completely contained in $\overline{S}$, this means it meet some prime ideal that doesn't meet $S$. And this contradicts the (iv) as expected.
+
+\subsubsection{}
+
+For (iii) $\Rightarrow$ (ii). For any $t\in T$, we claim $t/1$ is a unit in $S^{-1}A$ since we can find $x\in A$ such that $xt\in S$ by assumption and 
+\[t/1\cdot x/xt = 1.\]
+
+\subsubsection{}
+
+For (iii) $\Rightarrow$ (i). 
+
+Firstly we'll try to prove (iii) implies injectivity of $\phi$.
+
+Secondly we'll prove (ii) implies surjectivity of $\phi$.
+
+\subsubsection{}
+
+In summary, we've checked (v) and (iv) are equivalent; (i), (ii), and (iii) are equivalent. With an extra implication \Cref{Atiyah Chapter 3 Ex 8. 3-4}. 
+
+I couldn't finish the direction of (v) implies (i). \todo{!}
+
+But there's certainly a valid way to finish this. In Matsumura \cite{matsumura1989commutative} or \cite{altman}, there's another equivalent definition of \textit{saturation}, which is explicit in terms of set-builders. In that way, we can see (iv) implies (ii) easily. 
+
+Now we only need to verify two definitions are equivalent. See \cite{altman} Exercise 3.25.
