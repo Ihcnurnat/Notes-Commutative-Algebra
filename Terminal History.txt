@@ -212,4 +212,76 @@ To https://github.com/Ihcnurnat/Notes-Commutative-Algebra.git
 (base) runchitan@192 Introduction to Commutative Algebra Atiyah % 
  *  History restored 
 
-(base) runchitan@192 Introduction to Commutative Algebra Atiyah % 
+(base) runchitan@192 Introduction to Commutative Algebra Atiyah %
+
+
+
+
+(base) runchitan@RunchisMBP55161 Notes Commutative Algebra % pwd
+/Users/runchitan/Desktop/Notes Commutative Algebra
+(base) runchitan@RunchisMBP55161 Notes Commutative Algebra % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bibliography.bib
+        modified:   main.pdf
+        modified:   main.tex
+        deleted:    texFiles/A Term of Commutative Algebra/Chapter 13.tex
+        deleted:    texFiles/A Term of Commutative Algebra/Chapter 15.tex
+        deleted:    texFiles/A Term of Commutative Algebra/Chapter 3.tex
+        deleted:    texFiles/Atiyah Introduction to Commutative Algebra/Chapter 1.tex
+        deleted:    texFiles/Atiyah Introduction to Commutative Algebra/Chapter 10.tex
+        deleted:    texFiles/Atiyah Introduction to Commutative Algebra/Chapter 11.tex
+        deleted:    texFiles/Atiyah Introduction to Commutative Algebra/Chapter 2.tex
+        deleted:    texFiles/Atiyah Introduction to Commutative Algebra/Chapter 3.tex
+        deleted:    texFiles/Atiyah Introduction to Commutative Algebra/Chapter 4.tex
+        deleted:    texFiles/Atiyah Introduction to Commutative Algebra/Chapter 5.tex
+        deleted:    texFiles/Atiyah Introduction to Commutative Algebra/Chapter 6.tex
+        modified:   texFiles/Notes.tex
+        deleted:    texFiles/Reid Undergraduate Commutative Algebra/Chapter 5.tex
+        deleted:    texFiles/Reid Undergraduate Commutative Algebra/Chapter 7.tex
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        texFiles/01 Atiyah Introduction to Commutative Algebra/
+        texFiles/02 A Course in Commutative Algebra Kemper/
+        texFiles/03 A Term of Commutative Algebra/
+        texFiles/04 Undergraduate Commutative Algebra Reid/
+        texFiles/05 Matsumura/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) runchitan@RunchisMBP55161 Notes Commutative Algebra % git add .
+(base) runchitan@RunchisMBP55161 Notes Commutative Algebra % git commit -m "with Kemper's book"
+[main e7b619f] with Kemper's book
+ 19 files changed, 77 insertions(+), 19 deletions(-)
+ rename texFiles/{Atiyah Introduction to Commutative Algebra => 01 Atiyah Introduction to Commutative Algebra}/Chapter 1.tex (100%)
+ rename texFiles/{Atiyah Introduction to Commutative Algebra => 01 Atiyah Introduction to Commutative Algebra}/Chapter 10.tex (100%)
+ rename texFiles/{Atiyah Introduction to Commutative Algebra => 01 Atiyah Introduction to Commutative Algebra}/Chapter 11.tex (100%)
+ rename texFiles/{Atiyah Introduction to Commutative Algebra => 01 Atiyah Introduction to Commutative Algebra}/Chapter 2.tex (100%)
+ rename texFiles/{Atiyah Introduction to Commutative Algebra => 01 Atiyah Introduction to Commutative Algebra}/Chapter 3.tex (83%)
+ rename texFiles/{Atiyah Introduction to Commutative Algebra => 01 Atiyah Introduction to Commutative Algebra}/Chapter 4.tex (100%)
+ rename texFiles/{Atiyah Introduction to Commutative Algebra => 01 Atiyah Introduction to Commutative Algebra}/Chapter 5.tex (100%)
+ rename texFiles/{Atiyah Introduction to Commutative Algebra => 01 Atiyah Introduction to Commutative Algebra}/Chapter 6.tex (100%)
+ create mode 100644 texFiles/02 A Course in Commutative Algebra Kemper/Chapter 8.tex
+ rename texFiles/{A Term of Commutative Algebra => 03 A Term of Commutative Algebra}/Chapter 13.tex (100%)
+ rename texFiles/{A Term of Commutative Algebra => 03 A Term of Commutative Algebra}/Chapter 15.tex (100%)
+ rename texFiles/{A Term of Commutative Algebra => 03 A Term of Commutative Algebra}/Chapter 3.tex (100%)
+ rename texFiles/{Reid Undergraduate Commutative Algebra => 04 Undergraduate Commutative Algebra Reid}/Chapter 5.tex (100%)
+ rename texFiles/{Reid Undergraduate Commutative Algebra => 04 Undergraduate Commutative Algebra Reid}/Chapter 7.tex (100%)
+ create mode 100644 texFiles/05 Matsumura/Chapter 3.tex
+(base) runchitan@RunchisMBP55161 Notes Commutative Algebra % git pull
+Already up to date.
+(base) runchitan@RunchisMBP55161 Notes Commutative Algebra % git push
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (20/20), 193.63 KiB | 13.83 MiB/s, done.
+Total 20 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/Ihcnurnat/Notes-Commutative-Algebra.git
+   600ab95..e7b619f  main -> main
+(base) runchitan@RunchisMBP55161 Notes Commutative Algebra % 
