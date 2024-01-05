@@ -1,7 +1,5 @@
 \section{Chapter 1}
 
-
-
 \subsection{Ex 1.}\label{Atiyah Chapter 1 Ex 1.}
 \textit{See MAT's Page 1.}\\
 For a nilpotent element $x$ and a unit $a$, we can prove that $a+x$ is again a unit.
@@ -60,8 +58,9 @@ $\Rightarrow:$ We follow the hint. Suppose $f$ is a zero-divisor, then there exi
 \end{align*}In particular we have $a_nb_m=0$. Notice that we'll have 
 $$(a_ng)(f)=0.$$ But polynomial $a_ng$ is of degree less than $g$ since $a_nb_m=0$, this contradicts least degree property of $g$, which implies that $a_ng=0$.
 Let's examine the equality above again: \begin{align*}
-    0=fg&=(a_0+a_1x+\cdots+a_{n-1}x^{n-1})(b_0+b_1x+\cdots+b_mx^m)+(a_nx^n)(b_0+b_1x+\cdots+b_mx^m)\\
-    &=(a_0+a_1x+\cdots+a_{n-1}x^{n-1})(b_0+b_1x+\cdots+b_mx^m).
+    0=fg=&(a_0+a_1x+\cdots+a_{n-1}x^{n-1})(b_0+b_1x+\cdots+b_mx^m)\\
+    +&(a_nx^n)(b_0+b_1x+\cdots+b_mx^m)\\
+    =&(a_0+a_1x+\cdots+a_{n-1}x^{n-1})(b_0+b_1x+\cdots+b_mx^m).
 \end{align*}This time we look at coefficient for term $x^{n+m-1}$, which is $a_{n-1}b_m$ precisely. Since the product is $0$, which forces in particular $a_{n-1}b_m=0$. Then we can use polynomial $a_{n-1}g$, which is of degree less than $g$, but will annihilate $f$. We can continue in this fashion and conclude that all $a_ig=0$ for all $i\in \{1,2,...,n\}$. While $g$ is non-zero so we can find some $b_i\neq 0$ such that $$a_ib_j=0$$ as expected.
 
 \subsubsection{(iv)}

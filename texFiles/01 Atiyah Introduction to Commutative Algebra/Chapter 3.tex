@@ -151,7 +151,7 @@ But I'm not sure about the what will be the localisation...
 One very simple way to construct a counterexample to take product of two integral domains. 
 Say $R=\mathbb Q\times\mathbb Q$. According to Milne's Notes on Algebraic Number Theory Page 15, "Ideals in product of rings", we know that prime ideals in $R$ is of the form $\mathfrak q=\mathfrak p\times \mathbb Q$ or $\mathbb Q\times\mathfrak p$ where $\mathfrak p\subset\mathbb Q$ is a prime ideal. We can see that $R_{\mathfrak q}$ is always an integral domain. However, $R$ is not an integral domain for $(1,0),(0,1)$ are nontrivial zero-divisors.
 
-\subsection{Ex 6.}
+\subsection{Ex 6.}\label{Atiyah Chap 3 Ex 6.}
 
 Apply Zorn's Lemma. Since $A\neq 0$, hence it has identity. Then $\{1\}$ would be a multiplicatively closed subset. Hence $\sum$ is nonempty. Each \textit{chain} is bounded above by $A\setminus\{\text{zerodivisors}\}$. \ding{54}!!!
 This is a wrong way to apply Zorn. Because I was confused how to find the correct upper bound?...\\
@@ -314,7 +314,7 @@ But there's certainly a valid way to finish this. In Matsumura \cite{matsumura19
 
 Now we only need to verify two definitions are equivalent. See \cite{altman} Exercise 3.25.
 
-\subsection{}
+\subsubsection{}
 
 See a post \href{http://math_research.uct.ac.za/marques/US/AMCh3forSophiesAGSeminar.pdf}{HERE} and \href{https://math.stackexchange.com/questions/308292/s-t-be-multiplicatively-closed-sets-in-the-ring-r-such-that-s-subseteq-t}{HERE}.
 
@@ -333,11 +333,50 @@ Some concerns are here. Mainly for the equality mentioned above. We know $t/1\in
 But thanks to defintion of $(\cdot)^c$, which is essentially inverse $f$...
 
 \subsection{Ex 9.}
-\textit{The set $S_0$ of all non-zero-divisors in $A$ is a saturated multiplicatively closed subset of $A$. Hence the set $D$ of zero-divisors in $A$ is a union of prime ideals (see Chapter 1, Exercise 14). Show that every minimal prime ideal of $A$ is contained in $D$. [Use Exercise 6.]\\ The ring $S_0^{-1} A$ is called the \textbf{total ring o f fractions} of $A$. Prove that \begin{itemize}\item $S_0$ is the largest multiplicatively closed subset of $A$ for which the homomorphism $A\to S_0^{-1}A$ is injective. \item Every element in $S_0^{-1}A$ is either a zero-divisor or a unit. \item Every ring in which every non-unit is a zero-divisor is equal to its total ring of fractions (i.e., $A\to S_0^{-1}A$ is bijective).\end{itemize}}
+\textit{The set $S_0$ of all non-zero-divisors in $A$ is a saturated multiplicatively closed subset of $A$. Hence the set $D$ of zero-divisors in $A$ is a union of prime ideals (see Chapter 1, Exercise 14). Show that every minimal prime ideal of $A$ is contained in $D$. [Use Exercise 6.]\\ The ring $S_0^{-1} A$ is called the \textbf{total ring of fractions} of $A$. Prove that \begin{itemize}\item $S_0$ is the largest multiplicatively closed subset of $A$ for which the homomorphism $A\to S_0^{-1}A$ is injective. \item Every element in $S_0^{-1}A$ is either a zero-divisor or a unit. \item Every ring in which every non-unit is a zero-divisor is equal to its total ring of fractions (i.e., $A\to S_0^{-1}A$ is bijective).\end{itemize}}
 
 \subsubsection{}
-\begin{proof}
 	Clearly we have $S_0$ is saturated multiplicatively closed. Since we can easily prove 
 	\[ab\notin S_0 ~\Leftrightarrow~ a\notin S_0 ~\lor~ b\notin S_0.\]
-	
-\end{proof}
+
+
+\subsubsection{}
+
+By \Cref{Atiyah Chapter 3 Ex 7}, we know $A-S_0=D$ is a union of prime ideals. Compare this result with Chapter 1 Exercise 14.
+
+Let $\mathfrak q_1\triangleleft A$ be a minimal prime ideal, then $A-\mathfrak q_1$ is a multiplicatively closed subset such that $A-\mathfrak q_1\in\Sigma$ by \ref{Atiyah Chap 3 Ex 6.}.
+Here $\Sigma$ denotes the same thing as in Exercise 6 \ref{Atiyah Chap 3 Ex 6.}.
+
+\subsubsection{}
+
+I couldn't proceed. See a post \href{https://mathoverflow.net/questions/67382/minimal-primes-and-zero-divisors}{HERE}.
+
+See \cite{altman}, Corollary 11.4. Very elegant proof using localisation. 
+
+However, prime ideals might well contain non-zero-divisors. For example, in $\mathbb Z$ we have $(3), (5),...$ But $3$ is clearly a non-zero-divisor.
+
+I don't know if there's a proof that solely relies on result of Exercise 6 according to the hint.
+
+
+\subsubsection{(i)}
+
+First of all, we need to check that the homomorphism $A\to S_0^{-1}A$ is indeed injective. Suppose we have two distinct element $a,b\in A$ such that \[a/1=b/1\in S_0^{-1}A ~\Leftrightarrow~ \exists~s\in S_0,~ s(a\cdot 1-b\cdot 1)=0.\] While $a-b\neq 0$ would suggest that $s$ is a zero-divisor, contradiction. Therefore we must have $a/1\neq b/1$ and the homomorphism is injective. 
+
+Suppose $S_1\supsetneq S_0$ is a multiplicatively closed subset such that $A\to S_1^{-1}A$ is injective. Notice that by definition it must contain a zero-divisor $q_1\in S_1$. This means there exists $q_2\neq 0$ such that $q_1q_2=0$. But this implies \[q_2/1=0/1\in S_1^{-1}A.\] Therefore $A\to S_1^{-1}A$ isn't injective anymore. 
+
+\subsubsection{(ii)}
+
+Take an element $a_0/s_0\in S_0^{-1}A$. Suppose for the sake of contradiction that it's a non-zero-divisor and a non-unit. 
+
+Then we claim $a_0\notin S_0$. Otherwise, we'll have $s_0/a_0\in S_0^{-1}A$ such that $a_0/s_0\cdot s_0/a_0=1\in S_0^{-1}A$. 
+
+Hence $a_0$ must be a zero-divisor. Then there exists a non-zero element $a_1\in A$ such that $a_0a_1=0$. Suppose $a_1/1=0\in S_0^{-1}A$, then there exists $s_2\in S_0$ such that $s_2a_1=0$. While $a_1\neq 0$, it contradicts the fact that $s_2$ is a non-zero-divisor. Hence we've found a nonzero element such that 
+\[\frac{a_0}{s_0}\cdot \frac{a_1}{1}=\frac{0}{s_0}=\frac{0}{1}=0\in S_0^{-1}A.\]
+And this contradicts the assumption that $a_0/s_0$ is a non-zero-divisor. Hence we can conclude that element in $S_0^{-1}A$ is either a zero-divisors or a unit.
+
+\subsubsection{(iii)} %\todo{Checked at "A Term" Exercise 11.26}
+
+Notice that when $1\neq 0$, then every unit must be a non-zero-divisor. Therefore we have, in general, \[\{\text{zero-divisors}\}\subset\{\text{non-units}\}.\]
+See a post \href{https://math.stackexchange.com/questions/2062615/can-an-element-in-a-ring-with-unity-be-both-a-unit-and-zero-divisor}{HERE}.
+
+It suffices to check $A\to S_0^{-1}A$ is surjective. Consider an element $a_0/s_0\in S_0^{-1}A$. Notice that if $s_0$ is a non-unit, then it's a zero-divisor which is a contradiction given $s_0\in S_0$. Hence it must be a unit. Then we have $a_0s_0^{-1}\in A$ is a pre-image of $a_0/s_0$, which proves that the homomorphism $A\to S_0^{-1}A$ is surjective. \todo{See "A Term" Exercise 11.26!}
