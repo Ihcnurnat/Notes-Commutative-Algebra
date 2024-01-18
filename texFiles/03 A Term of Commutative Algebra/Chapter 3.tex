@@ -1,5 +1,16 @@
 \section{Chapter 3}
 
+\subsection{Defintion 3.11}
+
+Let $R$ be a ring. Then the group of units $R^{\times}$ is a saturated multiplicative sets. This is easy to see: if we have $ab$ is a unit, then let $u=(ab)^{-1}$. So we have $a(bu)=1$, which means $bu$ is inverse of $a$ and $a$ is a unit. Similarly we know $b$ is a unit. For the other direction is easy.
+
+For the set of non-zero-divisors $S_0$. 
+\[a\in S_0 ~\land~ b\in S_0 ~\Leftrightarrow~ ab\in S_0.\]
+Assume $ab\in S_0$ and $a\notin S_0$ or $b\notin S_0$. Without loss of generality, assume $a\notin S_0$. This implies there exists a non-zero element $v\in R$ such that $va=0$. However, associativity gives us a contradiction that $ab$ is a zero-divisor for \[v(ab)=(va)b=0.\]
+
+Conversely, use contrapositive. Argument follows similarly.
+
+
 \subsection{Definition 3.17}
 
 We can easily generalise the argument in \ref{Atiyah Chapter 1 Ex 8.} to conclude the existence of minimal prime over a given ideal.
