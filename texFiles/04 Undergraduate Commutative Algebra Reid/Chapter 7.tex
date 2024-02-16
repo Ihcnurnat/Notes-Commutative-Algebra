@@ -56,3 +56,18 @@ Is there any counterexample when $A$ isn't necessarily Noetherian?
 \subsubsection{(d)}
 
 This is where we could use definition that there exists an injective map $A/\mathfrak p\to M$.
+
+\subsection{Proposition 7.8}
+
+Here's another presentation of the original proof, with a different order.
+
+\begin{proof}
+$\Rightarrow$: Note that since $Q$ is $P$-primary, ideal $P$ is prime and therefore $Q\subset P\subsetneq A$. Then $A$-module $A/Q\neq 0$. While $A$ is Noetherian, apply Proposition 7.4. (c) gives us \[\text{Ass}~(A/Q)\neq \emptyset.\] 
+By definition this implies there exists a non-zero element $x\in A/Q$ such that 
+\[\text{Ann}~ x =\mathfrak q\in\text{Spec}A.\]
+
+Now we can apply the original proof, which yield that $\text{Ann}~ x=P$ and it's a prime. 
+
+$\Leftarrow$: The set of minimal primes $P'\supset \text{Ann}~ x$ is the same as set of minimal elements in $\text{Supp}~ M$. This is because $A/Q$ as an $A$-module is f.g., so is the subring $M\subset A/Q$.\todo{?} So we can apply Proposition 7.1 (iv) on Page 96 of \cite{reid1995undergraduate}.
+
+\end{proof}

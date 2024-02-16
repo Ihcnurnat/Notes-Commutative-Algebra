@@ -1,0 +1,77 @@
+\section{Chapter 17}
+
+\subsection{Exercise 17.4}
+
+Kernel of the quotient map $R\to R/\mathfrak a$ is $\mathfrak a$, and it lives inside $\text{Ann}(M)$ just to ensure $M$ accepts an $R/\mathfrak a$-module structure that's defined by 
+\[(r+\mathfrak a)m=rm.\] And it's well-defined.
+
+% https://q.uiver.app/#q=WzAsMixbMCwwLCIoUi9cXG1hdGhmcmFrIGEpLyhcXG1hdGhmcmFrIHAvXFxtYXRoZnJhayBhKVxcc2ltZXEgUi9cXG1hdGhmcmFrIHAiXSxbMSwwLCJNIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0=
+\[\begin{tikzcd}
+	{(R/\mathfrak a)/(\mathfrak p/\mathfrak a)\simeq R/\mathfrak p} & M
+	\arrow[hook, from=1-1, to=1-2]
+\end{tikzcd}\]
+
+Notice the isomorphism enables us to use the characterisation that $M$ has a submodule isomorphic to $R/\mathfrak p$ to deduce that under the quotient map \[\kappa(\text{Ass}_R(M))\subset \text{Ass}_{R'}(M).\]
+Argument for the converse inclusion is similar.\todo{?}
+
+\subsection{Proposition 17.7}
+
+Here I present my writing. My initial guess was to define $N$ explicitly as
+\[N=\bigoplus_{\mathfrak p\in \Psi}R/\mathfrak p.\]
+But does this work? \todo{?}
+
+\begin{proof}
+    We try to eliminate some trivial cases. If $M=0$, here the commutative ring $R$ is nontrivial, so there cannot exist an injective morphism 
+    \[R/\mathfrak p\to M\] for any prime ideal $\mathfrak p$. It follows that $\operatorname{Ass}(M)=\emptyset$. In this case the statement is vacuously true.
+
+    So we may assume $M\neq 0$ for the rest of the proof. \begin{itemize}
+        \item For $\Psi=\emptyset$, we can take $N=M$.
+        \item For $\Psi=\operatorname{Ass}(M)$, we can take $N=0$.
+    \end{itemize}
+    So in the following proof we'll assume $\Psi$ is a non-empty proper subset of $\operatorname{Ass}(M)$.
+
+    We wish to define $N$ by using Zorn's Lemma.
+    Consider a set composed of submodules $N_{\lambda}$ of $M$ such that
+    \[\mathcal S=\{N_{\lambda}\subset M ~\mid~ \operatorname{Ass}(N_{\lambda})\subset \operatorname{Ass}(M)-\Psi\}.\]
+
+    Although some formulations of Zorn's Lemma doesn't require non-empty condition, we can prove it here. We claim that $\mathcal S$ is non-empty. According to the assumptions we've made, the set $\operatorname{Ass}(M)-\Psi$ is non-empty. Pick a prime ideal $\mathfrak p\in \operatorname{Ass}(M)-\Psi$. Then we can define $N_0=\operatorname{Im}(R/\mathfrak p\to M)$, then $N_0\in\mathcal S$ because by Lemma 17.5 we know $\operatorname{Ass}(N_0)=\{\mathfrak p\}$. Hence $\mathcal S$ is non-empty.
+
+    Now we consider a chain $\mathcal S_0\subset \mathcal S$. We claim that  
+    \[N''=\bigcup_{N_{\lambda}\in \mathcal S_0} N_{\lambda}\in \mathcal S.\] 
+    It's clearly a submodule of $M$. And we know (by the first paragraph of the original proof of Prop 17.7 on Page 131 of \cite{altman})
+    \[\operatorname{Ass}(N'')=\bigcup_{N_{\lambda}\in\mathcal S_0}\operatorname{Ass}(N_{\lambda})\subset \operatorname{Ass}(M)-\Psi.\]Hence we know every chain has an upper-bound in $\mathcal S$, and there exists a maximal element for which we denote as $N\subset M$ such that $\operatorname{Ass}(N)\subset \operatorname{Ass}(M)-\Psi$.
+
+    According to Prop 17.6, we know 
+    \[\Psi\subset \operatorname{Ass}(M)\subset \operatorname{Ass}(N)\cup\operatorname{Ass}(M/N).\]
+    While we have $\operatorname{Ass}(N)\subset \operatorname{Ass}(M)-\Psi$, it follows that $\Psi\subset \operatorname{Ass}(M/N)$. Moreover, union $\operatorname{Ass}(M/N)$ to the above inclusions we'll have 
+    \[\Psi\subset \operatorname{Ass}(M)\subset \operatorname{Ass}(N)\cup\operatorname{Ass}(M/N)\subset (\operatorname{Ass}(M)-\Psi)\cup\operatorname{Ass}(M/N)=\operatorname{Ass}(M).\]
+    The last equality comes from the fact that $\Psi\subset \operatorname{Ass}(M/N)$. Hence we know 
+    \[\operatorname{Ass}(M)=\operatorname{Ass}(N)\cup \operatorname{Ass}(M/N).\]
+    So it suffices to check $\Psi\supset \operatorname{Ass}(M/N)$. Because in that way we'll get 
+    \begin{align*}
+        \operatorname{Ass}(M)=\operatorname{Ass}(N)\cup \Psi=\operatorname{Ass}(N)\sqcup \Psi ~\Rightarrow~ \operatorname{Ass}(N)=\operatorname{Ass}(M)-\Psi.
+    \end{align*}
+
+    Then we can follow the original proof. Follow the notation starting from paragraph 3. While $N'/N\simeq R/\mathfrak p$, so we must have $N'\supsetneq N$.
+    In particular, notice that by Prop 17.6 we have 
+    \[\operatorname{Ass}(N')\subset \operatorname{Ass}(N)\cup\operatorname{Ass}(N'/N)=\operatorname{Ass}(N)\cup\{\mathfrak p\}.\]
+    Now we consider where does $\mathfrak p$ belongs to. 
+    The maximality of $N$ forces \[\operatorname{Ass}(N')\not\subset \operatorname{Ass}(M)-\Psi ~\Rightarrow~ \operatorname{Ass}(N')\cap \Psi\neq\emptyset ~\Rightarrow~ ~\exists ~\mathfrak q\in \operatorname{Ass}(N')\cap \Psi.\] for $\operatorname{Ass}(N'),\Psi\subset \operatorname{Ass}(M)$. Recall that $\operatorname{Ass}(N)\subset \operatorname{Ass}(M)-\Psi$, then there exists a prime ideal 
+    \[\mathfrak q\in \operatorname{Ass}(N')\cap\Psi\subset (\operatorname{Ass}(N)\cup\{\mathfrak p\})\cap\Psi\subset\{\mathfrak p\}\cap\Psi ~\Rightarrow~ \mathfrak q=\mathfrak p\in\Psi.\]
+    And this proves the desired inclusion $\operatorname{Ass}(M/N)\subset \Psi$.
+
+\end{proof}
+
+
+\subsection{Proposition 17.8}
+
+One remark on $\mathfrak p\cap S=\emptyset$. Assume on the contrary that $S$ meet $\mathfrak p$, it follows that $S^{-1}\mathfrak p$ contains $1$ therefore cannot be a prime ideal.
+
+For the quotient $(\mathfrak a+\mathfrak p)/\mathfrak a$. Ideal $\mathfrak p$ is assumed to be f.g. module $\mathfrak a:=\operatorname{Ann}M$. Hence $(\mathfrak a+\mathfrak p)/\mathfrak a$ is f.g., because for any element $(a+p)+\mathfrak a=p+\mathfrak a$ we can take the same set of generators.\todo{my question was about the quotient module?}
+
+For $x=a+\sum a_ix_i$. Here we wish to prove $\mathfrak p\subset \mathfrak b$. Pick an element $x\in\mathfrak p$, note $\mathfrak p\subset \mathfrak a+\mathfrak p$ where $\mathfrak a := \operatorname{Ann} M \subset \operatorname{Ann}(sm) =: \mathfrak b$. Hence we can write $x$ in two parts as 
+\[x= a+\sum a_ix_i\] where $a\in 
+mathfrak a$ and $x_i\in \mathfrak b$ by the previous construction of $\mathfrak b$. Then we know element $x\in \mathfrak b$ actually. 
+
+For the third paragraph, in which we wish to prove $\mathfrak b\subset \mathfrak p$. Denote $\varphi_S:R\to R_{\mathfrak p}$. Notice that 
+\[b=\varphi_S^{-1}(b/1)\subset \mathfrak p^S.\]By definition of saturation there exists some $s_0\in S=R-\mathfrak p$ such that $s_0b\in \mathfrak p$, hence $b\in\mathfrak p$ for it's a prime ideal (by the virtual of being pre-image of a prime ideal).
