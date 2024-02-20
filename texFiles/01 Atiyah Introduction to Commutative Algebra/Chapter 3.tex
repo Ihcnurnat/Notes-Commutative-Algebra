@@ -1,16 +1,16 @@
-\section{Chapter 3}
+%\section{Chapter 3}
 
-\subsection{Example}
+\section{Example}
 
 Warning: localisation might not produce a local ring, for example see \href{https://math.stackexchange.com/questions/628371/a-f-is-not-a-local-ring}{HERE}.
 
 If we localise at a prime ideal $\mathfrak p$ then it's local. See \href{https://math.stackexchange.com/questions/300446/why-is-the-localization-at-a-prime-ideal-a-local-ring#:~:text=Well%2C%20any%20proper%20ideal%20m,p%20is%20a%20local%20ring.}{HERE}.
 
-\subsection{Proposition 3.7}
+\section{Proposition 3.7}
 
 Localisation commutes with tensor product. See \href{http://sporadic.stanford.edu/math210a/sol4.pdf}{HERE} for a pure tensor manipulation. See \href{https://math.stackexchange.com/questions/2292960/localization-commutes-with-tensor-products}{HERE} for a post, using universal property of tensor product.
 
-\subsection{Proposition 3.11}\label{Atiyah Chap 3 Prop 3.11.}
+\section{Proposition 3.11}\label{Atiyah Chap 3 Prop 3.11.}
 
 For i), I have some doubts in the last step of \href{https://math.stackexchange.com/questions/375353/every-ideal-of-the-localization-is-an-extended-ideal}{HERE}.
 
@@ -23,7 +23,7 @@ For v), about extension of ideal, which really should be discussed in Chap 1.
 
 For a more detailed treatment, see The Rising Sea 1.3.F. EXERCISE.
 
-\subsection{Proposition 3.14}
+\section{Proposition 3.14}
 
 One might wonder if the condition of finitely-generated is omitted what will happen?
 
@@ -39,7 +39,7 @@ Notice that by definition $S^{-1}M=0$ given that for any $m\in M$ we can always 
 On the other hand we have $\operatorname{Ann}(M)=0$, which gives us
 $$0=S^{-1}(\operatorname{Ann}(M))\neq \operatorname{Ann}(S^{-1}M)=\operatorname{Ann}(0)=k[x]$$
 
-\subsection{Proposition 3.16} 
+\section{Proposition 3.16} 
 
 Question on the last equality. Purely based on the contents we knew $$\mathfrak q^c \supset \mathfrak p^{ec}=\mathfrak p.$$
 
@@ -50,7 +50,7 @@ Conversely, we proceed by a contrapositive arguement. Suppose we have $x\in \mat
 
 There are some examples from Reid's Undergraduate C.A, see P41. 
 
-\subsection{Ex 1.}\label{Atiyah Chapter 3 Ex 1.}
+\section{Ex 1.}\label{Atiyah Chapter 3 Ex 1.}
 
 $\Leftarrow:$ Assume the existence of an element $s\in S$ such that $sM=0$. For any element $m_0/s_0\in S^{-1}M$, we claim 
 $$m_0/s_0=0/1 ~\text{ given }~ s(m_0\cdot 1 - s_0\cdot 0)=sm_0=0.$$Since every element is zero, hence $S^{-1}M=0$. 
@@ -66,11 +66,11 @@ This because for any $m\in M$, we can express it as $a_1m_1+\cdots+ a_nm_n=m\in 
 \ding{45} "finitely-generated $A$-module $M$" is important? Any counterexample???
 
 
-\subsection{Ex 2.}
+\section{Ex 2.}
 
 We recall the charactersation of Jacobson radical in a ring. For any element $x\in \operatorname{Jac}()$
 
-\subsection{Ex 3.}
+\section{Ex 3.}
 
 % https://q.uiver.app/#q=WzAsNCxbMCwwLCJBICJdLFsxLDAsIlNeey0xfUEiXSxbMiwwLCJVXnstMX0oU157LTF9QSkiXSxbMSwxLCIoU1QpXnstMX1BIl0sWzAsMywiZ18xIiwyXSxbMCwxLCJmXzEiXSxbMSwyLCJmXzIiXSxbMSwzLCJmXzMiLDJdLFsyLDMsIlxcZXhpc3RzICEgXFxwaGkiLDIseyJjdXJ2ZSI6MSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzMsMiwiXFxleGlzdHMgISBcXHBzaSIsMix7ImN1cnZlIjoxLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
 \[\begin{tikzcd}
@@ -102,7 +102,7 @@ Both maps are unique and making the diagram commute, hence they're isomorphisms.
 
 See Stack Project Prop 10.9.10 \href{https://stacks.math.columbia.edu/tag/00CM}{HERE}. See this page, for a discussion between isomorphisms of localisations as either ring or module...
 
-\subsection{Ex 4.}
+\section{Ex 4.}
 
 My approach was to produce two unique morphisms by universal property of $S^{-1}B$ and $T^{-1}B$, respectively. 
 
@@ -121,7 +121,7 @@ But it seems to be difficult to write in valid proof....
 
 See a post discuss a more straight-forward approach \href{https://math.stackexchange.com/questions/375454/s-1b-and-t-1b-isomorphic-for-t-fs}{HERE}, and \href{https://math.stackexchange.com/questions/1459441/fa-to-b-ring-homomorphism-s-multiplicatively-closed-subset-of-a-what-does}{HERE}. In the first post, there's an obvious map to define and module homomorphism together with surjectivity easy to check. For the injectivity, we can check... 
 
-\subsection{Ex 5.}
+\section{Ex 5.}
 
 I encountered a problem, wishing to prove $x/1\neq 0/1$ in the localised ring.
 
@@ -151,7 +151,7 @@ But I'm not sure about the what will be the localisation...
 One very simple way to construct a counterexample to take product of two integral domains. 
 Say $R=\mathbb Q\times\mathbb Q$. According to Milne's Notes on Algebraic Number Theory Page 15, "Ideals in product of rings", we know that prime ideals in $R$ is of the form $\mathfrak q=\mathfrak p\times \mathbb Q$ or $\mathbb Q\times\mathfrak p$ where $\mathfrak p\subset\mathbb Q$ is a prime ideal. We can see that $R_{\mathfrak q}$ is always an integral domain. However, $R$ is not an integral domain for $(1,0),(0,1)$ are nontrivial zero-divisors.
 
-\subsection{Ex 6.}\label{Atiyah Chap 3 Ex 6.}
+\section{Ex 6.}\label{Atiyah Chap 3 Ex 6.}
 
 Apply Zorn's Lemma. Since $A\neq 0$, hence it has identity. Then $\{1\}$ would be a multiplicatively closed subset. Hence $\sum$ is nonempty. Each \textit{chain} is bounded above by $A\setminus\{\text{zerodivisors}\}$. \ding{54}!!!
 This is a wrong way to apply Zorn. Because I was confused how to find the correct upper bound?...\\
@@ -162,21 +162,21 @@ $\Rightarrow$: Use contrapositive for "minimal"(Is this legal??? In fact we can 
 
 $\Leftarrow$: Assume $A-S$ is a minimal prime ideal. Hence $S$ is a multiplicatively closed set such that $0\notin S$. Furthermore, multiplicatively closed set $S$ is maximal given
 
-\subsubsection{}
+\subsection{}
 One concern was about contrapositive, is that legal? Another problem I encountered was taking complement of multiplicatively closed subset. It will not necessarily give us an ideal. For example, consider $\mathbb Q[x]$ with a multiplicativly closed subset $S_0=\{1,x,x^2,...\}$, the complement isn't even closed under addition for we have $x+1/2,x-1/2$. Or another even simpler example, take $S_1=\{1\}$ in $\mathbb Z$.
 
 However, "complement of maximal multiplicatively closed subset \textit{is} a prime ideal." See this post \href{https://math.stackexchange.com/questions/3704318/complement-of-multiplicative-set-is-a-prime-ideal}{HERE}. \todo{\ding{52}}
 
-\subsubsection{}
+\subsection{}
 A post \href{https://math.stackexchange.com/questions/25739/complement-of-maximal-multiplicative-set-is-a-prime-ideal}{HERE}. A post \href{https://math.stackexchange.com/questions/3962023/atiyah-macdonald-exercise-3-6}{HERE}, see this post "conversely". 
 
-\subsubsection{}
+\subsection{}
 
 Note that on "A Term..." there's another approach, requiring saturation... 
 
-\subsection{Ex 7.}\label{Atiyah Chapter 3 Ex 7}
+\section{Ex 7.}\label{Atiyah Chapter 3 Ex 7}
 
-\subsubsection{(i)}
+\subsection{(i)}
 
 $\Leftarrow$: Assume $A-S$ is a union of prime ideals. Then $S$ is a intersection of multiplicatively closed subset, which is again a multiplicativly closed subset. We only need to prove that 
 $$xy\in S ~\Rightarrow~ x\in S ~\text{ and }~ y\in S.$$
@@ -192,7 +192,7 @@ Now we need to prove $\mathfrak p_i\cap (A-S)$ is an ideal and prime.
 The above approach is potentially wrong... I couldn't work out. Because I couldn't prove \textit{is} an additive Abelian group. 
 See a post \href{https://math.stackexchange.com/questions/4329999/saturated-set-and-union-of-prime-ideals}{HERE}. 
 
-\subsubsection{}
+\subsection{}
 \textit{Potentially wrong...}
 It turned out I choose the wrong covering. See a post \href{https://math.stackexchange.com/questions/3988316/proof-verification-atiyah-macdonald-exercise-3-7i}{HERE}. It has some slight problems...
 
@@ -205,17 +205,17 @@ But is the argument right in this specific case?
 % toggle layer visibility
 %\switchocg{myLayer1}{Click to show/hide PDF Layer} 
 %\begin{ocg}{MyLayer1}{myLayer1}{off}
-\subsubsection{a verified approach}
+\subsection{a verified approach}
 
 According to a post \href{https://math.stackexchange.com/questions/57684/complement-of-saturated-set}{HERE}. One important claim is that we can find a maximal ideal containing $\langle x\rangle$ and disjoint from $S$. This is possible, see Eisenbud's "Commutative Algebra...", Page 70, construction of a prime ideal.
 
 Or see "A Term..." Proposition 3.9, Exercise 3.24. See \href{https://math.stackexchange.com/questions/4329999/saturated-set-and-union-of-prime-ideals}{HERE}. \todo{\ding{52}}
 
-\subsubsection{Examples}
+\subsection{Examples}
 
 Assumption of $S$ being saturated is necessary. Note that $\{1\}\subset \mathbb Z$ is a multiplicatively closed subset that's not \textit{saturated}, whereas $\{-1,1\}$ is saturated. And clearly $\mathbb Z\setminus \{1\}$ isn't a union of prime ideals for we have $1,-1$ inside that could never be covered by prime ideals. Indeed, we note $\mathbb Z\setminus \{-1,1\}$ is a union of primes. (?) 
 
-\subsubsection{(ii)}
+\subsection{(ii)}
 
 Let $\sum$ denotes the set of all \textit{saturated} multiplicatively closed subset in $A$ that containing $S$. Note that in each \textit{chain} $\{S_i\}_{i\in I}$ where $I$ is some index set, the intersection 
 $$A:=\bigcap_{i\in I} S_i$$ is again saturated multiplicatively closed subset: clearly it contains $1$; multiplicatively closed for each $S_i$ is so; and saturated for the similar reason. Also it must contain $S$, so $A\in\sum$.
@@ -233,7 +233,7 @@ $$\overline{S}= A-\bigcup_{i\in J}\mathfrak Q_i.$$
 
 See a verified post \href{http://www.math.caltech.edu/~2016-17/1term/ma120a/solutions/Sol1.pdf}{HERE}. \todo{\ding{52}}
 
-\subsubsection{Compute a specifc example, wrong}
+\subsection{Compute a specifc example, wrong}
 
 For the case where $\mathfrak a=A$, we have $1+\mathfrak a=A$ and $\overline{S}=A$.
 
@@ -250,49 +250,49 @@ Above argument is wrong! I made a mistake in the original proof \ding{53}
 ??? Recall the localisation, we have 
 $$\overline{S}=A-\left(\bigcup_{\mathfrak q\in\operatorname{Spec}(S^{-1}A)}f^{-1}(\mathfrak q)\right)$$ where $f:A\to S^{-1}A$.
 
-\subsubsection{Compute a specifc example, verified}
+\subsection{Compute a specifc example, verified}
 
 See \href{https://math.stackexchange.com/questions/1635191/saturation-of-a-multiplicatively-closed-subset}{HERE}. And \cite{altman} Exercise 3.25. \todo{\ding{52}}
 
 The correct approach is to consider all primes that containing $\mathfrak a$.
 $$\overline{S}=A-\left(\bigcup_{\mathfrak p\in\operatorname{Spec}(A),~ \mathfrak a\subset\mathfrak p}\right)\mathfrak p.$$
 
-\subsection{Ex 8.}
+\section{Ex 8.}
 
-\subsubsection{}
+\subsection{}
 
 For (i) $\Rightarrow$ (ii). Fix $t\in T$. Then $t/1$ is a unit in $S^{-1}A$ with the inverse being $\phi^{-1}(1/t)\in S^{-1}A$ given $\phi$ is bijective. 
 Notice that under ring homomorphism 
 \[\phi(t/1\cdot\phi^{-1}(1/t))=\phi(t/1)\cdot 1/t=t/1\cdot 1/t=1 ~\Rightarrow~ t/1\cdot\phi^{-1}(1/t)=1\in S^{-1}A.\]
 
-\subsubsection{}
+\subsection{}
 
 For (ii) $\Rightarrow$ (iii). Fix an element $t\in T$. By (ii) we know there's an element $a/s\in S^{-1}A$ for some $a\in A$ and $s\in S$ such that $1=t/1\cdot a/s=ta/s$. By definition there's some $s'\in S$ such that \[s'(ta-s)=0\in A ~\Rightarrow~ (s'a)t=s's\in S.\] Notice that $s'a\in A$, so we can define $x=s'a$ hencde $xa\in S$ as expected. 
 
-\subsubsection{}\label{Atiyah Chapter 3 Ex 8. 3-4}
+\subsection{}\label{Atiyah Chapter 3 Ex 8. 3-4}
 
 For (iii) $\Rightarrow$ (iv). For any $t\in T$, there exists some $x\in A$ such that 
 \[xt\in S\subset \overline{S} ~\Leftrightarrow~ x,t\in\overline{S}.\]
 
-\subsubsection{}
+\subsection{}
 
 For (iv) $\Rightarrow$ (v). Take contrapositive. For any prime ideal $\mathfrak p$ that doesn't meet $S$, then \[\mathfrak p\subset A\setminus \overline{S}\subset A\setminus T.\] And this is saying that $\mathfrak p$ won't meet $T$.
 
-\subsubsection{}
+\subsection{}
 
 For (v) $\Rightarrow$ (i). 
 ?? No idea. I tried two approaches. One is use local property, which leads to localise twice. Another is to verify bijectivity element-wise.
 
-\subsubsection{}
+\subsection{}
 
 For (v) $\Rightarrow$ (iv). Okay. Use contrapostive and characterisation of saturation in \Cref{Atiyah Chapter 3 Ex 7}. Say $T$ isn't completely contained in $\overline{S}$, this means it meet some prime ideal that doesn't meet $S$. And this contradicts the (iv) as expected.
 
-\subsubsection{}
+\subsection{}
 
 For (iii) $\Rightarrow$ (ii). For any $t\in T$, we claim $t/1$ is a unit in $S^{-1}A$. Since we can find $x\in A$ such that $xt\in S$, and for $x/xt\in S^{-1}A$,
 \[t/1\cdot x/xt = 1.\]
 
-\subsubsection{}
+\subsection{}
 
 For (iii) $\Rightarrow$ (i). Since we've checked equivalence between (ii) and (iii), we will use (ii) as an assumption.
 
@@ -304,7 +304,7 @@ Indeed, by (ii) we know $(t/1)^{-1}=a_0/s_0\in S^{-1}A$ for some $a_0\in A$ and 
 
 Hence we've proved that $\phi$ is bijective. 
 
-\subsubsection{Comments}
+\subsection{Comments}
 
 In summary, we've checked (v) and (iv) are equivalent; (i), (ii), and (iii) are equivalent. With an extra implication \Cref{Atiyah Chapter 3 Ex 8. 3-4}. 
 
@@ -314,7 +314,7 @@ But there's certainly a valid way to finish this. In Matsumura \cite{matsumura19
 
 Now we only need to verify two definitions are equivalent. See \cite{altman} Exercise 3.25.
 
-\subsubsection{}
+\subsection{}
 
 See a post \href{http://math_research.uct.ac.za/marques/US/AMCh3forSophiesAGSeminar.pdf}{HERE} and \href{https://math.stackexchange.com/questions/308292/s-t-be-multiplicatively-closed-sets-in-the-ring-r-such-that-s-subseteq-t}{HERE}.
 
@@ -326,28 +326,28 @@ Notice that we have \todo{is the first equality right?}
 Then assumption (v) will force $\mathfrak m$ meet $s$. Apply Prop 3.11 (ii) we know 
 \[\mathfrak M=\mathfrak m^e=(1),\] which is a contradiction.
 
-\subsubsection{}
+\subsection{}
 
 Some concerns are here. Mainly for the equality mentioned above. We know $t/1\in \mathfrak M=\mathfrak m^e$ is element generated by some finite linear (with coefficients in $S^{-1}A$) combination of elements from $\mathfrak m$. One thing worth noting is that $\mathfrak m^e=S^{-1}\mathfrak m$, so $t/1\in m_0/s_0$ for some $m_0\in\mathfrak m$ and $s_0\in S$. But this isn't enough to argue $t\in\mathfrak m$??? 
 
 But thanks to defintion of $(\cdot)^c$, which is essentially inverse $f$...
 
-\subsection{Ex 9.}
+\section{Ex 9.}
 \textit{The set $S_0$ of all non-zero-divisors in $A$ is a saturated multiplicatively closed subset of $A$. Hence the set $D$ of zero-divisors in $A$ is a union of prime ideals (see Chapter 1, Exercise 14). Show that every minimal prime ideal of $A$ is contained in $D$. [Use Exercise 6.]\\ The ring $S_0^{-1} A$ is called the \textbf{total ring of fractions} of $A$. Prove that \begin{itemize}\item $S_0$ is the largest multiplicatively closed subset of $A$ for which the homomorphism $A\to S_0^{-1}A$ is injective. \item Every element in $S_0^{-1}A$ is either a zero-divisor or a unit. \item Every ring in which every non-unit is a zero-divisor is equal to its total ring of fractions (i.e., $A\to S_0^{-1}A$ is bijective).\end{itemize}}
 
-\subsubsection{}
+\subsection{}
 	Clearly we have $S_0$ is saturated multiplicatively closed. Since we can easily prove 
 	\[ab\notin S_0 ~\Leftrightarrow~ a\notin S_0 ~\lor~ b\notin S_0.\]
 
 
-\subsubsection{}
+\subsection{}
 
 By \Cref{Atiyah Chapter 3 Ex 7}, we know $A-S_0=D$ is a union of prime ideals. Compare this result with Chapter 1 Exercise 14.
 
 Let $\mathfrak q_1\triangleleft A$ be a minimal prime ideal, then $A-\mathfrak q_1$ is a multiplicatively closed subset such that $A-\mathfrak q_1\in\Sigma$ by \ref{Atiyah Chap 3 Ex 6.}.
 Here $\Sigma$ denotes the same thing as in Exercise 6 \ref{Atiyah Chap 3 Ex 6.}.
 
-\subsubsection{}
+\subsection{}
 
 I couldn't proceed. See a post \href{https://mathoverflow.net/questions/67382/minimal-primes-and-zero-divisors}{HERE}.
 
@@ -358,13 +358,13 @@ However, prime ideals might well contain non-zero-divisors. For example, in $\ma
 I don't know if there's a proof that solely relies on result of Exercise 6 according to the hint.
 
 
-\subsubsection{(i)}
+\subsection{(i)}
 
 First of all, we need to check that the homomorphism $A\to S_0^{-1}A$ is indeed injective. Suppose we have two distinct element $a,b\in A$ such that \[a/1=b/1\in S_0^{-1}A ~\Leftrightarrow~ \exists~s\in S_0,~ s(a\cdot 1-b\cdot 1)=0.\] While $a-b\neq 0$ would suggest that $s$ is a zero-divisor, contradiction. Therefore we must have $a/1\neq b/1$ and the homomorphism is injective. 
 
 Suppose $S_1\supsetneq S_0$ is a multiplicatively closed subset such that $A\to S_1^{-1}A$ is injective. Notice that by definition it must contain a zero-divisor $q_1\in S_1$. This means there exists $q_2\neq 0$ such that $q_1q_2=0$. But this implies \[q_2/1=0/1\in S_1^{-1}A.\] Therefore $A\to S_1^{-1}A$ isn't injective anymore. 
 
-\subsubsection{(ii)}
+\subsection{(ii)}
 
 Take an element $a_0/s_0\in S_0^{-1}A$. Suppose for the sake of contradiction that it's a non-zero-divisor and a non-unit. 
 
@@ -374,14 +374,14 @@ Hence $a_0$ must be a zero-divisor. Then there exists a non-zero element $a_1\in
 \[\frac{a_0}{s_0}\cdot \frac{a_1}{1}=\frac{0}{s_0}=\frac{0}{1}=0\in S_0^{-1}A.\]
 And this contradicts the assumption that $a_0/s_0$ is a non-zero-divisor. Hence we can conclude that element in $S_0^{-1}A$ is either a zero-divisors or a unit.
 
-\subsubsection{(iii)} %\todo{Checked at "A Term" Exercise 11.26}
+\subsection{(iii)} %\todo{Checked at "A Term" Exercise 11.26}
 
 Notice that when $1\neq 0$, then every unit must be a non-zero-divisor. Therefore we have, in general, \[\{\text{zero-divisors}\}\subset\{\text{non-units}\}.\]
 See a post \href{https://math.stackexchange.com/questions/2062615/can-an-element-in-a-ring-with-unity-be-both-a-unit-and-zero-divisor}{HERE}.
 
 It suffices to check $A\to S_0^{-1}A$ is surjective. Consider an element $a_0/s_0\in S_0^{-1}A$. Notice that if $s_0$ is a non-unit, then it's a zero-divisor which is a contradiction given $s_0\in S_0$. Hence it must be a unit. Then we have $a_0s_0^{-1}\in A$ is a pre-image of $a_0/s_0$, which proves that the homomorphism $A\to S_0^{-1}A$ is surjective. \todo{See "A Term" Exercise 11.26!}
 
-\subsection{Ex 19.}
+\section{Ex 19.}
 
-\subsubsection{(i)} 
+\subsection{(i)} 
 Direct application of Proposition 3.8 on Page 40 of \cite{atiyah1994introduction}. \todo{verified \href{https://stacks.math.columbia.edu/tag/080S}{HERE}}

@@ -1,6 +1,6 @@
-\section{Chapter 1}
+%\section{Chapter 1}
 
-\subsection{Ex 1.}\label{Atiyah Chapter 1 Ex 1.}
+\section{Ex 1.}\label{Atiyah Chapter 1 Ex 1.}
 \textit{See MAT's Page 1.}\\
 For a nilpotent element $x$ and a unit $a$, we can prove that $a+x$ is again a unit.
 
@@ -11,8 +11,8 @@ So we have $a+x=a(1-y)$ is product of unit, thus it's a unit as expected.
 
 
 
-\subsection{Ex 2.}\label{Atiyah Chapter 1 Ex 2.}
-\subsubsection{(i)} $\Leftarrow:$ standard application of \textbf{Ex.1}
+\section{Ex 2.}\label{Atiyah Chapter 1 Ex 2.}
+\subsection{(i)} $\Leftarrow:$ standard application of \textbf{Ex.1}
 
 %$\Rightarrow:$ Induction on the degree of $f$. Conclusion is correct when there's only one term $a_0=f$.\newpage
 $\Rightarrow:$ We follow the hint and suppose $b_0+b_1x+\cdots+b_mx^m$ is the inverse of $f$. We prove by induction on $r$ that $a_n^{r+1}b_{m-r}=0$:
@@ -27,7 +27,7 @@ $$a_{n-1}a_nb_m+a_n^2b_{m-1}=a_n^2b_{m-1}=0$$ since $a_nb_m=0$.
 In general, we can continue by the similar fashion, namely look at the coefficients of $x^{n+m-i}$ for some natural number $i$: 
 $$\sum_{\alpha+\beta=n+m-i}a_{\alpha}b_{\beta}.$$ Multiply $a^{i}$ on both sides will make all terms except the last one be $0$, which forces the last term $a^{i+1}_{n}b_{m-i}=0$ to be zero. In particular, let $i=m$ we have $a^{i+1}_{n}b_0=0$. Recall that $b_0$ is a unit, so we have $a^{m+1}_{n}=0$ as desired. So $-a_nx^n$ is a nilpotent and $f+(-a_nx^n)=a_0+\cdots+a_{n-1}x^{n-1}$ is a unit by Ex 1. So we can apply the argument again, implies that $a_{n-1}$ is nilpotent. Until we only have the constant term, namely $a_0=a_0+a_1x-a_1x$ must be a unit.
     
-\subsubsection{(ii)} $\Rightarrow:$ Suppose $f$ is nilpotent, thus we have 
+\subsection{(ii)} $\Rightarrow:$ Suppose $f$ is nilpotent, thus we have 
     \begin{align*}
         0&=f^m\\
         &=(a_0+a_1x+\cdots+a_nx^n)^m\\
@@ -49,7 +49,7 @@ $$\sum_{\alpha+\beta=n+m-i}a_{\alpha}b_{\beta}.$$ Multiply $a^{i}$ on both sides
     \end{align*}
     where $C_i=\sum \prod_{i\in I_n} a_i$ for some finite index set $I_n\subset \{0,1,2,...,n\}$. The coefficient $C_i$ is sum of some coefficient that collected various powers of $x$, namely terms of $x^j$ where $j\in I_i$. Each such power will contain various $a_i$, but according to Pigeon Principle we've lifted them to power $D$, at least one of them will become $0$ and then this term is zero. All such term will be zero, and their sum, $C_i$, will be zero. So we have $f^D=0$ as desired.
 
-\newpage\subsubsection{(iii)} 
+\subsection{(iii)} 
 $\Leftarrow:$ this is precisely the definition.\\
 
 $\Rightarrow:$ We follow the hint. Suppose $f$ is a zero-divisor, then there exists a nonzero element $g$ in the polynomial ring such that $fg=0$. We can further suppose $g$ is the smallest degree polynomial satisfy the condition we mentioned.
@@ -63,7 +63,7 @@ Let's examine the equality above again: \begin{align*}
     =&(a_0+a_1x+\cdots+a_{n-1}x^{n-1})(b_0+b_1x+\cdots+b_mx^m).
 \end{align*}This time we look at coefficient for term $x^{n+m-1}$, which is $a_{n-1}b_m$ precisely. Since the product is $0$, which forces in particular $a_{n-1}b_m=0$. Then we can use polynomial $a_{n-1}g$, which is of degree less than $g$, but will annihilate $f$. We can continue in this fashion and conclude that all $a_ig=0$ for all $i\in \{1,2,...,n\}$. While $g$ is non-zero so we can find some $b_i\neq 0$ such that $$a_ib_j=0$$ as expected.
 
-\subsubsection{(iv)}
+\subsection{(iv)}
 \href{https://math.stackexchange.com/questions/688331/exercise-from-atiyah-macdonald-chapter-1-2-iv}{Solutions from StackExchange.}
 
 \textit{For one direction, refer to Gauss's Lemma.}
@@ -72,7 +72,7 @@ In fact, we have many versions of Gauss's Lemma.
 
 
 
-\subsection{Ex 3.}\label{Atiyah Chapter 1 Ex 3.}
+\section{Ex 3.}\label{Atiyah Chapter 1 Ex 3.}
 Induction on $r$, which holds for $r=1$. Suppose all results hold for $A[x_1,...,x_{r-1}]$.\\\\
 $f$ is a unit in $A[x_1,...,x_{r-1}][x_r]$ $\Leftrightarrow$ $a_0$ is a unit in $A[x_1,...,x_{r-1}]$ and $a_1,...,a_n\in A[x_1,...,x_{r-1}]$ are nilpotent.\\\\
 One thing to notice is that here the coefficients are polynomial with indeterminants, so we can use the induction assumption to finish( since polynomial is of finite degree and we only have to apply finitely many times of results).\\\\
@@ -82,7 +82,7 @@ So the generalised version of theorem states that the constant term is a unit in
 
 
 
-\subsection{Ex 4.}
+\section{Ex 4.}
 Maximal ideal is prime ideal, thus Jacobson Radical $\supset $ Nilradical.\\
 So the non-trivial direction of proof starts by picking up an element $f$ from Jacobson Radical $\mathfrak{R}$. 
 By Prop 1.9 we know that $1-fy$ is a unit for any $y$.\\
@@ -93,15 +93,15 @@ Now we let $y=x$, this gives us
 
 
 
-\subsection{Ex 5.}
+\section{Ex 5.}
 
-\subsubsection{Formal Power Series}
+\subsection{Formal Power Series}
 
 Here are some remarks for Formal Power Series: see a post \href{https://math.stackexchange.com/questions/1096521/ring-of-formal-power-series-over-a-principal-ideal-domain-is-a-unique-factorisat}{HERE}, and \href{https://math.stackexchange.com/questions/457447/if-r-is-an-integral-domain-then-rx-is-an-integral-domain}{HERE}.
 
 In the second \href{https://math.stackexchange.com/questions/1096521/ring-of-formal-power-series-over-a-principal-ideal-domain-is-a-unique-factorisat}{post}: Ring of formal power series over a principal ideal domain is a unique factorisation domain. A quick solution is to use Kaplansky's Criterion to determine formal power series $R[[X]]$ is UFD. See a paper \href{https://people.brandeis.edu/~buchsbau/miscpapers/10052.pdf}{HERE}.
 
-\subsubsection{(i)} 
+\subsection{(i)} 
 
 $\Leftarrow:$ \ding{52}
 
@@ -111,18 +111,18 @@ We only need to look at the lowest power of their product
     1=fg=(b_0+b_1x+\cdots)(a_0+a_1x+\cdots)=b_0a_0+(b_0a_1+b_1a_0)x+\cdots.
 \end{align*}The fact that this equality holds implies that we must have $b_0a_0=1$, which gives us the desired result.
 
-\subsubsection{(ii)} Suppose we have $f^n=0$ for some integer $n>0$. If we look at the constant coefficient, we'll have $a_0^n=0$, so $a_0$ nilpotent. Then inductively prove $a_i$ is nilpotent for all $i\in \mathbb N$ by following Ex 2. (ii).\\
+\subsection{(ii)} Suppose we have $f^n=0$ for some integer $n>0$. If we look at the constant coefficient, we'll have $a_0^n=0$, so $a_0$ nilpotent. Then inductively prove $a_i$ is nilpotent for all $i\in \mathbb N$ by following Ex 2. (ii).\\
 
 Converse is ... ???
 
-\subsubsection{(iii)} 
+\subsection{(iii)} 
 
 $\Leftrightarrow:$ Suppose $f$ belongs to the Jacobson radical, so according to Prop 1.9 this is equivalently to say
 $$1-fy$$ is a unit in $A[[x]]$ for all $y\in A[[x]]$. By part (ii) we know that this is the same as $1-a_0b_0$ is a unit in $A$ for any $b_0\in A$ where $b_0$ is the constant coefficient for $y\in A[[x]]$. Recall part (ii) again we know that this is equivalently to say $a_0$ belongs to the Jacobson Radical of $A$.\\
 
 \href{https://math.stackexchange.com/questions/367073/about-the-definition-of-extended-ideals}{HERE} is a good counterexample explaining the reason of why we defined product of ideal with "finiteness".
 
-\subsubsection{(iv)}
+\subsection{(iv)}
 
 ??? Here I assume the underlying ring homomorphism is $f:A\to A[[x]]$ which sends a ring element $a\mapsto a$ in the formal power series.\\
 
@@ -144,9 +144,7 @@ According to the definition of the maximal ideal, $\mathfrak m$ is composed of n
 $$\mathfrak m\subsetneq I\subset  A[[x]]$$ for some ideal $I\subset A[[x]]$. Then $I=A[[x]]$ and in particular $I$ contains a unit in $A[[x]]$. Apply contraction to them we have 
 $$f^{-1}(\mathfrak m)\subsetneq f^{-1}(I)\subset A.$$ According to part (i), the ideal $I$ contains unit $g\in A[[x]]$, then $f^{-1}(I)$ contains the constant coefficient $g_0\in A$, which is a unit. This implies that $f^{-1}(I)=A$, therefore $f^{-1}(\mathfrak m)$ is a maximal ideal. 
 
-
-
-\subsubsection{(v)} 
+\subsection{(v)} 
 
 For a given prime ideal $\mathfrak p\subset A$, note that 
 $$(\mathfrak p+xA[[x]])^c=\mathfrak p$$ under the inclusion map. It suffices to prove that $\mathfrak p+xA[[x]]$ is a prime ideal in $A[[x]]$. Firstly of all it's an ideal since it's clearly a subgroup and absorb multiplication from elements of $A[[x]]$. Suppose we have $f,g\in A[[x]]$ where $f=f_0+f_1x+\cdots$ and $g=g_0+g_1x+\cdots$ such that 
@@ -156,7 +154,7 @@ $$f=f_0+f_1x+\cdots=f_0+x(f_1+f_2x+\cdots)\in \mathfrak p+xA[[x]]$$ and similarl
 
 
 
-\subsection{Ex 6.}
+\section{Ex 6.}
 
 \href{https://math.stackexchange.com/questions/2816529/check-my-proof-that-the-nilradical-and-the-jacobson-radical-are-equal-am-1-6}{HERE} is one solution. \href{https://math.stackexchange.com/questions/925332/atiyah-macdonald-problem-6-of-chapter-1  }{HERE} is another solution.
 
@@ -169,7 +167,7 @@ $$1-xy=1-x$$ is a unit. But then we have $(1-x)x=x-x^2=0$, which implies that $1
 
 
 
-\subsection{Ex 7.}\label{Chap 1 Ex 7.}
+\section{Ex 7.}\label{Chap 1 Ex 7.}
 
 Fix a prime ideal $I$.
 We know $A/I$ is an integral domain. To prove $I$ is a maximal ideal, we only need to check $A/I$ is a field. More precisely, we need to check every nonzero element in $A/I$ has an inverse.\\
@@ -181,7 +179,7 @@ $$([a]^{n-1}-1)[a]=0 ~\Rightarrow~ [a]^{n-1}=1$$ where $[a]$ is the natural proj
 
 
 
-\subsection{Ex 8.}\label{Atiyah Chapter 1 Ex 8.}
+\section{Ex 8.}\label{Atiyah Chapter 1 Ex 8.}
 
 \subsubsection{}
 Nilradical is the minimal element with respect to inclusion. ??\ding{54} This element has to retain to be prime.
@@ -190,7 +188,7 @@ Nilradical is the minimal element with respect to inclusion. ??\ding{54} This el
 
 \textbf{Fact}: How about maximal ideal?\\ 1) As long as we have two maximal ideal with intersection as either one's proper subset, then their intersection mustn't be maximal;\\ 2) since $\mathbb Z$ is P.I.D, non-zero prime ideal is maximal ideal. We can take the same example as before.
 
-\subsubsection{}
+\subsection{}
 Although we know that intersection of prime ideals are not necessarily prime ideal, here we only need to consider a special case, which is for applying Zorn's Lemma. We give the order of all ideals $I_1\leq I_2$ if and only if $I_2\subset I_1$. This special case is to prove that for all prime ideals that are in one \textit{chain}, their intersection is again a prime ideal. Refers \href{https://math.stackexchange.com/questions/944274/intersection-of-prime-ideals-in-a-chain-is-prime}{HERE}\todo{\ding{52}}.
 
 ??? But for this post, I don't see the reason why it requires existence of prime ideals. Zorn's Lemma only needs "for every chain it has a upper bound..."
@@ -203,11 +201,11 @@ Without loss of generality, we can assume that $I_{i_1}\subset I_{i_2}$. So we h
 $$ab\notin I_{i_1} ~~ \Rightarrow ~~ ab\notin \cap _{i\in A}I_i.$$
 This proves that $\cap _{i\in A} I_i$ is a prime ideal as expected.
 
-\subsubsection{}
+\subsection{}
 
 See \cite{altman} 3.17; minimal prime over an ideal...
 
-\subsection{Ex 9.}
+\section{Ex 9.}
 
 $\Leftarrow:$ Suppose we have some prime ideals $\{P_i\}_{i\in A}$ for some index set $A$, such that 
 $$\mathfrak a=\bigcap _{i\in A} P_i.$$
@@ -235,7 +233,7 @@ According to \href{https://www.jmilne.org/math/xnotes/CA.pdf}{Prop 2.2 Page 5}, 
 
 
 
-\subsection{Ex 10.}
+\section{Ex 10.}
 
 ii) $\Rightarrow$ iii): We prove that $\mathfrak R$ is a maximal ideal. This is because if we have
 $$\mathfrak R\subsetneq I\subset A$$ for some ideal $I$, then this implies that we have $i\in I\setminus \mathfrak R$. While the nilradical composed of all elements that're nilpotent, then we know that $i$ must be a unit. This implies that $I=A$, which confirms that $\mathfrak R$ is prime.\\
@@ -246,11 +244,11 @@ $$\mathfrak R=\bigcap_{i\in J} P_i$$ for all prime ideals $P_i\subset A$ and for
 
 \noindent i) $\Rightarrow$ ii): We have a ring $A$ that only has one prime ideal. While each maximal ideal is prime, then at most we have one maximal ideal. Suppose $A=0$, the case is trivial. For $A\neq 0$, Theorem 1.3 let us conclude that we have at least one maximal ideal. So in this case we have exactly one maximal ideal, which equals to $\mathfrak R$. Each element of $A$ is either a unit or a non-unit. The first case is done, then we consider the case for a non-unit, which is contained in a maximal ideal, namely $\mathfrak R$. And it must be nilpotent since it's also in nilradical. So we know that every element of $A$ is either a unit or nilpotent.
 
-\subsubsection{}
+\subsection{}
 
 See a post \href{https://math.stackexchange.com/questions/595552/each-element-of-a-ring-is-either-a-unit-or-a-nilpotent-element-iff-the-ring-has}{HERE}.
 
-\subsection{Ex 11.}
+\section{Ex 11.}
 
 i) Consider this, for any $x\in A$, \begin{align*}
     x+1=(x+1)^2=x^2+2x+1=x+2x+1=3x+1
@@ -278,7 +276,7 @@ And this completes the other direction of inclusion.
 
 
 
-\subsection{Ex 12.}
+\section{Ex 12.}
 
 \vspace{0.2in}Also see Spring 2023 506 HW 4 Problem 3.\vspace{0.2in}
 
@@ -293,7 +291,7 @@ Solution \href{https://math.stackexchange.com/questions/3180861/proof-check-idem
 
 
 
-\subsection{Ex 13.}
+\section{Ex 13.}
 
 \indent Firstly we prove that the ideal $\mathfrak a$ couldn't be the whole ring. Suppose on the contrary that $\mathfrak a=(1)$, then we can find a $g\in A:=K[x_f]$ such that 
 $$g\prod_{i\in J}f_i=1$$ for some index set $J$. This implies that $f$ is a unit in polynomial ring $A$. By definition of irreducible polynomial, we know that $f$ couldn't be a constant since $K$ is a field. According to \ref{Atiyah Chapter 1 Ex 2.}, coefficients other than the constant must be nilpotent, this contradicts the fact that $f$ is a monic polynomial. So we must have $\mathfrak a\neq (1)$.\\
@@ -304,7 +302,7 @@ The rest is precisely what the problem suggested.
 
 
 
-\subsection{Ex 14.}
+\section{Ex 14.}
 
 Proof is basically Proposition 2.2 of \href{https://www.jmilne.org/math/xnotes/CA.pdf}{HERE}.\\
 
@@ -334,9 +332,9 @@ $$D=\bigcup_{x\neq 0} \operatorname{Ann}(x).$$ So zero-divisors are union of ide
 
 
 
-\subsection{Ex 15.}
+\section{Ex 15.}
 
-\subsubsection{(i)}
+\subsection{(i)}
 
 We denote the ideal as $\mathfrak a=\langle E\rangle \subset A$.
 Clearly we have $V(E)\supset V(\mathfrak a)$ since for any prime ideal that contains $\mathfrak a$ must contain $E$ in particular. Conversely, give an arbitrary prime ideal $\mathfrak p\in V(E)$, this means $\mathfrak p\supset E$ by definition. We interpret the ideal generated by $E$ as intersection of all ideals that containing $E$. Hence we know that 
@@ -345,11 +343,11 @@ $$\mathfrak p\supset \mathfrak a.$$ This implies that ideal $\mathfrak p$ is a p
 \noindent For the second equality, again we note that $V(\mathfrak a)\supset V(\rad(\mathfrak a))$. For any given prime ideal $\mathfrak q\supset \mathfrak a$ that contains $\mathfrak a$, while $\rad(\mathfrak a)$ is the intersection of the prime ideals which contain $\mathfrak a$ by Proposition 1.14, so we have $\mathfrak q\supset \rad(\mathfrak a)$ and $\mathfrak q\in V(\rad(\mathfrak a))$. In summary we have 
 $$V(E)=V(\mathfrak a)=V(\rad(\mathfrak a)).$$
 
-\subsubsection{(ii)} For $\{0\}$, any prime ideals of $A$ would contain it so $V(0)=X$. Recall in the textbook we defined prime ideal $\neq \langle 1\rangle$. So we cannot consider the $A$ as a prime ideal of $A$ itself. Hence we have $V(1)=\emptyset$.\\
+\subsection{(ii)} For $\{0\}$, any prime ideals of $A$ would contain it so $V(0)=X$. Recall in the textbook we defined prime ideal $\neq \langle 1\rangle$. So we cannot consider the $A$ as a prime ideal of $A$ itself. Hence we have $V(1)=\emptyset$.\\
 
-\subsubsection{(iii)} This is basically unwrap the definition. For a prime ideal $\mathfrak p$ that contains $\cup_{i\in I} E_i$, it must contain each $E_i$. This implies that $\mathfrak p\in V(E_i)$ for each index $i\in I$, therefore it belongs to $\cap _{i\in I} V(E_i)$. Conversely, pick any prime ideal $\mathfrak p$ such that lives in every $V(E_i)$ where $i\in I$. This just means $\mathfrak p$ contains every $E_i$ where $i\in I$, hence we have $\mathfrak p\in V(\cup_{i\in I} E_i)$. This completes another direction of inclusion and proved the equality.\\
+\subsection{(iii)} This is basically unwrap the definition. For a prime ideal $\mathfrak p$ that contains $\cup_{i\in I} E_i$, it must contain each $E_i$. This implies that $\mathfrak p\in V(E_i)$ for each index $i\in I$, therefore it belongs to $\cap _{i\in I} V(E_i)$. Conversely, pick any prime ideal $\mathfrak p$ such that lives in every $V(E_i)$ where $i\in I$. This just means $\mathfrak p$ contains every $E_i$ where $i\in I$, hence we have $\mathfrak p\in V(\cup_{i\in I} E_i)$. This completes another direction of inclusion and proved the equality.\\
 
-\subsubsection{(iv)} Now we try to prove the first equality. Clearly we have $V(\mathfrak a \cap \mathfrak b)\subset V(\mathfrak a\mathfrak b)$ since $\mathfrak a\mathfrak b\subset \mathfrak a\cap \mathfrak b$. Conversely, for any prime ideal $\mathfrak p\in V(\mathfrak a\mathfrak b)$, it contains product of ideal $\mathfrak a\mathfrak b$. Since $\mathfrak p$ is prime, by Lemma 2.1 on page 4 of \href{https://www.jmilne.org/math/xnotes/CA.pdf}{HERE}, without loss of generality, we have $\mathfrak p\supset \mathfrak a$. This implies that $\mathfrak p\in V(\mathfrak a\cap\mathfrak b)$.\\
+\subsection{(iv)} Now we try to prove the first equality. Clearly we have $V(\mathfrak a \cap \mathfrak b)\subset V(\mathfrak a\mathfrak b)$ since $\mathfrak a\mathfrak b\subset \mathfrak a\cap \mathfrak b$. Conversely, for any prime ideal $\mathfrak p\in V(\mathfrak a\mathfrak b)$, it contains product of ideal $\mathfrak a\mathfrak b$. Since $\mathfrak p$ is prime, by Lemma 2.1 on page 4 of \href{https://www.jmilne.org/math/xnotes/CA.pdf}{HERE}, without loss of generality, we have $\mathfrak p\supset \mathfrak a$. This implies that $\mathfrak p\in V(\mathfrak a\cap\mathfrak b)$.\\
 
 \noindent Now we finish the second equality. Clearly we have $\mathfrak a\mathfrak b\subset \mathfrak a\cap \mathfrak b\subset \mathfrak a\subset \mathfrak p$, this implies that $V(\mathfrak{ab})\supset V(\mathfrak a)\cup V(\mathfrak b)$. Now consider any prime ideal $\mathfrak p\supset \mathfrak {ab}$, by the same approach above, we can assume that this prime ideal contains $\mathfrak a$. Hence we have $\mathfrak p\in V(\mathfrak a)\cup V(\mathfrak b)$.
 In summary we have $$V(\mathfrak a\cap \mathfrak b)=V(\mathfrak{ab})=V(\mathfrak a)\cup V(\mathfrak b).$$
@@ -358,21 +356,21 @@ See \cite{altman} Exercise 2.23 on Page 15. \todo{\ding{52}}
 
 
 
-\subsection{Ex 16.}
+\section{Ex 16.}
 
-\subsubsection{}
+\subsection{}
 For $\operatorname{Spec}(\mathbb Z)$, it is composed of prime ideals $0$ and $\langle p\rangle$ for all prime number $p$.
 
 See \href{https://ncatlab.org/nlab/show/Spec%28Z%29}{HERE}. 
 See a post \href{https://math.stackexchange.com/questions/4008952/drawing-a-picture-of-operatornamespec-mathbbz}{HERE}. \todo{\ding{52}}
 
-\subsubsection{}
+\subsection{}
 For $\operatorname{Spec}(\mathbb R)$.
 Since $\mathbb R$ is a field, then it's just one point.
 
 See a post \href{https://math.stackexchange.com/questions/1258959/prime-ideals-in-a-field}{HERE}. \todo{\ding{52}}
 
-\subsubsection{}
+\subsection{}
 For $\operatorname{Spec}(\mathbb C[x])$.
 Since $\mathbb C$ is algebraically closed, all prime ideals are of the form $ax+b$ for some $a,b\in\mathbb C$.
 
@@ -380,7 +378,7 @@ See a post \href{https://math.stackexchange.com/questions/838431/studying-operat
 See a post \href{https://math.stackexchange.com/questions/1856918/comparing-the-prime-spectra-of-mathbbqx-mathbbrx-and-mathbbcx}{HERE} for general approach for spectrum of a polynomial ring over a field.
 
 
-\subsubsection{}
+\subsection{}
 For $\operatorname{Spec}(\mathbb R[x])$. 
 
 According to Prop 12 on Page 286 of \cite{dummit2004abstract}, which states that in \textit{U.F.D.} a nonzero element is prime iff it's irreducible. 
@@ -393,7 +391,7 @@ See a related post \href{https://math.stackexchange.com/questions/4452569/descri
 
 
 
-\subsubsection{}
+\subsection{}
 
 For $\operatorname{Spec}(\mathbb Z[x])$, ???
 
@@ -403,7 +401,7 @@ See a post \href{https://math.stackexchange.com/questions/4088566/most-even-degr
 
 Verified on Page 28, Example 1.8 from \cite{QingLiu2002algebraic}. \todo{\ding{52}}
 
-\subsubsection{}
+\subsection{}
 
 For irreducibility of $\mathbb R[x,y]$, see a post \href{https://math.stackexchange.com/questions/125146/irreducibility-of-a-polynomial-in-the-ring-mathbbrx-y}{HERE}.
 
@@ -411,10 +409,10 @@ See \href{https://math.stackexchange.com/questions/1281142/what-are-the-closed-p
 
 
 
-\subsection{Ex 17.}\label{Atiyah Chapter 1 Ex 17.}
+\section{Ex 17.}\label{Atiyah Chapter 1 Ex 17.}
 Here we use $D(f):=X_{f}$.
 By definition we know Zariski topology is defined by the closed subsets. While $D(\bullet)$ is the complement of closed set, they satisfy the basis for open sets. 
-\subsubsection{(i)}
+\subsection{(i)}
 We can compute \begin{align*}
     D(f)\cap D(g) =& V(f)^c \cap V(g)^c\\
     =& [V(f)\cup V(g)]^c\\
@@ -423,7 +421,7 @@ We can compute \begin{align*}
     =& [V(fg)]^c\\
     =& D(fg).
 \end{align*}
-\subsubsection{(ii)}
+\subsection{(ii)}
 $\Rightarrow:$ Assume $D(f)=\emptyset$, then $V(f)=\operatorname{Spec}A$. In particularly, we know $\langle f\rangle\subset \mathfrak p$ for any $\mathfrak p\in \operatorname{Spec}A$, which implies 
 $$\langle f\rangle \subset \bigcap \mathfrak p=\operatorname{Nil}(A).$$ And this implies $f$ is nilpotent.
 
@@ -434,7 +432,7 @@ $\Rightarrow:$ Note $D(f)=X$ implies $V(f)=V(\langle f\rangle)=\emptyset$. If $\
 
 $\Leftarrow:$ Say $f$ is a unit, then $V(f)=V(\langle f\rangle)=V(A)=\emptyset$, which forces $D(f)=X$ as expected. 
 
-\subsubsection{(iv)}
+\subsection{(iv)}
 $\Rightarrow:$ Assume $D(f)=D(g)$, i.e. $V(\langle f\rangle)=V(\langle g\rangle)$. In parcilarly, we try to interpret $V(\langle f\rangle)\subset V(\langle g\rangle)$. This means for any prime ideal $\mathfrak p\supset \langle f\rangle$, we have $\mathfrak p\supset \langle g\rangle$. Then by Characterisation of Radical, it follows that $$\langle g\rangle \subset \bigcap_{\mathfrak p\supset \langle f\rangle,~ \mathfrak p\in\operatorname{Spec}A}\mathfrak p= \sqrt{\langle f\rangle}.$$
 Similarly, we can get inclusion conversely and 
 $$\sqrt{\langle g\rangle}\subset \sqrt{\sqrt{\langle f\rangle}}=\sqrt{\langle f\rangle}\subset \sqrt{\sqrt{\langle g\rangle}}=\sqrt{\langle g\rangle} ~\Rightarrow~ \sqrt{\langle f\rangle}=\sqrt{\langle g\rangle}.$$
@@ -469,7 +467,7 @@ The claim told us $$1\in \langle \sum_{i\in I}~ f_i\rangle,$$ which implies we c
 
 See a post \href{https://math.stackexchange.com/questions/2319058/proof-verification-zariski-topology-is-quasi-compact}{HERE}. Proposition 13.2 on Page 95 \cite{altman}. \todo{\ding{52}}
 
-\subsubsection{(vi)}
+\subsection{(vi)}
 One approach is to generalise the proof in previous part (v). But I encountered a problem...
 
 See a post \href{https://math.stackexchange.com/questions/1175478/basic-open-sets-in-the-zariski-topology-are-also-compact}{HERE}. \todo{\ding{52}}
@@ -490,7 +488,7 @@ Hence we have
 $$\sqrt{\langle f\rangle}=\sqrt{\bigcup_{i\in J}\langle f_i\rangle} ~\Rightarrow~ Z(\langle f\rangle)=Z(\bigcup_{i\in J}\langle f_i\rangle) ~\Rightarrow~ D(f)=\bigcup_{i\in J}D(f_i),$$ which gives a finite subcover of $D(f)$ as expected.
 
 According to the post above, \href{https://math.stackexchange.com/questions/1175478/basic-open-sets-in-the-zariski-topology-are-also-compact}{HERE}. We can also use a homeomorphism $\operatorname{Spec}(A_f)\simeq X_f$ to finish the proposition. \todo{How to prove this homeo?}
-\subsubsection{(vii)}
+\subsection{(vii)}
 $\Leftarrow:$ This direction is clear by (vi).
  
 $\Rightarrow:$ Since all basic open sets form a basis for Zariski topology on $A$, then for any open quasi-compact set $U$ we can express it as a union of basic open sets 
@@ -515,13 +513,13 @@ See a lecture note \href{https://math.stanford.edu/~conrad/Perfseminar/Notes/L3.
 
 
 
-\subsection{Ex 18.}\label{Atiyah Chapter 1 Ex 18.}
+\section{Ex 18.}\label{Atiyah Chapter 1 Ex 18.}
 
-\subsubsection{(i)}
+\subsection{(i)}
 
 Follows immediately according to (ii).
 
-\subsubsection{(ii)}
+\subsection{(ii)}
 
 By definition we have \begin{align*}
     \overline{\{x\}} =& \bigcap_{\mathfrak p\subset \mathfrak p_x} \mathbf V(\mathfrak p) \supset \mathbf V(\mathfrak p_x).
@@ -530,7 +528,7 @@ By definition we have \begin{align*}
 
 See Exercise 13.16 \cite{altman} on Page 98. \todo{???}
 
-\subsubsection{(iii)} 
+\subsection{(iii)} 
 
 We use contrapositive argument. We wish to prove that if $y$ lies in any neighborhood of $x$ and vice versa, then $x=y$. \todo{Wrong contrapositive ???} 
 
@@ -542,9 +540,9 @@ See \href{https://en.wikipedia.org/wiki/Kolmogorov_space}{Kolmogorov space} from
 
 
 
-\subsection{Ex 19.}\label{Atiyah Chapter 1 Ex 19.}
+\section{Ex 19.}\label{Atiyah Chapter 1 Ex 19.}
 
-\subsubsection{Equivalent Definition for Irreducible}
+\subsection{Equivalent Definition for Irreducible}
 
 Take $X$ a topological space. T.F.A.E. 
 \begin{itemize}
@@ -560,7 +558,7 @@ $$(X\setminus V_1)\cap(X\setminus V_2)=X\setminus [V_1\cup V_2]=\emptyset.$$
 (a) $\Leftrightarrow$ (c): Contrapositive. Assume a non-empty open set $U$ isn't dense in $X$, i.e. $\overline{U}\subsetneq X$. Therefore we have $$X=\overline{U}\cup (X\setminus U),$$ which contradicts the assumption that $X$ is irreducible. Conversely, suppose $X$ is reducible. Then $X=V_1\cup V_2$ where $V_1,V_2$ are non-empty proper closed subsets of $X$. But immediately we have $(X\setminus V_1)$ is a non-empty open set in $X$, and it's not dense in $X$ since 
 $$\overline{X\setminus V_1}\subset V_2\subsetneq X.$$
 
-\subsubsection{}
+\subsection{}
 
 \begin{proof}
     Assume $\mathfrak q:=\operatorname{Nil}(A)$ is a prime ideal, we wish to show that $\operatorname{Spec}(A)$ is irreducible. By one characterisation of nilradical, we have 
@@ -582,9 +580,9 @@ See a Lemma on Page 2 of a note \href{https://ocw.mit.edu/courses/18-726-algebra
 
 
 
-\subsection{Ex 20.}\label{Atiyah Chapter 1 Ex 20.}
+\section{Ex 20.}\label{Atiyah Chapter 1 Ex 20.}
 
-\subsubsection{(i)}
+\subsection{(i)}
 Both $Y$ and $\overline{Y}$ are topological space with subspace topology given by $X$.
 For any pair of non-empty open subset $U_1,U_2\in\overline{Y}$, there exist $W_1,W_2$ open in $X$ such that $$U_1=W_1\cap\overline{Y},~ U_2=W_2\cap\overline{Y}.$$
 While $Y$ is irreducible, then $(W_1\cap Y)\cap (W_2\cap Y)$ will intersect in $Y$. By definition of subspace topology in $Y$, we know both $(W_1\cap Y),(W_2\cap Y)$ are open. Furthermore, we note
@@ -592,7 +590,7 @@ $$\emptyset~\subsetneq~[(W_1\cap Y)\cap(W_2\cap Y)]\cap Y ~\subset~ (U_1\cap U_2
 
 See Stacks Project \href{https://stacks.math.columbia.edu/tag/004U}{HERE}.\todo{\ding{52}}
 
-\subsubsection{(ii)}
+\subsection{(ii)}
 
 I have no idea what is needed to prove? Isn't this equivalent to some sort of Axiom of Choice or Zorn?\todo{\ding{53}}
 
@@ -601,7 +599,7 @@ See \cite{altman} Lemma 16.50 on Page 125, \textit{"irreducible component"}. Als
 Use Zorn's Lemma... 
 Order all irreducible spaces by inclusion. In any \textit{chain} of irreducible spaces, we claim the union of irreducible spaces are again irreducible. Then any chain is bounded above and apply Zorn's Lemma gives the existence of a maximal irreducible space. Therefore any irreducible space is contained in a maximal one, for which we call \textit{irreducible component} in (iii) later on.
 
-\subsubsection{(iii)}
+\subsection{(iii)}
 
 Say $A\subset X$ is an irreducible component, which means maximal with respect to inclusion. It follows immediately $A$ is closed given $$A\subset \overline{A} ~\Rightarrow~ A=\overline{A}.$$
 
@@ -611,15 +609,15 @@ For a Hausdorff space $X$, irreducible compoent is just a singleton $\{x\}$ for 
 
 See \cite{altman} Lemma 16.50 on Page 125; See an official solution \href{https://metaphor.ethz.ch/x/2019/hs/401-3660-69L/ex/SolSheet1.pdf}{HERE}.\todo{\ding{52}}
 
-\subsubsection{(iv)}
+\subsection{(iv)}
 
 According to \ref{Atiyah Chapter 1 Ex 18.}, we know $\mathbf V(\mathfrak p)=\overline{\{\mathfrak p\}}$ is closed for being a closure of a single point by (ii). It's maximal given $\mathfrak p$ is minimal.
 
 See a post \href{https://math.stackexchange.com/questions/764677/irreducible-components-of-speca}{HERE}\todo{\ding{52}}.
 
-\subsection{Ex 21.}\label{Atiyah Chapter 1 Ex 21.}
+\section{Ex 21.}\label{Atiyah Chapter 1 Ex 21.}
 
-\subsubsection{(i)}
+\subsection{(i)}
 
 For any $f\in A$ we unwrap the definition as follows \begin{align*}
     \phi^{\ast -1}(\mathbf D(f)) =& \{\alpha\in Y ~\mid~ \phi^{\ast}(\alpha)\in \mathbf D(f)\}\\
@@ -634,11 +632,11 @@ For any $f\in A$ we unwrap the definition as follows \begin{align*}
 \end{align*}
 Hence the induced map $\phi^{\ast}$ is continuous.
 
-\subsubsection{(ii)}
+\subsection{(ii)}
 Given $\mathfrak a\subset A$ is an ideal. We can compute the pre-image as \begin{align*}
     ?
 \end{align*}
 
-\subsubsection{}
+\subsection{}
 
 See a solution \href{http://math_research.uct.ac.za/marques/US/AMforSophiesAGSeminar.pdf}{HERE}.

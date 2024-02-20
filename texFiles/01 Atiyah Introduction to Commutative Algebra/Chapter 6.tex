@@ -1,10 +1,10 @@
-\section{Chapter 6}
+%\section{Chapter 6}
 
-\subsection{Proposition 6.2.}
+\section{Proposition 6.2.}
 
 According to \href{https://mathoverflow.net/questions/42241/errata-for-atiyah-macdonald}{Errata}, last line of the proof should be $M_n=N$.
 
-\subsection{Corollary 6.4}
+\section{Corollary 6.4}
 
 One might wonder if $\bigoplus_{i\in I}M_i$ is also Noetherian given the index set $I$ is not necessarily finite with each $M_i$ being Noetherian. 
 Consider this example 3) on Page 76
@@ -14,7 +14,7 @@ Not sure if the above example works well as a \textit{counterexample}???
 See a post \href{https://math.stackexchange.com/questions/173614/question-about-direct-sum-of-noetherian-modules-is-noetherian}{HERE}. 
 Once we allow infinte index set, at least countably infinite, we'll get $M_1\subsetneq M_1\oplus M_2\subsetneq...$
 
-\subsection{Proposition 6.7}
+\section{Proposition 6.7}
 
 We cannot interpret this inclusion set-theorically? Any element $n_{0}+N_i$ must also be a.... I cannot resolve the coset $+N_i$ problem... 
 
@@ -27,9 +27,9 @@ The inclusion $N_{i-1}/N_i\subset M_{i-1}/M_i$ is given by noticing $N_i$ is \te
 \end{tikzcd}\]
 And this induces an injective from $N_{i-1}/N_i\to M_{i-1}/M_i$, for which we can interpret it as set inclusion.
 
-\subsection{Ex 1.}\label{Atiyah Chapter 6 Ex 1.}
+\section{Ex 1.}\label{Atiyah Chapter 6 Ex 1.}
 
-\subsubsection{(i)}
+\subsection{(i)}
 
 Since $M$ is Noetherian, then it's finitely generated in particular. 
 Then we can apply one form of Nakayama's Lemma.
@@ -39,7 +39,7 @@ I didn't get the approach suggested by the hint \href{https://math.stackexchange
 One crutial observation is the ascending chain of modules
 $$\operatorname{Ker}(u)\subset\operatorname{Ker}(u^2)\subset\operatorname{Ker}(u^3)\subset\cdots$$
 
-\subsubsection{(ii)}
+\subsection{(ii)}
 
 Couldn't understand hint from both the textbook and the post \href{https://math.stackexchange.com/questions/145310/proving-that-surjective-endomorphisms-of-noetherian-modules-are-isomorphisms-and}{HERE}. 
 
@@ -54,10 +54,10 @@ Another cute argument is to consider any $m\in M$. There exists $m'\in M$ such t
 $$u^n(m)=u^{n+1}(m').$$
 By injectivity of $u$ we must have $u^{n-1}(m)=u^n(m')$. Inductively, we know $m=u(m')$. Hence $\operatorname{Im}(u)=M$.
 
-\subsubsection{}
+\subsection{Remarks}
 For (ii), assumption of Artinian is necessary. Since for non-Artinian $\mathbb Z$-module $\mathbb Z$, we have $\times 2:\mathbb Z\to \mathbb Z$ injective but not surjective.
 
-\subsection{Ex 2.}
+\section{Ex 2.}
 
 Apply argument of Prop 6.2 in Atiyah's \cite{atiyah1994introduction}.
 Verified at \cite{altman} Exercise 16.32. \todo{\ding{52}}
