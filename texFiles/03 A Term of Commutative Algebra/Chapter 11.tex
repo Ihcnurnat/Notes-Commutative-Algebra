@@ -27,3 +27,21 @@ Notice that isomorphism will preserve units.
 \end{tikzcd}\]
 
 UMP tells us there exists a unique map $\rho:S^{-1}R\to R$ such that $\operatorname{id}_R=\rho\varphi_S$. Notice that the inverse of $\varphi_S$ will also satisfy this requirement, by the uniquess we know it must be $\rho$.
+
+
+\section{11.25 Exercise}
+
+\begin{proof}
+Here I interpret $R_{\lambda}$ as for some index $\lambda$ in certain index set, not as a localisation.\todo{?}
+
+Homomorphic image of multiplicatively closed subset is again multiplicatively closed. And union of multiplicatively closed subset of a ring is again multiplicatively closed. Therefore $S$ defined in prompt is multiplicatively closed. 
+
+Now we fix a morphism from $R\to A$ where $A$ is arbitrary ring. This data is equivalent to a co-cone over $A$. And we can build... \todo{See solution, it's much cleaner}
+
+\end{proof}
+
+\subsection{Another Remark}
+See nLab \href{https://ncatlab.org/nlab/show/adjoints+preserve+%28co-%29limits}{HERE}. And a \href{https://math.stackexchange.com/questions/505479/does-localization-commute-with-direct-inverse-limits}{post}, and \href{https://math.stackexchange.com/questions/1902377/localization-as-colimit-defining-the-preorder}{post}. It could be easier to think about it as following. But there's a slight problem I couldn't fix: when commuting lim and tensor I couldn't figure out which is the correct multiplicative closed to localise.
+\begin{proof}
+	We could interpret localisation as a tensor product, which is a left adjoint. Hence it must commute with taking colimit.
+\end{proof}

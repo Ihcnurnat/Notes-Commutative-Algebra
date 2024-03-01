@@ -1,5 +1,81 @@
 %\section{Chapter 12}
 
+\section{Exercise 12.6}
+
+\begin{proof}
+    Firstly we need to check $S$ is a \href{https://ncatlab.org/nlab/show/filtered+category}{filtered category}. We check the following conditions: 
+    \begin{itemize}
+    \item Since $1\in S$ then it's non-empty. Objects are elements of $S$, Hom set is specified as the prompt. 
+    \item For any $s_1,s_2\in S$, have $s_1s_2\in S$ with morphisms 
+    \[s_1:s_2\to s_1s_2,~s_2:s_1\to s_1s_2.\]
+    \item For two parallel morphisms $\alpha,\beta:s_1\to s_2$ where $\alpha,\beta\in R$ and $s_1,s_2\in S$. We have a morphism $s_1:s_2\to s_1s_2$ such that the composition (given by multiplication) 
+    \[s_1\alpha:s_1\to s_1s_2 = s_1\beta:s_1\to s_1s_2\] matches by definition.
+    \end{itemize} Therefore $S$ with objects being elements of $S$ with Hom set defined as above is a filtered category. The morphism compose by multiplication. \todo{Correct, see solution, but I stopped for I was confused by $M_s:=M$}
+    
+    The following is based on solution of diagram chasing: 
+
+    % https://q.uiver.app/#q=WzAsNSxbMCwwLCJtJ1xcaW4gTV9zPU0iXSxbMiwwLCJNX3Q9TSJdLFsxLDEsIm1cXGluXFxvcGVyYXRvcm5hbWV7Y29saW19IE1fe1xcYnVsbGV0fSJdLFsxLDIsIlNeey0xfU0iXSxbMywwLCJNX3tzdH1cXG5pIDA9XFxtdV90bSciXSxbMCwxLCJcXG11X3g6PSBcXGNkb3QgeCIsMl0sWzAsMl0sWzEsMl0sWzIsMywiXFxiZXRhIl0sWzAsMywiXFxiZXRhX3MiLDIseyJjdXJ2ZSI6Mn1dLFswLDQsIlxcbXVfe3R9Oj1cXGNkb3QgdCIsMCx7ImN1cnZlIjotMn1dLFs0LDIsIiIsMCx7ImN1cnZlIjotMn1dXQ==
+\[\begin{tikzcd}
+	{m'\in M_s=M} && {M_t=M} & {M_{st}\ni 0=\mu_tm'} \\
+	& {m\in\operatorname{colim} M_{\bullet}} \\
+	& {S^{-1}M}
+	\arrow["{\mu_x:= \cdot x}"', from=1-1, to=1-3]
+	\arrow[from=1-1, to=2-2]
+	\arrow[from=1-3, to=2-2]
+	\arrow["\beta", from=2-2, to=3-2]
+	\arrow["{\beta_s}"', curve={height=12pt}, from=1-1, to=3-2]
+	\arrow["{\mu_{t}:=\cdot t}", curve={height=-12pt}, from=1-1, to=1-4]
+	\arrow[curve={height=-12pt}, from=1-4, to=2-2]
+\end{tikzcd}\]
+    This proves injectivity. 
+    Surjectivity follows, see solution on Page 293.
+\end{proof} 
+
+\subsection{Remarks}
+This is closely related to Rising Sea Exercise 4.1.E., Definition 4.3.7., and Stacks Project \href{https://stacks.math.columbia.edu/tag/01HR}{affine scheme}.
+
+What we've done is to interpret a usual localisation as a \textit{filtered} colimit.\todo{?}
+
+\subsection{References}
+
+See \href{https://math.stackexchange.com/questions/751079/localization-of-a-module-as-direct-limit}{HERE} and \href{https://math.stackexchange.com/questions/505479/does-localization-commute-with-direct-inverse-limits}{HERE}.
+
+
+There is a subtle distinction prevents us to apply it directly as a proof: $M_{\bullet}$ is considered as $M$ in the exercise but as a localisation in statement of \href{https://stacks.math.columbia.edu/tag/00CR}{Tag 00CR} of \cite{stacks-project}.
+
+\begin{proof}
+    The pre-order specified on $S$ makes it into a filtered category exactly by the argument above. 
+
+    One thing we need to modify is to re-define $\beta_{\bullet}$ as inclusion maps for any $f\in S$ 
+    \[\beta_f:M_f\to S^{-1}M ~\text{by}~ m/f^e\mapsto m/f^e\] for some $m\in M$ and integer $e$. Then universal property of colimit will induce a map 
+    \[\beta:\operatorname{colim}_{f\in S}M_f\to S^{-1}M.\]
+    We can check $\beta$ is surjective and injective by similar argument as in the solution of previous exercise. One important reason we can do this by diagram chasing is because we're talking about \textit{filtered} colimit.
+    \begin{itemize}
+        \item Surjective. Pick an element of $S^{-1}M$, it's form $m/f_0$ implies it lives in some $M_{f_0}$. Since the diagram is commute, we know it's projection into the colimit would be the preimage we're looking for.
+        \item Injective. Pick $m\in \operatorname{colim}_{f\in S}M_f$ such that $\beta m=0\in S^{-1}M$. Firstly, by Corollary 7.5, we know there's some $m'\in M_f$ for some $f$. 
+        % https://q.uiver.app/#q=WzAsMyxbMSwwLCJtXFxpbiBcXG9wZXJhdG9ybmFtZXtjb2xpbX1fe1xcYnVsbGV0XFxpbiBTfU1fe1xcYnVsbGV0fSJdLFsxLDEsIlxcYmV0YSBtPTBcXGluIFNeey0xfU0iXSxbMCwwLCJNX2ZcXG5pIG0nIl0sWzIsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFswLDEsIlxcYmV0YSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMiwxLCJcXGJldGFfZiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XV0=
+\[\begin{tikzcd}
+	{M_f\ni m'} & {m\in \operatorname{colim}_{\bullet\in S}M_{\bullet}} \\
+	& {\beta m=0\in S^{-1}M}
+	\arrow[maps to, from=1-1, to=1-2]
+	\arrow["\beta", maps to, from=1-2, to=2-2]
+	\arrow["{\beta_f}"', maps to, from=1-1, to=2-2]
+\end{tikzcd}\]
+        By commutativity of the above diagram we know $m'=\beta_f(m')=\beta m=0$ for $\beta_f$ is just inclusion. By definition of localisation, we know there exists some $g\in S$ such that $gm'=0\in M$. Since $m'\in M_f$, we consider 
+        % https://q.uiver.app/#q=WzAsNCxbMSwwXSxbMiwwLCIwPWdtJ1xcaW4gTV97Zmd9Il0sWzAsMCwibSdcXGluIE1fZiJdLFsxLDEsIm1cXGluXFxvcGVyYXRvcm5hbWV7Y29saW19X3tcXGJ1bGxldFxcaW4gU31NX3tcXGJ1bGxldH0iXSxbMiwxLCJcXG11X3tnfTo9XFxjZG90IGciXSxbMiwzXSxbMSwzXV0=
+\[\begin{tikzcd}
+	{m'\in M_f} & {} & {0=gm'\in M_{fg}} \\
+	& {m\in\operatorname{colim}_{\bullet\in S}M_{\bullet}}
+	\arrow["{\mu_{g}:=\cdot g}", from=1-1, to=1-3]
+	\arrow[from=1-1, to=2-2]
+	\arrow[from=1-3, to=2-2]
+\end{tikzcd}\]
+        While $\mu_{g}(m')=gm'=0\in M_{fg}$ and the diagram is commute, we have $m$ is a homomorphic image of $0$ under a module homomorphism. Hence $m=0$ therefore $\beta$ is injective.
+
+    \end{itemize}
+
+\end{proof}
+
 \section{12.17}
 
 (1) Notice that $S^{-1}\operatorname{Ann}(M)\subset \operatorname{Ann}(S^{-1}M)$ is by definition. 

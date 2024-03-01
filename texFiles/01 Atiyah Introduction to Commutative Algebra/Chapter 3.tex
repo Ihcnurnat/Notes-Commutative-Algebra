@@ -126,7 +126,7 @@ See a post discuss a more straight-forward approach \href{https://math.stackexch
 I encountered a problem, wishing to prove $x/1\neq 0/1$ in the localised ring.
 
 
-\textit{A potentially incorrect solution}
+\subsection{A potentially incorrect solution}
 
 We wish to prove that 
 $$\operatorname{Nil}(A)=\bigcap_{\mathfrak p\in\operatorname{Spec}A}\mathfrak p=0.$$
@@ -144,10 +144,13 @@ See a post \href{https://math.stackexchange.com/questions/2095939/proof-check-be
 
 See a post \href{https://math.stackexchange.com/questions/2095939/proof-check-being-reduced-is-a-local-property-atiyah-macdonald-3-5?rq=1}{HERE}. It used Corollary 3.12.
 
-\textit{"Being an integral domain is not a local property."} See a post \href{https://math.stackexchange.com/questions/685844/is-being-an-integral-domain-a-local-property}{HERE}.
+\subsection{Counterexample}
+\textit{"Being an integral domain is not a local property."} See a post \href{https://math.stackexchange.com/questions/685844/is-being-an-integral-domain-a-local-property}{HERE}, and \href{https://math.stackexchange.com/questions/2137643/being-an-integral-domain-is-not-a-local-property}{HERE}.
 
 Possible counterexamples including $\mathbb Z/6\mathbb Z$, $\mathbb C[x,y]/\langle xy\rangle$, etc. 
 But I'm not sure about the what will be the localisation... 
+
+
 One very simple way to construct a counterexample to take product of two integral domains. 
 Say $R=\mathbb Q\times\mathbb Q$. According to Milne's Notes on Algebraic Number Theory Page 15, "Ideals in product of rings", we know that prime ideals in $R$ is of the form $\mathfrak q=\mathfrak p\times \mathbb Q$ or $\mathbb Q\times\mathfrak p$ where $\mathfrak p\subset\mathbb Q$ is a prime ideal. We can see that $R_{\mathfrak q}$ is always an integral domain. However, $R$ is not an integral domain for $(1,0),(0,1)$ are nontrivial zero-divisors.
 
