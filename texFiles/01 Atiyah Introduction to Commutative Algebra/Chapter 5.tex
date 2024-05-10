@@ -6,16 +6,22 @@ For iii) $\Rightarrow$ iv), notice that $C$ is a subring and $1\in C$ in particu
 
 For iv) $\Rightarrow$ i), see Gong Ting's notes \href{https://drive.google.com/file/d/12aM32lvgwaq9DI_ydv93aIty7Q1MhRmw/view}{HERE} on Page 30, in which the last part used "determinant trick".
 
-\section{Corollary 5.4.}
+\section{Corollary 5.4.}\label{Atiyah Corollary 5.4.}
 
-This is in fact iff. 
+For partial converse: If we know $A\subset C$ is finite type. Then $B\subset C$ is finite type. This is just considering coefficients in $A$ as $B$. More precisely, we can prove this by applying right exact functor $\otimes_{A}B$ to the surjective map $A[...]\to C$ to get $B[...]\to C$. 
 
-If we know ring extensions $A\subset B\subset C$. Assume $A\subset C$ is integral then $A\subset B$ is integral for $b\in B\subset C$; and $B\subset C$ is integral for $c\in C$ we could use exactly the same monic polynomial. 
+For a more concrete description: If we know ring extensions $A\subset B\subset C$. Assume $A\subset C$ is integral then $A\subset B$ is integral for $b\in B\subset C$; and $B\subset C$ is integral for $c\in C$ we could use exactly the same monic polynomial. 
 
-The only nontrivial direction is to prove $A\subset B$, $B\subset C$ are integral, then the tower $A\subset C$ is integral. 
+However, under the same condition, $A\subset B$ might not be finite type. For example, as in \href{https://math.stackexchange.com/questions/43353/transitivity-of-finitely-generated-condition}{POST}, we have 
+\[k\subset k[x_1x_2, x_1x_2^2, x_1x_2^3,...\subset k[x_1,x_2].\]
 
 For a more complete description, see Gathmann's Notes Lemma 9.6. on Page 81. For the converse direction of the statement, namely if we know $A\subset C$ then ... It's very important $A, B$ are both rings. See Stacks Project: finite ring map! \todo{Checked!}
 
+\subsection{Further Discussion}
+
+We'll consider the condition of "finitely generated module". Assume $A\subset B\subset C$ as module. We can build the tower of $A\subset C$ from small blocks. For the other direction we know this fantastic discussion: \href{https://math.stackexchange.com/questions/126946/a-subseteq-b-subseteq-c-ring-extensions-a-subseteq-c-finite-finitely-genera?rq=1}{POST}.
+\[A:=k[X_1,...]\subset B:= A[\{X_iY\}_{i\in\mathbb Z}]\subset C:= A[Y]/(Y^2).\]
+Basically, we need a non-Noetherian base ring. And over that we can always form a polynomial ring while quotient out $Y^2$ such that it's a f.g. module and f.g. algebra.
 
 \section{Proposition 5.6.}
 
@@ -62,3 +68,11 @@ See my remarks on Gathmann's Notes Lemma 9.7.
 Here it's important that $S$ is un-changed! See an example where the implication will fail if localising with respect to different multiplicatively closed subset: Gathmann Commutative Algebra Exercise 9.8. (b) on Page 82.
 
 Question: does there exist $S^{-1}B$ integral over $S^{-1}A$, but $B$ not integral over $A$?
+
+\section{Lemma 5.14.}
+
+Here $M=A[x_1,...,x_n]$ admits a ring structure. Therefore for a polynomial with coefficients in $\mathfrak a$, we have 
+\[\phi^n+a_i\phi^{n-1}+\cdots+a_n=0\in\operatorname{End}M.\]Apply this endormorphism to $1\in M=A[...]$, we have 
+\begin{align*}
+	x^?+a_i x^?+a_n=0\in M, \in C.
+\end{align*} 
