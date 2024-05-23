@@ -75,4 +75,21 @@ Here $M=A[x_1,...,x_n]$ admits a ring structure. Therefore for a polynomial with
 \[\phi^n+a_i\phi^{n-1}+\cdots+a_n=0\in\operatorname{End}M.\]Apply this endormorphism to $1\in M=A[...]$, we have 
 \begin{align*}
 	x^?+a_i x^?+a_n=0\in M, \in C.
-\end{align*} 
+\end{align*}
+
+\section{Proposition 5.18.}
+
+(i). According to (1.6) \cite{atiyah1994introduction}, we need to prove the \textbf{set} of non-units $\mathfrak m$  is an ideal. Another elegant proof is given by Chap 4 Section 10 on Page 71 of \cite{matsumura1989commutative}, which relies on a lemma: 
+
+\textit{\textbf{LEMMA}: If $R$ (integral domain with fraction field $K$) is a valuation ring then for any two ideals $I,J\triangleleft R$ either $I\subset J$ or $J\subset I$ must hold.}
+\begin{proof}
+	The case when either of $I,J=0$ is trivial. We may assume $I\neq 0$ and $J\neq 0$. Pick $x\in I$ and $x\notin J$ with $0\neq y\in J$. 
+
+	Consider $x/y\in \Frac R=K$, if $x/y\in R$ then $y\cdot x/y=x\in J$ contradiction. Then $x/y\notin R$. Hence $y/x\in R$, we have $y=x(y/x)\in I$ and $J\subset I$.
+\end{proof}
+
+Hence being a valuation ring forces the set of ideals become a \textit{totally ordered set}. Hence it's a local ring.
+
+\section{Corollary 5.22.}
+
+The existence of $B$ is given by Theorem 5.21. and extend by (ii) of Proposition 5.18.
