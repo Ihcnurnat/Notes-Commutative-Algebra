@@ -29,3 +29,52 @@ How about infinite intersection of ideals?
 
 (ii) Clearly we have $\mathfrak q\subset (\mathfrak q:x)$.
 Conversely, for $y\in (\mathfrak q:x)$, then $yx\in \mathfrak p$. While $x\notin \mathfrak p$, it follows that $y\in \mathfrak q$.
+
+(iii) Clearly $(\mathfrak q : x)\supset \mathfrak p$. Conversely, for $y\in (\mathfrak q : x)$, we have $yx\in \mathfrak q$.
+
+\section{Proposition 4.8.}
+
+For more details, see Lemma 8.33. of Andreas Gathmann's notes on commutative algebra.
+
+\section{Exercise 1.}
+\textit{If an ideal $\mathfrak a$ has a primary decomposition, then $\Spec (A/\mathfrak a)$ has only finitely many irreducible components.
+}
+\begin{proof}
+    According to Exercise 20 Chap 1 \cite{atiyah1994introduction}, irreducible components of $\Spec (A/\mathfrak a)$ are closed sets 
+    \[\mathbf V(\mathfrak p)\] where $\mathfrak p\triangleleft A/\mathfrak a$ is a \textit{minimal prime ideal}. While ideal $\mathfrak a$ admits a primary decomposition, then 
+    \[\mathfrak p\supset \mathfrak a=\mathfrak q_1\cap ...\cap \mathfrak q_n\] for primary ideals $\mathfrak q_i$ and $n\in\mathbb N$. Given $\mathfrak p$ is a prime ideal, then 
+    \begin{align*}
+        \mathfrak p \supset&~ \sqrt{\mathfrak a}\\
+        =&~ \sqrt{\mathfrak q_1\cap ...\cap \mathfrak q_n}\\
+        =&~ \sqrt{\mathfrak q_1}\cap ...\cap \sqrt{\mathfrak q_n} ~\text{ by Exercise 1.13. \cite{atiyah1994introduction}}.
+    \end{align*}Apply Prime Avoidance Proposition 1.11. \cite{atiyah1994introduction}, we know $\mathfrak p\supset \sqrt{\mathfrak q_i}$ for some integer $1\leq i\leq n$. Notice that $\sqrt{\mathfrak q_i}$ is a prime ideal, then to be minimal prime ideal we must have $\mathfrak p=\sqrt{\mathfrak q_i}$. There are only finitely many prime ideals $\sqrt{\mathfrak p_i}$, each corresponds to a minimal prime ideal and then an irreducible components. 
+    Hence $\Spec(A/\mathfrak a)$ can only have finitely many irreducible components.
+
+\end{proof}
+
+\subsection{Comments}
+
+See this link regarding the converse of the statement \href{https://math.stackexchange.com/questions/207406/irreducible-components-of-the-prime-spectrum-of-a-quotient-ring-and-primary-deco}{HERE}.
+
+\section{Exercise 2.}
+\textit{If $\mathfrak a = \sqrt{\mathfrak a}$, then $\mathfrak a$ has no embedded prime ideals.}
+
+    Assume $\mathfrak a$ admits a primary decomposition $\mathfrak a = \mathfrak q_1\cap...\cap\mathfrak q_n$.
+\begin{proof}
+    Notice that 
+    \begin{align*}
+        \sqrt{\mathfrak a}=\mathfrak a =&~ \bigcap \mathfrak q_{\bullet}=\bigcap_{1\leq i\leq n}\sqrt{q_i}\\
+        \Rightarrow~ \bigcap_{\mathfrak p\supset \mathfrak a}\mathfrak p=&~\bigcap_{1\leq i\leq n}\sqrt{q_i}.
+    \end{align*}
+    For the set $A:=\{\sqrt{\mathfrak q_1},...,\sqrt{\mathfrak q_n}\}$, we need to show that each $\sqrt{\mathfrak q_i}$ is minimal with respect to inclusion. But in fact, we know 
+    \[A\subset\{~ \mathfrak p\supset \mathfrak a,~\mathfrak p ~\text{is a prime ideal}~\}.\]
+    The fact that when taking intersection, we have an equality implies that each element of the set $A$ is minimal, for otherwise we have 
+    \[\bigcap_{\mathfrak p\supset \mathfrak a}\mathfrak p \subsetneqq \bigcap_{\mathfrak p\in A}\mathfrak p=\bigcap_{1\leq i\leq n}\sqrt{q_i}\]
+\end{proof}
+
+\section{Exercise 3.}
+\textit{}
+
+\begin{proof}
+    
+\end{proof}
