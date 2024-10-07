@@ -97,3 +97,50 @@ Hence being a valuation ring forces the set of ideals become a \textit{totally o
 \section{Corollary 5.22.}
 
 The existence of $B$ is given by Theorem 5.21. and extend by (ii) of Proposition 5.18.
+
+\section{Exercise 1.}
+
+\begin{proof}
+	We can verify, for an ideal $\mathfrak a\subset B$.
+	\begin{align*}
+		f^{\ast}(\mathbf V(\mathfrak a)) =&~ \{f^{-1}(\mathfrak p) ~\vert~ \mathfrak a\subset\mathfrak p\in \Spec B\}\\
+		=&~ \{\mathfrak q\in \Spec A ~\vert~ \mathfrak q ~\text{ is contracted ideal}~ \land~ \mathfrak q^e\supset \mathfrak a \}\\
+		=&~ \{\mathfrak q\in \Spec A ~\vert~ \mathfrak q=\mathfrak q^{ec}\subset \mathfrak a^c\}\\
+		=&~ \mathbf V(f^{-1}(\mathfrak a))\subset \Spec A.	
+	\end{align*}
+\end{proof}
+\subsection{Comment}
+
+
+
+\section{Exercise 5.}
+\textit{Let $A\subset B$ be rings, $B$ integral over $A$.}
+\subsection{(i)} \textit{If $x\in A$ is a unit in $B$ then it is a unit in $A$.}
+\begin{proof}
+	Let $y:=x^{-1}\in B$, then there exist 
+	\[y^n+a_{n-1}y^{n-1}+\cdots+a_1 y +a_0=0\] for some integer $n$ and $a_{\bullet}\in A$. Multiply on both sides by $x^{n-1}$ gives us 
+	\begin{align*}
+		x^{n-1}(y^n+a_{n-1}y^{n-1}+\cdots+a_1 y +a_0)=&~0\\
+		\Rightarrow~ x^{n-1}y^{n-1}y+a_{n-1}+\cdots+a_1x^{n-2}+a_0x^{n-1}=&~0\\
+		\Rightarrow~ y=-(a_{n-1}+\cdots+a_1x^{n-2}+a_0x^{n-1})\in A.
+	\end{align*}Hence $x$ is indeed a unit in $A$.
+\end{proof}
+
+\subsection{(ii)}\textit{The Jacobson radical of $A$ is the contraction of the Jacobson radical of $B$.}
+\begin{proof}
+	According to Corollary 5.8 \cite{atiyah1994introduction}, we have 
+	\begin{align*}
+		\operatorname{Jac}A=&~ \bigcap_{\mathfrak m\in\operatorname{MaxSpec}A}\mathfrak m\\
+		\subset&~ \bigcap_{\mathfrak m\in\operatorname{MaxSpec}B}\mathfrak m^c\\
+		\subset&~ (\bigcap_{\mathfrak m\in\operatorname{MaxSpec}B}\mathfrak m)^c\\
+		=&~ (\operatorname{Jac}B)^c.
+	\end{align*}
+	Conversely, pick an element $x\in (\operatorname{Jac}B)^c$. Then we know by Proposition 1.9. \cite{atiyah1994introduction}
+	\begin{align*}
+		1-xy ~\text{is a unit in $B$ for any}~ y\in B\\
+		\Rightarrow~ 1-xy ~\text{is a unit in $A$ for any}~ y\in A
+	\end{align*}since $1-xy\in A$ and we can apply part (i) to deduce it's a unit in $A$. But this statement, by Proposition 1.9., is equivalent to say $x\in\operatorname{Jac}A$. Hence we can conclude \[\operatorname{Jac}A=(\operatorname{Jac}B)^c.\]
+\end{proof}
+\subsection{Comment}
+
+See Exercise (14.10) of \cite{altman}.

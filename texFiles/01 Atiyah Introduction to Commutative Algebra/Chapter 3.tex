@@ -128,27 +128,28 @@ But it seems to be difficult to write in valid proof....
 See a post discuss a more straight-forward approach \href{https://math.stackexchange.com/questions/375454/s-1b-and-t-1b-isomorphic-for-t-fs}{HERE}, and \href{https://math.stackexchange.com/questions/1459441/fa-to-b-ring-homomorphism-s-multiplicatively-closed-subset-of-a-what-does}{HERE}. In the first post, there's an obvious map to define and module homomorphism together with surjectivity easy to check. For the injectivity, we can check... 
 
 \section{Ex 5.}
-
+\textit{Being reduced is a local property.}
 I encountered a problem, wishing to prove $x/1\neq 0/1$ in the localised ring.
 
-
 \subsection{A potentially incorrect solution}
-
+\begin{proof}
 We wish to prove that 
 $$\operatorname{Nil}(A)=\bigcap_{\mathfrak p\in\operatorname{Spec}A}\mathfrak p=0.$$
 
 For the localised ring $A_{\mathfrak p}$, by Prop 3.11 (i) and Coro 3.13, we know every ideals are extended ideals and 
 \begin{align*}
 	0=\operatorname{Nil}(A_{\mathfrak p}) =& \bigcap_{\mathfrak q\in\operatorname{Spec}A,~ \mathfrak q\subset \mathfrak p} \mathfrak q^{e}\supset \left(\bigcap_{\mathfrak q\in\operatorname{Spec}A,~ \mathfrak q\subset \mathfrak p} \mathfrak q\right)^e
-\end{align*}where the last inclusion is given by Exercise 1.18 on Page 10 of Atiyah's textbook. But the only way that an extended ideal to be zero is the ideal 
+\end{align*}where the last inclusion is given by Exercise 1.18 on Page 10 of Atiyah's textbook\todo{Could we extend the original result to infinitely many primes?}. But the only way that an extended ideal to be zero is the ideal 
 $$\bigcap_{\mathfrak q\in\operatorname{Spec}A,~ \mathfrak q\subset \mathfrak p} \mathfrak q=0.$$ Therefore we have 
 \begin{align*}
 	\operatorname{Nil}(A) =& \bigcap_{\mathfrak p\in\operatorname{Spec}A}\mathfrak p\subset \bigcap_{\mathfrak q\in\operatorname{Spec}A,~ \mathfrak q\subset \mathfrak p} \mathfrak q=0.
 \end{align*}
+\end{proof}
+See a post \href{https://math.stackexchange.com/questions/2095939/proof-check-being-reduced-is-a-local-property-atiyah-macdonald-3-5?rq=1}{HERE}. For examples...See a post \href{https://math.stackexchange.com/questions/2095939/proof-check-being-reduced-is-a-local-property-atiyah-macdonald-3-5?rq=1}{HERE}. It used Corollary 3.12.
 
-See a post \href{https://math.stackexchange.com/questions/2095939/proof-check-being-reduced-is-a-local-property-atiyah-macdonald-3-5?rq=1}{HERE}. For examples...
-
-See a post \href{https://math.stackexchange.com/questions/2095939/proof-check-being-reduced-is-a-local-property-atiyah-macdonald-3-5?rq=1}{HERE}. It used Corollary 3.12.
+\begin{proof}
+	$A\to \prod_{\mathfrak p\in\Spec A} A_{\mathfrak p}$ ?
+\end{proof}
 
 \subsection{Counterexample}
 \textit{"Being an integral domain is not a local property."} See a post \href{https://math.stackexchange.com/questions/685844/is-being-an-integral-domain-a-local-property}{HERE}, and \href{https://math.stackexchange.com/questions/2137643/being-an-integral-domain-is-not-a-local-property}{HERE}.
